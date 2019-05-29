@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import { todosReducer } from './todos'
+import { itemsReducer } from './items'
 
 export default combineReducers({
-  todos: todosReducer
+  items: itemsReducer
 })
