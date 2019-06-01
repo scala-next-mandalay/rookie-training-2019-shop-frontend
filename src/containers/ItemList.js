@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 import ItemList from '../components/ItemList'
 import { 
-  fetchAllItems, 
-  getVisibleItems,
+  fetchAllItems,
+  getItemsByCategory,
 } from '../modules/items'
 
 const mapStateToProps = state => ({
-  items: getVisibleItems(state.items.items, state.items.visibilityFilter),
+  items: getItemsByCategory(state.items.rows, state.items.selectedCateogryId),
   noMoreFetch: state.items.noMoreFetch
 })
 

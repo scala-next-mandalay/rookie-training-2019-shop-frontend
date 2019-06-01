@@ -4,22 +4,34 @@ import format from 'string-format'
 
 const initialState = {
   inputText: '',
-  items: [],
+  rows: [],
   noMoreFetch: false,
-  visibilityFilter: null
+  selectedCateogryId: null
 }
 
+export const getItemsByCategory = (rows, categoryId) => {
+  if (categoryId == null) {
+    return rows
+  }
+  else {
+    return rows.filter(t => t.category_id === categoryId)
+  }
+}
+
+//=============================================================================
+//　Reducer
+//=============================================================================
 export const　itemsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_VISIBILITY_FILTER':
+    case 'SET_CATEGORY_ID':
       return {
         ...state,
-        visibilityFilter: action.payload
+        selectedCateogryId: action.payload
       }
-    case 'FETCH_TODOS_DONE':
+    case 'FETCH_ITEMS_DONE':
       return {
         ...state,
-        items: state.items.concat(action.payload)
+        rows: state.rows.concat(action.payload)
       }
     case 'NO_MORE_FETCH':
       return {
@@ -31,31 +43,17 @@ export const　itemsReducer = (state = initialState, action) => {
   }
 }
 
-export const getVisibleItems = (items, category_id) => {
-  if (category_id == null) {
-    return items
-  }
-  else {
-    return items.filter(t => t.category_id === category_id)
-  }
-}
-
 //=============================================================================
 //　ActionCreators
 //=============================================================================
-
-export const setVisibilityFilter = filter => ({
-  type: 'SET_VISIBILITY_FILTER',
-  payload: filter
+export const setCategoryId = categoryId => ({
+  type: 'SET_CATEGORY_ID',
+  payload: categoryId
 })
 
 export const fetchAllItems = () => {
   return async (dispatch, getState) => {
-    dispatch({
-      type: 'SET_ALREADY_FETCHED'
-    })
-
-    const axRes = await axios.get(format(URL_GET_ALL_ITEMS, getState().items.items.length))
+    const axRes = await axios.get(format(URL_GET_ALL_ITEMS, getState().items.rows.length))
 
     if (axRes.data.data.length === 0) {
       dispatch({
@@ -64,7 +62,7 @@ export const fetchAllItems = () => {
     }
 
     dispatch({
-      type: 'FETCH_TODOS_DONE',
+      type: 'FETCH_ITEMS_DONE',
       payload: axRes.data.data
     })
   }

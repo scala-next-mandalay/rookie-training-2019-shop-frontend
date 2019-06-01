@@ -10,40 +10,76 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import { BASEURL_ITEM_IMAGES } from '../constants'
+import Button from '@material-ui/core/Button';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 500,
+    maxWidth: 600,
     margin: theme.spacing(1),
   },
   media: {
     height: 0,
     //paddingTop: '56.25%', // 16:9
-    paddingTop: '62%',
+    paddingTop: '128%',
   },
+  rightIcon: {
+    marginLeft: theme.spacing(1),
+  },
+  cardContentArea: {
+    marginTop: theme.spacing(1),
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+  },
+  cardActionArea: {
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+  },
+  buttonText: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 14
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 10
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: 14
+    },
+  }
 }));
 
-const Item = ({ name, price, image, category_id }) => {
+const Item = ({ addCartItem, row }) => {
   const classes = useStyles()
   return (
     <Card className={classes.card}>
         <CardMedia
           className={classes.media}
-          image={BASEURL_ITEM_IMAGES+image}
-          title="{name}"
+          image={BASEURL_ITEM_IMAGES+row.image}
+          //image={"http://127.0.0.1/dummyImage.jpg"}
+          title={row.name}
         />
-        <CardContent>
+        <CardContent className={classes.cardContentArea}>
+          <Typography variant="h6" component="h2">
+            {row.name}
+          </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {name}
+            {row.price} Ks
           </Typography>
         </CardContent>
-        <CardActions disableSpacing>
-          <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="Share">
-            <ShareIcon />
-          </IconButton>
+        <CardActions className={classes.cardActionArea}>
+          <Button 
+            variant="outlined" 
+            fullWidth 
+            color="primary"
+            onClick={()=>{
+              addCartItem(row)
+            }}
+          >
+            Add to Cart
+            <AddShoppingCartIcon className={classes.rightIcon} />
+          </Button>
         </CardActions>
       </Card>
   )

@@ -12,6 +12,7 @@
     "aws-amplify": "^1.1.28",
     "aws-amplify-react": "^2.3.8",
     "axios": "^0.18.0",
+    "material-ui-image": "^3.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -21,7 +22,8 @@
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "string-format": "^2.0.0"
+    "string-format": "^2.0.0",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
