@@ -5,13 +5,9 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import { BASEURL_ITEM_IMAGES } from '../constants'
 import Button from '@material-ui/core/Button';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 const useStyles = makeStyles(theme => ({
@@ -37,17 +33,6 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
-  buttonText: {
-    [theme.breakpoints.down('sm')]: {
-      fontSize: 14
-    },
-    [theme.breakpoints.up('sm')]: {
-      fontSize: 10
-    },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: 14
-    },
-  }
 }));
 
 const Item = ({ addCartItem, row }) => {
@@ -86,7 +71,13 @@ const Item = ({ addCartItem, row }) => {
 }
 
 Item.propTypes = {
-  name: PropTypes.string.isRequired
+  row: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string,
+  }).isRequired,
+  addCartItem: PropTypes.func,
 }
 
 export default Item

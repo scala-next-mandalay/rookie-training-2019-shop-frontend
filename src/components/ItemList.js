@@ -38,8 +38,12 @@ const ItemList = ({ items, fetchAllItems, noMoreFetch }) => {
 ItemList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string,
   }).isRequired).isRequired,
+  fetchAllItems: PropTypes.func,
+  noMoreFetch: PropTypes.bool.isRequired,
 }
 
 export default ItemList

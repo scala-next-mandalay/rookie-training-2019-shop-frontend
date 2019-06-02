@@ -9,15 +9,6 @@ const initialState = {
   selectedCateogryId: null
 }
 
-export const getItemsByCategory = (rows, categoryId) => {
-  if (categoryId == null) {
-    return rows
-  }
-  else {
-    return rows.filter(t => t.category_id === categoryId)
-  }
-}
-
 //=============================================================================
 //　Reducer
 //=============================================================================

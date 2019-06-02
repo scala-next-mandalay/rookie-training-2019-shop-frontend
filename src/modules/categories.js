@@ -19,7 +19,7 @@ export const　categoriesReducer = (state = initialState, action) => {
     case 'FETCH_CATEGORIES_DONE':
       return {
         ...state,
-        rows: [{id:null, name:'ALL'}, ...action.payload]
+        rows: [{id:-1, name:'ALL'}, ...action.payload]
       }
     default:
       return state

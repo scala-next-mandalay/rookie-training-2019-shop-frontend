@@ -36,7 +36,7 @@ const _updateState = (state) => {
   let totalQuantity = 0
   let maxQuantity = 0
   for (const row of newState.rows) {
-    const qty = parseInt(row.quantity)
+    const qty = row.quantity
     totalQuantity += qty
     if (qty > maxQuantity) {
       maxQuantity = qty
@@ -70,16 +70,15 @@ const _deleteCartItem = (rows, itemId) => {
   localStorage.setItem('cart', JSON.stringify(cartItems));
 }
 
-
 export const changeQuantity = (itemId, quantity) => ({
   type: 'CHANGE_QUANTITY',
-  payload: {itemId, quantity}
+  payload: {itemId: itemId, quantity: parseInt(quantity)}
 })
 
 const _changeQuantity = (rows, itemId, quantity) => {
-  //Be empty if the value smaller than 1.
+  //Set to 0 if quantity is less than 0.
   if (!quantity || quantity <= 0) {
-    quantity = null
+    quantity = 0
   }
 
   //All cart data

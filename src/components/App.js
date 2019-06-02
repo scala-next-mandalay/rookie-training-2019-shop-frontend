@@ -1,14 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Amplify from 'aws-amplify'
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import theme from '../theme'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import Header from '../containers/Header'
+import Header from './Header'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import { IntlProvider } from "react-intl"
 import { chooseLocale } from '../locations'
 import ItemList from '../containers/ItemList'
-import Cart from '../containers/Cart'
+import Cart from './Cart'
 import { makeStyles } from '@material-ui/core/styles'
 
 
@@ -40,11 +41,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 //<Route exact path="/login" render={() => <Authenticator />} />
-const App = ({locale, fetchCartData}) => {
+const App = ({locale, fetchCartData, fetchAllCategories}) => {
   const classes = useStyles();
 
   React.useEffect(() => {
     fetchCartData()
+    fetchAllCategories()
   })
 
   return (
@@ -79,6 +81,12 @@ const App = ({locale, fetchCartData}) => {
       </MuiThemeProvider>
     </IntlProvider>
   )
+}
+
+App.propTypes = {
+  locale: PropTypes.string.isRequired,
+  fetchCartData: PropTypes.func,
+  fetchAllCategories: PropTypes.func,
 }
 
 export default App

@@ -2,19 +2,23 @@ import { connect } from 'react-redux'
 import ItemList from '../components/ItemList'
 import { 
   fetchAllItems,
-  getItemsByCategory,
 } from '../modules/items'
 
-const mapStateToProps = state => ({
-  items: getItemsByCategory(state.items.rows, state.items.selectedCateogryId),
-  noMoreFetch: state.items.noMoreFetch
-})
-
-const mapDispatchToProps = dispatch => ({
-  fetchAllItems: () => dispatch(fetchAllItems()),
-})
+const _getItemsByCategory = (rows, categoryId) => {
+  if (categoryId <= 0) {
+    return rows
+  }
+  else {
+    return rows.filter(t => t.category_id === categoryId)
+  }
+}
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  (state) => ({
+    items: _getItemsByCategory(state.items.rows, state.items.selectedCateogryId),
+    noMoreFetch: state.items.noMoreFetch
+  }),
+  (dispatch) => ({
+    fetchAllItems: () => dispatch(fetchAllItems()),
+  })
 )(ItemList)
