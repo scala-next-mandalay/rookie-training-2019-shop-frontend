@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Typography from '@material-ui/core/Typography'
+import Box from '@material-ui/core/Box'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -14,9 +14,9 @@ const CategoryList = ({ categories, setCategoryId, handleDrawerClose }) => {
             setCategoryId(obj.id)
           }}  >
             <ListItemText>
-            <Typography variant="h6" noWrap>
+            <Box>
               {obj.name}
-            </Typography>
+            </Box>
             </ListItemText>
           </ListItem>
         ))}

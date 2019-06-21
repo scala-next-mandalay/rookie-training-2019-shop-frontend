@@ -2,6 +2,7 @@ const initialState = {
   rows: [],
   totalQuantity: 0,
   maxQuantity: 0,
+  totalPrice: 0,
 }
 
 //=============================================================================
@@ -27,23 +28,35 @@ export const　cartReducer = (state = initialState, action) => {
 
 const _updateState = (state) => {
   const newState = {...state}
+  newState.rows = []
 
   const jsonData = localStorage.getItem('cart')
   if (jsonData) {
     newState.rows = JSON.parse(jsonData)
   }
+  
 
   let totalQuantity = 0
   let maxQuantity = 0
+  let totalPrice = 0
   for (const row of newState.rows) {
+    //calcurate about quantity
     const qty = row.quantity
     totalQuantity += qty
     if (qty > maxQuantity) {
       maxQuantity = qty
     }
+
+    //Add subtotal column here.
+    row.subTotal = row.price * qty
+
+    //calcurate total price
+    totalPrice += row.subTotal
+    
   }
   newState.totalQuantity = totalQuantity
   newState.maxQuantity = maxQuantity
+  newState.totalPrice = totalPrice
 
   return newState
 }

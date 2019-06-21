@@ -4,14 +4,14 @@ import Amplify from 'aws-amplify'
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import theme from '../theme'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import Header from './Header'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import { IntlProvider } from "react-intl"
 import { chooseLocale } from '../locations'
-import ItemList from '../containers/ItemList'
 import Cart from './Cart'
-import { makeStyles } from '@material-ui/core/styles'
-
+import Shop from './Shop'
+import Auth from './Auth'
+import { withAuthenticator } from 'aws-amplify-react'
+import Auth from '@aws-amplify/auth';
 
 Amplify.configure({
   Auth: {
@@ -22,61 +22,33 @@ Amplify.configure({
   }
 });
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-  },
-  content: {
-    flexGrow: 1,
-    [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(3),
-    },
-    [theme.breakpoints.down('xs')]: {
-      padding: theme.spacing(2),
-    },
-  },
-  spaceOfToolbar: {
-    height: theme.mixins.toolbar.minHeight,
-  }
-}));
-
-//<Route exact path="/login" render={() => <Authenticator />} />
-const App = ({locale, fetchCartData, fetchAllCategories}) => {
-  const classes = useStyles();
-
+const App = ({authState, authData, locale, fetchCartData, fetchAllCategories, setUser}) => {
   React.useEffect(() => {
     fetchCartData()
     fetchAllCategories()
+    console.log(authState)
+    console.log(authData)
+    if (authData && authData.attributes.email && authData.attributes.email_verified) {
+      setUser(authData.attributes.email)
+    }
   })
 
   return (
     <IntlProvider locale={locale} messages={chooseLocale(locale)}>
       <MuiThemeProvider theme={theme}>
         <Router>
-          <div className={classes.root}>
-            <CssBaseline />
-            
-            <Route exact path="/" render={() => {
-              return (
-                <React.Fragment>
-                  <Header />
-                  <div className={classes.content}>
-                    <div className={classes.spaceOfToolbar} />
-                    <ItemList />
-                  </div>
-                </React.Fragment>
-              )
-            }} />
+        <CssBaseline />
+        <Route exact path="/" render={() => {
+          return <Shop />
+        }} />
 
-            <Route exact path="/cart" render={() => {
-              return (
-                <div className={classes.content}>
-                  <div className={classes.spaceOfToolbar} />
-                  <Cart />
-                </div>
-              )
-            }} />
-          </div>
+        <Route exact path="/cart" render={() => {
+          return <Cart />
+        }} />
+    
+        <Route exact path="/login" render={() => {
+          return <Auth />
+        }} />
         </Router>
       </MuiThemeProvider>
     </IntlProvider>
@@ -89,4 +61,9 @@ App.propTypes = {
   fetchAllCategories: PropTypes.func,
 }
 
-export default App
+//export default App
+const signUpConfig = {
+  hiddenDefaults: ['phone_number'],
+  hideAllDefaults: true
+}
+export default withAuthenticator(App, {signUpConfig});

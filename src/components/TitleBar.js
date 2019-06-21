@@ -1,16 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import AppBar from '@material-ui/core/AppBar'
+import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import {FormattedMessage} from 'react-intl'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
-import Badge from '@material-ui/core/Badge';
-import { Link as RouterLink } from 'react-router-dom';
-
+import Badge from '@material-ui/core/Badge'
+import Box from '@material-ui/core/Box'
+import CartItemPropTypes from './CartItemPropTypes'
+import IconLinkButton from './IconLinkButton'
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -28,8 +30,19 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const TitleBar = ({cart, totalQuantity, handleDrawerToggle}) => {
+const TitleBar = ({cart, totalQuantity, handleDrawerToggle, userId, signOut}) => {
   const classes = useStyles()
+  
+  const authButton = (userId === null) ? (
+    <Button color="inherit" >
+      Login
+    </Button>
+  ) : (
+    <Button color="inherit" onClick={signOut}>
+      Logout
+    </Button>
+  )
+  
   return (
     <AppBar position="fixed" className={classes.appBar}>
       <Toolbar>
@@ -38,44 +51,42 @@ const TitleBar = ({cart, totalQuantity, handleDrawerToggle}) => {
           aria-label="Open drawer"
           edge="start"
           onClick={handleDrawerToggle}
-          hidden={(handleDrawerToggle === null)}
+          disabled={(handleDrawerToggle === null)}
           className={classes.menuButton}
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" noWrap>
-         <FormattedMessage id="Top.Title" />
-        </Typography>
 
-        <IconButton
-          color="inherit"
-          to="/cart"
-          component={RouterLink}
-          className={classes.rightIcon}
-        >
-          <Badge 
-            color="secondary" 
-            badgeContent={totalQuantity} 
-            invisible={cart.length > 0 ? false: true} 
-          >
-            <ShoppingCartIcon />
-          </Badge>
-        </IconButton>
+        <Box fontSize="h6.fontSize" flexGrow={1} ml={0}>
+          <FormattedMessage id="Top.Title" />
+        </Box>
+
+        <Box mr={1} ml="auto">
+          {authButton}
+        </Box>
+        
+
+        <Box mr={0} ml="auto">
+          <IconLinkButton to="/cart">
+            <Badge 
+              color="secondary" 
+              badgeContent={totalQuantity} 
+              invisible={cart.length > 0 ? false: true} 
+            >
+              <ShoppingCartIcon />
+            </Badge>
+          </IconLinkButton>
+        </Box>
+        
       </Toolbar>
     </AppBar>
   )
 }
 
 TitleBar.propTypes = {
-  cart: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    image: PropTypes.string,
-    quantity: PropTypes.number.isRequired,
-  }).isRequired).isRequired,
+  cart: PropTypes.arrayOf(CartItemPropTypes.isRequired).isRequired,
   totalQuantity: PropTypes.number.isRequired,
-  handleDrawerToggle: PropTypes,
+  handleDrawerToggle: PropTypes.func,
 }
 
 TitleBar.defaultProps = {

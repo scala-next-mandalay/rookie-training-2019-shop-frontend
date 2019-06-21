@@ -1,12 +1,8 @@
 import { connect } from 'react-redux'
 import CartTable from '../components/CartTable'
-import { deleteCartItem } from '../modules/cart'
 
 export default connect(
   (state) => ({
-    cart: state.cart.rows,
-  }),
-  (dispatch) => ({
-    deleteCartItem: (itemId) => dispatch(deleteCartItem(itemId)),
+    cart: state.cart.rows
   })
 )(CartTable)

@@ -5,7 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box'
 import { BASEURL_ITEM_IMAGES } from '../constants'
 import Button from '@material-ui/core/Button';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
@@ -39,34 +39,34 @@ const Item = ({ addCartItem, row }) => {
   const classes = useStyles()
   return (
     <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image={BASEURL_ITEM_IMAGES+row.image}
-          //image={"http://127.0.0.1/dummyImage.jpg"}
-          title={row.name}
-        />
-        <CardContent className={classes.cardContentArea}>
-          <Typography variant="h6" component="h2">
-            {row.name}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {row.price} Ks
-          </Typography>
-        </CardContent>
-        <CardActions className={classes.cardActionArea}>
-          <Button 
-            variant="outlined" 
-            fullWidth 
-            color="primary"
-            onClick={()=>{
-              addCartItem(row)
-            }}
-          >
-            Add to Cart
-            <AddShoppingCartIcon className={classes.rightIcon} />
-          </Button>
-        </CardActions>
-      </Card>
+      <CardMedia
+        className={classes.media}
+        image={BASEURL_ITEM_IMAGES+row.image}
+        //image={"http://127.0.0.1/dummyImage.jpg"}
+        title={row.name}
+      />
+      <CardContent className={classes.cardContentArea}>
+        <Box fontWeight={600}>
+          {row.name}
+        </Box>
+        <Box>
+          Price: {row.price} Ks
+        </Box>
+      </CardContent>
+      <CardActions className={classes.cardActionArea}>
+        <Button 
+          variant="outlined" 
+          fullWidth 
+          color="primary"
+          onClick={()=>{
+            addCartItem(row)
+          }}
+        >
+          Add to Cart
+          <AddShoppingCartIcon className={classes.rightIcon} />
+        </Button>
+      </CardActions>
+    </Card>
   )
 }
 

@@ -6,15 +6,13 @@ import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import CategoryList from '../containers/CategoryList'
+import ToolbarSpacer from './ToolbarSpacer'
 
 const drawerWidth = 220;
 
 const useStyles = makeStyles(theme => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-  },
-  spaceOfToolbar: {
-    height: theme.mixins.toolbar.minHeight,
   },
   drawer: {
     [theme.breakpoints.up('md')]: {
@@ -53,7 +51,7 @@ const DrawerMenu = ({mobileOpen, handleDrawerClose}) => {
         >
           <div>
             <IconButton onClick={handleDrawerClose}>
-            <CloseIcon />
+              <CloseIcon />
             </IconButton>
           </div>
           <CategoryList handleDrawerClose={handleDrawerClose} />
@@ -68,7 +66,7 @@ const DrawerMenu = ({mobileOpen, handleDrawerClose}) => {
             paper: classes.drawerPaper,
           }}
         >
-          <div className={classes.spaceOfToolbar} />
+          <ToolbarSpacer />
           <CategoryList handleDrawerClose={handleDrawerClose} />
         </Drawer> 
       </Hidden>

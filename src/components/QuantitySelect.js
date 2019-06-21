@@ -13,7 +13,6 @@ const QuantitySelect = ({ id, quantity, maxQuantity, changeQuantity }) => {
     <NativeSelect
       value={quantity}
       onChange={(event) => changeQuantity(id, event.target.value)}
-      //input={<Input name="age" id="age-native-helper" />}
     >
       {options}
     </NativeSelect>
