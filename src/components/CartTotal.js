@@ -1,11 +1,6 @@
-import React from 'react';
+import React from 'react'
 import PropTypes from 'prop-types'
-import Button from '@material-ui/core/Button'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import CardActions from '@material-ui/core/CardActions'
-import Box from '@material-ui/core/Box'
-import Link from '@material-ui/core/Link'
+import { Box, Card, CardContent, CardActions, Button, Link } from '@material-ui/core'
 import { Link as RouterLink } from 'react-router-dom'
 
 const CartTotal = ({totalPrice}) => {

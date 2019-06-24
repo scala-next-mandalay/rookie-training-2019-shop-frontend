@@ -1,31 +1,35 @@
-import React from 'react';
-import Container from '@material-ui/core/Container';
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box, Grid, Container, Hidden } from '@material-ui/core'
 import CartTable from '../containers/CartTable'
 import CartTotal from '../containers/CartTotal'
 import TitleBar from '../containers/TitleBar'
-import Grid from '@material-ui/core/Grid'
 import ToolbarSpacer from './ToolbarSpacer'
-import Box from '@material-ui/core/Box'
-import Hidden from '@material-ui/core/Hidden'
+
+const useStyles = makeStyles(theme => ({
+  container: {
+    display: 'flex',
+  },
+  gridCartTable: {
+    display: 'flex',
+  }
+}))
 
 const Cart = () => {
+  const classes = useStyles()
   return (
     <React.Fragment>
       <TitleBar />
-      <Container maxWidth="lg">
-        <ToolbarSpacer />
-        <Box display="flex" flexDirection="row">
-
+      <ToolbarSpacer />
+      <Container maxWidth="lg" className={classes.container}>
         <Grid container>
-          <Grid item xs={12} sm={12} md={9}>
-            <Box display="flex" flexDirection="row">
-              <Box flexGrow={1}>
-                <CartTable/>
-              </Box>
-              <Hidden smDown>
-                <Box mx={1} />
-              </Hidden>
-            </Box>            
+          <Grid item xs={12} sm={12} md={9} className={classes.gridCartTable}>
+            <Box flexGrow={1}>
+              <CartTable/>
+            </Box>
+            <Hidden smDown>
+              <Box mx={1} />
+            </Hidden>
           </Grid>
           <Hidden mdUp>
             <Grid item xs={12}><Box my={2} /></Grid>
@@ -34,10 +38,9 @@ const Cart = () => {
             <CartTotal/>
           </Grid>
         </Grid>
-        </Box>
       </Container>
     </React.Fragment>
   )
 }
 
-export default Cart;
+export default Cart

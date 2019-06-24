@@ -1,39 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Box from '@material-ui/core/Box'
+import { makeStyles } from '@material-ui/core/styles'
+import { Box, Card, CardMedia, CardContent, CardActions, Button } from '@material-ui/core'
 import { BASEURL_ITEM_IMAGES } from '../constants'
-import Button from '@material-ui/core/Button';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { AddShoppingCart as AddShoppingCartIcon } from '@material-ui/icons'
 
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 600,
-    margin: theme.spacing(1),
+    margin: theme.spacing(2),
   },
   media: {
     height: 0,
-    //paddingTop: '56.25%', // 16:9
     paddingTop: '128%',
   },
-  rightIcon: {
-    marginLeft: theme.spacing(1),
+  cardContent: {
+    margin: theme.spacing(1),
   },
-  cardContentArea: {
-    marginTop: theme.spacing(1),
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
+  cardActions: {
+    margin: theme.spacing(1),
   },
-  cardActionArea: {
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-  },
-}));
+}))
 
 const Item = ({ addCartItem, row }) => {
   const classes = useStyles()
@@ -42,10 +29,9 @@ const Item = ({ addCartItem, row }) => {
       <CardMedia
         className={classes.media}
         image={BASEURL_ITEM_IMAGES+row.image}
-        //image={"http://127.0.0.1/dummyImage.jpg"}
         title={row.name}
       />
-      <CardContent className={classes.cardContentArea}>
+      <CardContent className={classes.cardContent}>
         <Box fontWeight={600}>
           {row.name}
         </Box>
@@ -53,7 +39,7 @@ const Item = ({ addCartItem, row }) => {
           Price: {row.price} Ks
         </Box>
       </CardContent>
-      <CardActions className={classes.cardActionArea}>
+      <CardActions className={classes.cardActions}>
         <Button 
           variant="outlined" 
           fullWidth 
@@ -62,8 +48,8 @@ const Item = ({ addCartItem, row }) => {
             addCartItem(row)
           }}
         >
-          Add to Cart
-          <AddShoppingCartIcon className={classes.rightIcon} />
+          <Box mr={1}>Add to Cart</Box>
+          <AddShoppingCartIcon />
         </Button>
       </CardActions>
     </Card>

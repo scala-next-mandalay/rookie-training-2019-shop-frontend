@@ -1,187 +1,156 @@
-import React from 'react';
+import React from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import CardMedia from '@material-ui/core/CardMedia'
+import { Box, Grid, Paper, CardMedia, Divider, Hidden } from '@material-ui/core'
 import { BASEURL_ITEM_IMAGES } from '../constants'
 import QuantitySelect from '../containers/QuantitySelect'
 import CartItemPropTypes from './CartItemPropTypes'
-import Grid from '@material-ui/core/Grid'
-import Divider from '@material-ui/core/Divider'
-import Hidden from '@material-ui/core/Hidden'
-import Box from '@material-ui/core/Box'
 import DeleteCartItemLink from '../containers/DeleteCartItemLink'
+const uuidv1 = require('uuid/v1');
 
 const useStyles = makeStyles(theme => ({
-  gridRight: {
-    margin: 'auto',
-    textAlign: 'right',
-    paddingTop: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
+  gridRow: {
+    padding: theme.spacing(2),
   },
-  gridLeft: {
-    margin: 'auto',
-    textAlign: 'left',
-    paddingTop: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
-  },
-  descContainer: {
+  gridCell: {
     display: 'flex',
   },
-  descImagePC: {
+  imagePC: {
     width: 50,
     height: 64
   },
-  descImageMobile: {
+  imageMobile: {
     height: 0,
     paddingTop: '128%',
   },
-  descTitle: {
+  paperMobile: {
     display: 'flex',
-    flexDirection: 'column',
-    margin: 'auto',
-    marginLeft: theme.spacing(2),
+    flexDirection: 'row',
+    marginTop: theme.spacing(2),
+    padding: theme.spacing(2),
   },
-  deleteLink: {
-    marginTop: theme.spacing(1),
-  },
-  rightItem: {
-    paddingLeft: theme.spacing(1),
-  }
 }));
 
 const CartTable = ({ cart }) => {
   const classes = useStyles()
+  
+  const addDivider = (rows) => {
+    rows.push(<Grid key={uuidv1()} item xs={12}><Divider /></Grid>)
+  }
 
   //componet list for PC
   const tableRows = [] //for PC
   tableRows.push(
-    <Grid key={0} container>
-      <Grid item xs={4}>
-        <Box textAlign="left" my={2} ml={2}>Desc</Box>
+    <Grid key={uuidv1()} container className={classes.gridRow}>
+      <Grid item xs={4} className={classes.gridCell}>
+        <Box ml={0} my="auto" flexGrow={1}>Desc</Box>
       </Grid>
-      <Grid item xs={2}>
-        <Box textAlign="right" my={2}>@ (Ks)</Box>
+      <Grid item xs={2} className={classes.gridCell}>
+        <Box ml="auto" mr={0} my="auto">@ (Ks)</Box>
       </Grid>
-      <Grid item xs={2}>
-        <Box textAlign="right" my={2}>Qty.</Box>
+      <Grid item xs={2} className={classes.gridCell}>
+        <Box ml="auto" mr={0} my="auto">Qty.</Box>
       </Grid>
-      <Grid item xs={2}>
-        <Box textAlign="right" my={2} mr={2}>Price (Ks)</Box>
+      <Grid item xs={2} className={classes.gridCell}>
+        <Box ml="auto" mr={0} my="auto">Price (Ks)</Box>
       </Grid>
-      <Grid item xs={2}>
-        <Box m={1} />
-      </Grid>
-      <Grid item xs={12}><Divider /></Grid>
+      <Grid item xs={2} className={classes.gridCell} />
     </Grid>
   )
+  addDivider(tableRows)
 
   //componet list for Mobile
   const paperRows = [] //for Mobile
 
   //loop per cartItem
   cart.forEach((row, i) => {
-    const divider = (i + 1 < cart.length) ? (<Grid item xs={12}><Divider /></Grid>) : null
-
     //rows for PC
     tableRows.push(
-      <Grid container key={row.id}>
-        <Grid item xs={4}>
-          <Box display="flex" flexDirection="row" pl={2} py={1}>
-            <CardMedia
-              className={classes.descImagePC}
-              image={BASEURL_ITEM_IMAGES+row.image}
-              //image={"http://127.0.0.1/dummyImage.jpg"}
-              title={row.name}
-            />
-            <Box textAlign="left" ml={2} my="auto" fontWeight={600}>
-              {row.name}
-            </Box>  
-          </Box>
-          
-        </Grid>
-        <Grid item xs={2} >
-          <Box display="flex" height="100%">
-            <Box textAlign="right" my="auto" ml="auto" mr={0}>
-              {row.price}
-            </Box>  
-          </Box>   
-        </Grid>
-        <Grid item xs={2}>
-          <Box display="flex" height="100%">
-            <Box my="auto" ml="auto" mr={0}>
-              <Box pl="auto">
-                <QuantitySelect id={row.id} quantity={row.quantity} />
-              </Box>
-            </Box>
+      <Grid container key={row.id} className={classes.gridRow}>
+        <Grid item xs={4} className={classes.gridCell}>
+          <CardMedia
+            className={classes.imagePC}
+            image={BASEURL_ITEM_IMAGES+row.image}
+            title={row.name}
+          />
+          <Box ml={2} my="auto" fontWeight={600}>
+            {row.name}
           </Box>
         </Grid>
-        <Grid item xs={2} className={classes.gridRight}>
-          <Box textAlign="right" fontWeight={600}>
+        <Grid item xs={2} className={classes.gridCell}>
+          <Box my="auto" ml="auto" mr={0}>
+            {row.price}
+          </Box>
+        </Grid>
+        <Grid item xs={2} className={classes.gridCell}>
+          <Box my="auto" ml="auto" mr={0}>
+            <QuantitySelect id={row.id} quantity={row.quantity} />
+          </Box>
+        </Grid>
+        <Grid item xs={2} className={classes.gridCell}>
+          <Box my="auto" ml="auto" mr={0} fontWeight={600}>
             {row.subTotal}
           </Box>
         </Grid>
-        <Grid item xs={2} className={classes.gridRight}>
-          <DeleteCartItemLink id={row.id} />
+        <Grid item xs={2} className={classes.gridCell}>
+          <Box m="auto">
+            <DeleteCartItemLink id={row.id} />
+          </Box>
         </Grid>
-        {divider}
       </Grid>
     )
+    
+    //Add devider except last item.
+    if (i + 1 < cart.length) {
+      addDivider(tableRows)
+    }
 
     //rows for Mobile
     paperRows.push(
-      <Grid container key={row.id}>
+      <Paper key={'XXX'+row.id} className={classes.paperMobile}>
         <Grid item xs={4}>
-          <Box m={2}>
-            <CardMedia
-              className={classes.descImageMobile}
-              //image={BASEURL_ITEM_IMAGES+row.image}
-              image={"http://127.0.0.1/dummyImage.jpg"}
+          <CardMedia
+              className={classes.imageMobile}
+              image={BASEURL_ITEM_IMAGES+row.image}
               title={row.name}
             />
-          </Box>
         </Grid>
         <Grid item xs={8}>
-          <Box display="flex" height='100%'>
-            <Box flexGrow="1" my="auto">
-              <Box fontWeight={600} my={1} textAlign="left" >
-                {row.name}
+          <Box ml={2} display="flex" flexDirection="column" height="100%">
+            <Box fontWeight={600} ml={0} my="auto">
+              {row.name}
+            </Box>
+            <Box display="flex" my={1} flexDirection="row">
+              <Box fontWeight={600} textAlign="left" >
+                {row.subTotal} Ks
               </Box>
-              <Box display="flex" my={1} flexDirection="row">
-                <Box fontWeight={600} textAlign="left" >
-                  {row.subTotal} Ks
-                </Box>
-                <Box ml="auto" mr={2}>
-                  <DeleteCartItemLink id={row.id} />
-                </Box>
+              <Box ml="auto" mr={2}>
+                <DeleteCartItemLink id={row.id} />
               </Box>
-              <Box display="flex" my={1} flexDirection="row">
-                <QuantitySelect id={row.id} quantity={row.quantity} />
-                <Box textAlign="left">
-                  @{row.price} Ks
-                </Box>
+            </Box>
+            <Box display="flex" my={1} flexDirection="row">
+              <QuantitySelect id={row.id} quantity={row.quantity} />
+              <Box textAlign="left">
+                @{row.price} Ks
               </Box>
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={12}>{divider}</Grid> 
-      </Grid>
+      </Paper>
     )
   })
+  
+  
 
   return (
-    <Paper>
+    <React.Fragment>
       <Hidden smUp implementation="css">
       {paperRows}  
       </Hidden>
       <Hidden xsDown implementation="css">
-        {tableRows}
+        <Paper>{tableRows}</Paper>
       </Hidden>
-    </Paper>
+    </React.Fragment>
   )
 }
 

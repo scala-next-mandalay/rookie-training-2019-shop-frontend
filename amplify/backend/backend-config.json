@@ -1,0 +1,14 @@
+{
+	"auth": {
+		"2019shopfrontb7dc7353": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"storage": {
+		"2019ShopFront": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Box from '@material-ui/core/Box'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
+import { Box, List, ListItem, ListItemText } from '@material-ui/core'
 
 const CategoryList = ({ categories, setCategoryId, handleDrawerClose }) => {
   return (

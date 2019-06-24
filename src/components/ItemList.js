@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Box, Grid } from '@material-ui/core'
 import Item from '../containers/Item'
-import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
 import InfiniteScroll from 'react-infinite-scroller'
 import ItemPropTypes from './ItemPropTypes'
 

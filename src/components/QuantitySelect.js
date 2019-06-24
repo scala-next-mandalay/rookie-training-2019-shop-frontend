@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import NativeSelect from '@material-ui/core/NativeSelect';
+import { NativeSelect } from '@material-ui/core'
 
 const QuantitySelect = ({ id, quantity, maxQuantity, changeQuantity }) => {
   const options = []
