@@ -1,4 +1,4 @@
 const en = {
-  'Top.Title': 'The Art Shop',
+  'Top.Title': 'Rookie Training 2019',
 };
 export default en;

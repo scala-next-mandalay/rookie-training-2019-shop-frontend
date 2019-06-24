@@ -1,5 +1,5 @@
 const ja = {
-  'Top.Title': '絵画ショップ',
+  'Top.Title': '新人研修作品2019',
 };
 
 export default ja;

@@ -40,7 +40,7 @@ const TitleBar = ({cart, totalQuantity, handleDrawerToggle, signOut}) => {
           <MenuIcon />
         </IconButton>
 
-        <Box fontSize="h6.fontSize" flexGrow={1} ml={0}>
+        <Box fontSize={{xs:"subtitle1", sm:"h6.fontSize"}} flexGrow={1} ml={0}>
           <FormattedMessage id="Top.Title" />
         </Box>
 
