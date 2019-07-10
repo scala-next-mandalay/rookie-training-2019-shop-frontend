@@ -1,0 +1,229 @@
+.ho:hover{
+    color:#f90;
+}
+.ho{
+color:#9A7B66;
+font-family: play_fair,serif;
+font-size: 1.125em;
+letter-spacing: 2px;
+}
+.priceTxt{
+font-family: raleway_regular,sans-serif;
+font-size: 12px;
+color: #a07a63;
+letter-spacing: 2px;
+}
+.nameTxt{
+color: #352c2c;
+font-size: 1.125em;
+font-family: play_fair,serif;
+}
+.title{
+color: #352c2c;
+font-size: 1.185em;
+/*letter-spacing: 2px;*/
+}
+.responsive-image {
+  
+  width: 100%;
+ 
+}
+
+.responsive-image__image {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  display: inline-block;
+}
+
+.text{
+        position: absolute;
+        z-index: 1;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 25%;
+        text-align: center;
+        width: 60%; /* Set the width of the positioned div */
+        color: white;
+        text-shadow: 5px 9px 4px #9A7B66;
+    }
+.dialogStyle{
+  position:absolute;
+  margin:auto;
+   /*margin-right:40px;*/
+   top:0;
+   left:0;
+   width:50%;
+   height:90%;
+    
+  
+}
+
+.shopping_cart_style{
+  width :100%;
+  font-family: raleway_regular,sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  background:white;
+  height:40px;
+}
+.btn_Purchase{
+  margin-top:15px;
+  border-radius:2px;
+  margin-bottom:15px;
+}
+
+
+/*customerForm*/
+.title_Ship{
+   margin:10px 20px;
+   
+}
+.wrapper {
+  /*height: 100%;*/
+  /*width: 80%;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  margin-left:20px;
+   margin-right:20px;
+  background-color: #f2f2f2;
+}
+
+.form-wrapper {
+  /*width: 100%;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*padding: 20px 40px;*/
+  margin:0 10px;
+  border-radius: 10px;
+  /*box-shadow: 0px 10px 50px #555;*/
+  background: white,
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  color: #111;
+  font-weight: lighter;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+label {
+  font-size: 0.8em;
+  margin-bottom: 0.25em;
+  color: #222;
+  font-weight: lighter;
+}
+
+input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+}
+
+input::placeholder {
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: #999;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+  display: relative;
+}
+
+.firstName {
+  margin-right: 1%;
+}
+
+.lastName {
+  margin-left: 1%;
+}
+
+.firstName,
+.lastName,
+.email,
+.phone,
+.address1,
+.address2,
+.statetxt,
+.city,
+.country{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.firstName,
+.lastName,
+.date{
+  width: 49%;
+}
+
+.email,
+.phone,
+.address1,
+.address2,
+.statetxt,
+.city,
+.country{
+  width: 100%;
+}
+
+.createAccount {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createAccount button {
+  background-color: #9A7B66;
+  color: #fff;
+  border: 2px solid grey;
+  width: 100%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 2em;
+}
+
+.createAccount button:hover {
+  color: #9A7B66;
+  background-color: #fff;
+  border: 2px solid #9A7B66;
+}
+
+.createAccount small {
+  color: #999;
+  font-weight: lighter;
+}
+.txt3{
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #352c2c;
+font-size: 1.125em;
+font-family: play_fair,serif;
+}

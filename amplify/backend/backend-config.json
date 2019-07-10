@@ -1,13 +1,19 @@
 {
 	"auth": {
-		"2019shopfrontb7dc7353": {
+		"mbr2019shopfrontd577de1c": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation"
 		}
 	},
 	"storage": {
-		"2019ShopFront": {
+		"s3fea295b6": {
 			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
 			"providerPlugin": "awscloudformation"
 		}
 	}

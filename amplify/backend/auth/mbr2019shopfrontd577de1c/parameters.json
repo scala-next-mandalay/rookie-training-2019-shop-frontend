@@ -1,12 +1,12 @@
 {
-    "identityPoolName": "2019shopfrontb7dc7353_identitypool_b7dc7353",
+    "identityPoolName": "mbr2019shopfrontd577de1c_identitypool_d577de1c",
     "allowUnauthenticatedIdentities": false,
-    "lambdaLogPolicy": "2019sh_b7dc7353_lambda_log_policy",
-    "openIdLambdaRoleName": "2019sh_b7dc7353_openid_lambda_role",
-    "openIdRolePolicy": "2019sh_b7dc7353_openid_pass_role_policy",
-    "openIdLambdaIAMPolicy": "2019sh_b7dc7353_openid_lambda_iam_policy",
-    "openIdLogPolicy": "2019sh_b7dc7353_openid_lambda_log_policy",
-    "userPoolName": "2019shopfrontb7dc7353_userpool_b7dc7353",
+    "lambdaLogPolicy": "mbr201_d577de1c_lambda_log_policy",
+    "openIdLambdaRoleName": "mbr201_d577de1c_openid_lambda_role",
+    "openIdRolePolicy": "mbr201_d577de1c_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "mbr201_d577de1c_openid_lambda_iam_policy",
+    "openIdLogPolicy": "mbr201_d577de1c_openid_lambda_log_policy",
+    "userPoolName": "mbr2019shopfrontd577de1c_userpool_d577de1c",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -14,9 +14,9 @@
     "mfaTypes": [
         "SMS Text Message"
     ],
-    "roleName": "2019shb7dc7353_sns-role",
-    "roleExternalId": "2019shb7dc7353_role_external_id",
-    "policyName": "2019shb7dc7353-sns-policy",
+    "roleName": "mbr201d577de1c_sns-role",
+    "roleExternalId": "mbr201d577de1c_role_external_id",
+    "policyName": "mbr201d577de1c-sns-policy",
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
     "emailVerificationSubject": "Your verification code",
@@ -27,7 +27,7 @@
     "requiredAttributes": [
         "email"
     ],
-    "userpoolClientName": "2019shb7dc7353_app_client",
+    "userpoolClientName": "mbr201d577de1c_app_client",
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
@@ -36,15 +36,15 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "mfaLambdaRole": "2019shb7dc7353_totp_lambda_role",
-    "mfaLambdaLogPolicy": "2019shb7dc7353_totp_lambda_log_policy",
-    "mfaPassRolePolicy": "2019shb7dc7353_totp_pass_role_policy",
-    "mfaLambdaIAMPolicy": "2019shb7dc7353_totp_lambda_iam_policy",
-    "userpoolClientLambdaRole": "2019shb7dc7353_userpoolclient_lambda_role",
-    "userpoolClientLogPolicy": "2019shb7dc7353_userpoolclient_lambda_log_policy",
-    "userpoolClientLambdaPolicy": "2019shb7dc7353_userpoolclient_lambda_iam_policy",
+    "mfaLambdaRole": "mbr201d577de1c_totp_lambda_role",
+    "mfaLambdaLogPolicy": "mbr201d577de1c_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "mbr201d577de1c_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "mbr201d577de1c_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "mbr201d577de1c_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "mbr201d577de1c_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "mbr201d577de1c_userpoolclient_lambda_iam_policy",
     "userpoolClientSetAttributes": false,
-    "resourceName": "2019shopfrontb7dc7353",
+    "resourceName": "mbr2019shopfrontd577de1c",
     "authSelections": "identityPoolAndUserPool",
     "authRoleName": {
         "Ref": "AuthRoleName"
