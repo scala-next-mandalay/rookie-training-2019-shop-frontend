@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, List, ListItem, ListItemText } from '@material-ui/core'
+import './style.css'
 
 const CategoryList = ({ categories, setCategoryId, handleDrawerClose }) => {
   return (
     <List>
         {categories.map((obj) => (
           <ListItem button key={obj.id} onClick={()=>{
-            handleDrawerClose()
+           handleDrawerClose()
             setCategoryId(obj.id)
           }}  >
             <ListItemText>
-            <Box>
+            <Box fontWeight={600} color='#9A7B66' fontStyle='italic' class='ho'>
               {obj.name}
             </Box>
             </ListItemText>

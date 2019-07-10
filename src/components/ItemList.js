@@ -5,8 +5,10 @@ import Item from '../containers/Item'
 import InfiniteScroll from 'react-infinite-scroller'
 import ItemPropTypes from './ItemPropTypes'
 
+
 const ItemList = ({ items, fetchAllItems, noMoreFetch }) => {
   return (
+   
     <InfiniteScroll
         pageStart={0}
         loadMore={fetchAllItems}
@@ -14,16 +16,24 @@ const ItemList = ({ items, fetchAllItems, noMoreFetch }) => {
         initialLoad={true}
         loader={<div className="loader" key={0}></div>}
     >
-      <Box maxWidth={1400}>
+    
+      <Box maxWidth={1300}  justify="center" mx="auto">
         <Grid container>{
           items.map(item => (
-            <Grid key={item.id} item xs={12} sm={4} lg={3}>
+         
+         
+            <Grid key={item.id} item xs={12} sm={4} lg={4} md={4}>
               <Item key={item.id} row={item} />
             </Grid>
+        
           ))
         }</Grid>
       </Box>
+      
+    
+      
     </InfiniteScroll>
+ 
   )
 }
 

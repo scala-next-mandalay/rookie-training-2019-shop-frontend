@@ -5,6 +5,7 @@ export default connect(
   (state) => ({
     cart: state.cart.rows,
     totalQuantity:  state.cart.totalQuantity,
+     totalPrice: state.cart.totalPrice
   }),
   null
 )(TitleBar)

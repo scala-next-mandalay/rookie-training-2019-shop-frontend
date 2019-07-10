@@ -8,6 +8,8 @@ import { IntlProvider } from "react-intl"
 import { chooseLocale } from '../locations'
 import Cart from './Cart'
 import Shop from './Shop'
+ import CustomerForm from './CustomerForm'
+//import CartTable from '../containers/CartTable'
 
 const App = ({locale, fetchCartData, fetchAllCategories, setUser}) => {
   React.useEffect(() => {
@@ -26,6 +28,12 @@ const App = ({locale, fetchCartData, fetchAllCategories, setUser}) => {
           <Route exact path="/cart" render={() => {
             return <Cart />
           }} />
+          <Route exact path="/checkout" render={() => {
+            return <CustomerForm />
+          }} />
+         
+         
+         
         </Router>
       </MuiThemeProvider>
     </IntlProvider>

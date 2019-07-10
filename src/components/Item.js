@@ -4,11 +4,14 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Box, Card, CardMedia, CardContent, CardActions, Button } from '@material-ui/core'
 import { BASEURL_ITEM_IMAGES } from '../constants'
 import { AddShoppingCart as AddShoppingCartIcon } from '@material-ui/icons'
+import './style.css'
 
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 600,
     margin: theme.spacing(2),
+    border:'1px solid #9A7B66'
+   
   },
   media: {
     height: 0,
@@ -32,10 +35,10 @@ const Item = ({ addCartItem, row }) => {
         title={row.name}
       />
       <CardContent className={classes.cardContent}>
-        <Box fontWeight={600}>
+        <Box fontWeight={600} class="nameTxt">
           {row.name}
         </Box>
-        <Box>
+        <Box class="priceTxt">
           Price: {row.price} Ks
         </Box>
       </CardContent>

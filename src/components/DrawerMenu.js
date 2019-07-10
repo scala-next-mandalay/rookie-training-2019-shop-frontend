@@ -4,20 +4,20 @@ import { makeStyles, useTheme } from '@material-ui/core/styles'
 import { Box, Drawer, Hidden, IconButton, Divider } from '@material-ui/core'
 import { Close as CloseIcon } from '@material-ui/icons'
 import CategoryList from '../containers/CategoryList'
-import ToolbarSpacer from './ToolbarSpacer'
+// import ToolbarSpacer from './ToolbarSpacer'
 
-const drawerWidth = 220;
+const drawerWidth = 300;
 
 const useStyles = makeStyles(theme => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
   },
-  drawer: {
-    [theme.breakpoints.up('md')]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
-  },
+  // drawer: {
+  //   [theme.breakpoints.up('xs')]: {
+  //     width: drawerWidth,
+  //     flexShrink: 0,
+  //   },
+  // },
 }));
 
 const DrawerMenu = ({mobileOpen, handleDrawerClose}) => {
@@ -28,7 +28,7 @@ const DrawerMenu = ({mobileOpen, handleDrawerClose}) => {
     <nav className={classes.drawer}>
       <Hidden mdUp implementation="css">
         <Drawer
-          variant="temporary"
+           variant="temporary"
           anchor={theme.direction === 'rtl' ? 'right' : 'left'}
           open={mobileOpen}
           onClose={handleDrawerClose}
@@ -46,17 +46,7 @@ const DrawerMenu = ({mobileOpen, handleDrawerClose}) => {
         </Drawer>
       </Hidden>
 
-      <Hidden smDown implementation="css">
-        <Drawer
-          className={classes.drawer}
-          variant="permanent"
-        >
-          <Box width={drawerWidth}>
-            <ToolbarSpacer />
-          </Box>
-          <CategoryList handleDrawerClose={handleDrawerClose} />
-        </Drawer> 
-      </Hidden>
+      
     </nav>
   )
 }

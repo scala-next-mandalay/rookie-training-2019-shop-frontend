@@ -7,6 +7,7 @@ const Header = () => {
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
+    //setMobileOpen(true)
   }
 
   const handleDrawerClose = () => {
@@ -15,7 +16,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <TitleBar handleDrawerToggle={handleDrawerToggle} />
+      <TitleBar handleDrawerToggle={handleDrawerToggle} showNav={true} showMenu={true} />
       <DrawerMenu mobileOpen={mobileOpen} handleDrawerClose={handleDrawerClose} />
     </React.Fragment>
   )
