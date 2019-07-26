@@ -52,7 +52,7 @@ const OrderDetail = ({orderitems,items, selectedOrder}) => {
      
     <div>
        <div className="title_Ship">
-           <Grid  mt={1} mb={1}  className="nameTxt" display="flex" flexDirection="column">
+           <Grid  mt={1} mb={1}  className="nameTxt">
                <Grid item xs={12} sm={12} ml={1} className="txt4">Order Id- {selectedOrder===null?null:selectedOrder.id}</Grid>
                 <Grid container  mt={1} mb={1}  className="priceTxt" >
                 <Grid item xs={12} sm={6} >Order Date- {selectedOrder===null?null:selectedOrder.created_at}</Grid>
@@ -135,7 +135,7 @@ const OrderDetail = ({orderitems,items, selectedOrder}) => {
   return(
  
       <Container maxWidth="lg">
-            <TitleBar showMenu={false} showIcon={false}/>
+            <TitleBar showMenu={false} showIcon={false} showNav={false} />
             <ToolbarSpacer/>
             <Box display="flex" >
             <Box ml="auto" my="auto" mr={3} mt={3}>

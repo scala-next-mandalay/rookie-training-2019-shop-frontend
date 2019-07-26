@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,totalPrice,showIcon}) => {
+const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,showIcon}) => {
   const classes = useStyles();
   const [state, setState] = React.useState({
     right: false
@@ -99,7 +99,7 @@ const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,to
           {showMenu ? <MenuIcon />:null}
         </IconButton>
 
-        <Box fontSize={{xs:"subtitle1", sm:"h6.fontSize"}} ml={0} display="flex" flexDirection="row" class="title">
+        <Box fontSize={{xs:"subtitle1", sm:"h6.fontSize"}} ml={0} display="flex" flexDirection="row" className="title">
           <FormattedMessage id="Top.Title" />
         </Box>
          <Box>
@@ -134,7 +134,6 @@ TitleBar.propTypes = {
   totalQuantity: PropTypes.number.isRequired,
   showNav: PropTypes.bool.isRequired,
   showMenu: PropTypes.bool.isRequired,
-   totalPrice: PropTypes.number.isRequired,
    showIcon: PropTypes.bool.isRequired,
 };
 

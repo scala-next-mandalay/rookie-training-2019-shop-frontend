@@ -10,13 +10,13 @@ const NavTesting = ({ categories, setCategoryId, handleDrawerClose }) => {
       <Hidden only={["sm", "xs","md"]}>
          <Box display="flex" flexDirection="row" p={1} m={1} >
         {categories.map((obj) => (
-          <Box button key={obj.id} onClick={()=>{
+          <Box key={obj.id} onClick={()=>{
             // handleDrawerClose()
             setCategoryId(obj.id);
           }}  >
                         <div style={{ width: '100%' }}>
             <Box display="flex" flexDirection="row" p={1} m={1}>
-             <Box p={1} bgcolor="none" marginLeft="3px" color="#000000" class="ho">
+             <Box p={1} bgcolor="none" marginLeft="3px" color="#000000" className="ho">
                     {obj.name}
                 </Box>
        

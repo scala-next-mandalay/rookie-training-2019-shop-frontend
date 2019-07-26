@@ -18,6 +18,8 @@ letter-spacing: 1px;
 color: #352c2c;
 font-size: 1.125em;
 font-family: play_fair,serif;
+display: 'flex';
+flex-direction: 'column';
 }
 .title{
 color: #352c2c;

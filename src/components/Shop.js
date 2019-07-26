@@ -8,10 +8,10 @@ const Shop = () => {
   return (
     <Box display="flex" flexDirection="row">
       <Header />
-      <Box display="flex" flexDirection="column" class="responsive-image">
+      <Box display="flex" flexDirection="column" className="responsive-image">
         <Box>
-         <img src={bg}  alt="Shop Happy " containerFluid class="responsive-image__image"/>
-         <div class="text">
+         <img src={bg}  alt="Shop Happy " className="responsive-image__image"/>
+         <div className="text">
             <h1>Welcome to .....</h1>
           </div>
         </Box>

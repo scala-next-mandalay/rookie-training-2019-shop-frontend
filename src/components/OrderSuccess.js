@@ -28,8 +28,15 @@ const useStyles = makeStyles(theme => ({
   
 
 }));
-const OrderSuccess = ({orders,cart,requestParams,showMenu,totalPrice,totalQuantity}) => {
+const OrderSuccess = ({postResultObj}) => {
+    console.log('AAAA', postResultObj)
   const classes = useStyles();
+  
+  if (!postResultObj) {
+      return (<div>...loading</div>)
+  }
+  
+  
   return(
       <Container maxWidth="lg">
       <TitleBar showMenu={false} showIcon={false}/>
@@ -48,7 +55,7 @@ const OrderSuccess = ({orders,cart,requestParams,showMenu,totalPrice,totalQuanti
             >
             View Order History
        </Link>
-      {requestParams===null?null:
+      
      
       <Paper className={classes.root}>
       <div className="title_Ship">
@@ -70,23 +77,18 @@ const OrderSuccess = ({orders,cart,requestParams,showMenu,totalPrice,totalQuanti
         </TableHead>
         <TableBody>
             <TableRow >
-             <TableCell align="left" className='priceTxt'>{requestParams === null ? null:requestParams.first_name}</TableCell>
-             <TableCell align="left" className='priceTxt'>{requestParams === null ? null:requestParams.last_name}</TableCell>
-             <TableCell align="left" className='priceTxt'>{requestParams !== null ? requestParams.address1 : null}</TableCell>
-             <TableCell align="left" className='priceTxt'>{requestParams !== null ? requestParams.address2 : null}</TableCell>
-             <TableCell align="left" className='priceTxt'>{requestParams !== null ? requestParams.country : null}</TableCell>
-             <TableCell align="left" className='priceTxt'>{requestParams !== null ? requestParams.state : null}</TableCell>
-             <TableCell align="left" className='priceTxt'>{requestParams !== null ? requestParams.city : null}</TableCell>
+             <TableCell align="left" className='priceTxt'>{postResultObj.first_name}</TableCell>
+             <TableCell align="left" className='priceTxt'>{postResultObj.last_name}</TableCell>
+             <TableCell align="left" className='priceTxt'>{postResultObj.address1}</TableCell>
+             <TableCell align="left" className='priceTxt'>{postResultObj.address2}</TableCell>
+             <TableCell align="left" className='priceTxt'>{postResultObj.country}</TableCell>
+             <TableCell align="left" className='priceTxt'>{postResultObj.state}</TableCell>
+             <TableCell align="left" className='priceTxt'>{postResultObj.city}</TableCell>
             </TableRow>
          <Hidden only={["xs","sm"]}>
-          <TableRow >
-            <TableCell rowSpan={6} />
-            <TableCell colSpan={5}>Total Quantity(items)</TableCell>
-            <TableCell align="left"><Box className='priceTxt'>{totalQuantity} Items</Box></TableCell>
-          </TableRow>
           <TableRow className='priceTxt'>
             <TableCell colSpan={5}>Subtotal</TableCell>
-            <TableCell align="left"><Box className='priceTxt'>{totalPrice} MMK</Box></TableCell>
+            <TableCell align="left"><Box className='priceTxt'>{postResultObj.total_price} MMK</Box></TableCell>
           </TableRow>
           <TableRow>
             <TableCell colSpan={5}>Sale Tax(0%)</TableCell>
@@ -94,23 +96,16 @@ const OrderSuccess = ({orders,cart,requestParams,showMenu,totalPrice,totalQuanti
           </TableRow>
           <TableRow>
             <TableCell colSpan={5}>Total</TableCell>
-            <TableCell align="left"><Box className='priceTxt'>{totalPrice} MMK</Box></TableCell>
+            <TableCell align="left"><Box className='priceTxt'>{postResultObj.total_price} MMK</Box></TableCell>
           </TableRow>
          </Hidden>
         </TableBody>
       </Table>
        <Hidden mdUp>
         <Box display="flex" flexDirection="column" marginTop="20px" backgroundColor="#f2f2f2">
-          <Paper>
-            <Box  mt={1} mb={1} ml={2} textAlign="left" className="nameTxt" mr={0} display="flex">
-            <Grid className="priceTxt" item xs={6} sm={6}> Total Quantity(Items) :</Grid> <Grid xs={6} sm={6} className={classes.gridTotalPrice}> {totalQuantity} Items</Grid>
-            </Box>
-          </Paper>
-        </Box>
-        <Box display="flex" flexDirection="column" marginTop="20px" backgroundColor="#f2f2f2">
            <Paper>
             <Box  mt={1} mb={1} ml={2} textAlign="left" className="nameTxt" mr={0} display="flex">
-            <Grid className="priceTxt" item xs={6} sm={6}> Subtotal :</Grid> <Grid xs={6} sm={6} className={classes.gridTotalPrice}> {totalPrice}MMK</Grid>
+            <Grid className="priceTxt" item xs={6} sm={6}> Subtotal :</Grid> <Grid xs={6} sm={6} className={classes.gridTotalPrice}> {postResultObj.total_price}MMK</Grid>
             </Box>
           </Paper>
         <Box display="flex" flexDirection="column" marginTop="20px" backgroundColor="#f2f2f2">
@@ -124,25 +119,20 @@ const OrderSuccess = ({orders,cart,requestParams,showMenu,totalPrice,totalQuanti
           <Box display="flex" flexDirection="column" marginTop="20px" backgroundColor="#f2f2f2">
            <Paper>
             <Box  mt={1} mb={1} ml={2} textAlign="left" className="nameTxt" mr={0} display="flex">
-            <Grid className="priceTxt" item xs={6} sm={6}> Total :</Grid> <Grid xs={6} sm={6} className={classes.gridTotalPrice}> {totalPrice}MMK</Grid>
+            <Grid className="priceTxt" item xs={6} sm={6}> Total :</Grid> <Grid xs={6} sm={6} className={classes.gridTotalPrice}> {postResultObj.total_price}MMK</Grid>
             </Box>
           </Paper>
          </Box>
         </Hidden>
-        </Paper>}
+        </Paper>
       </Container>
   );
  
 };
 OrderSuccess.propTypes = {
-  totalPrice: PropTypes.number.isRequired,
-  totalQuantity: PropTypes.number.isRequired,
+  postResultObj: PropTypes.object.isRequired,
 
-};
-OrderSuccess.propTypes = {
-  orders: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-  }).isRequired).isRequired
+
 };
 
 export default OrderSuccess;

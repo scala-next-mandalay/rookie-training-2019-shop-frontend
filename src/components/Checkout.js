@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity}) => {
+const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity, postOrder}) => {
    const classes = useStyles();
    const validationSetting = {
     isEmpty: ['first_name', 'address1', 'country', 'city']
@@ -87,9 +87,13 @@ const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity}) => {
     setForm(newForm);
   };
   
+  const handleOrderSubmit = event => {
+    postOrder();
+  }
+  
   const handleSubmit = event => {
     event.preventDefault();
-      const errs = validateForm(validationSetting, form);
+    const errs = validateForm(validationSetting, form);
     if (errs) {
       setErrors(errs);
        if(form.first_name===""||form.last_name===""||form.address1===""||form.address2===""||form.country===""||form.state===""||form.city===""){
@@ -303,7 +307,7 @@ const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity}) => {
             variant="contained"
             color="primary"
             className={classes.submitButton}
-            // onClick={handleSubmit}
+            onClick={handleOrderSubmit}
             to="/checkoutconfirm"
             component={RouterLink}
           >
@@ -316,8 +320,10 @@ const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity}) => {
   );
   
   return (
-    <div maxWidth="lg">
-     <TitleBar showMenu={false} showIcon={true} />
+    <React.Fragment>
+    <TitleBar showMenu={false} showIcon={true} showNav={false} />
+
+     
       <ToolbarSpacer />
      <div className="title_Ship">
       <div className="ho">1. Shipping information</div>
@@ -350,13 +356,13 @@ const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity}) => {
         <Grid display="flex" flexDirection="row">
         <Grid item xs={12} sm={12} md={8} lg={8}>
         <CartTable showQty={true}/>
-          <Box display="flex" flexDirection="column" marginTop="20px" backgroundColor="#f2f2f2">
+          <Box display="flex" flexDirection="column" marginTop="20px" bgcolor="#f2f2f2">
           <Paper className={classes.gridPaper}>
           <Box  mt={1} mb={1} fontSize="h6.fontSize" textAlign="right" className="nameTxt" mr={0} display="flex">
-          <Grid className="nameTxt" item xs={8} sm={8}> Total Quantity(Items) :</Grid> <Grid xs={4} sm={4} className={classes.gridTotalPrice}> {totalQuantity}(Items)</Grid>
+          <Grid className="nameTxt" item xs={8} sm={8}> Total Quantity(Items) :</Grid> <Grid item xs={4} sm={4} className={classes.gridTotalPrice}> {totalQuantity}(Items)</Grid>
           </Box>
           <Box  mt={1} mb={1} fontSize="h6.fontSize" textAlign="right" className="nameTxt" mr={0} display="flex">
-          <Grid className="nameTxt" item xs={8} sm={8}> Total Price :</Grid> <Grid xs={4} sm={4} className={classes.gridTotalPrice}> {totalPrice}(MMK)</Grid>
+          <Grid className="nameTxt" item xs={8} sm={8}> Total Price :</Grid> <Grid item xs={4} sm={4} className={classes.gridTotalPrice}> {totalPrice}(MMK)</Grid>
           </Box>
         </Paper>
       </Box>  
@@ -364,7 +370,8 @@ const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity}) => {
        </Grid>
        </Grid>
         </div>
-    </div>
+
+    </React.Fragment>
     
   );
 }

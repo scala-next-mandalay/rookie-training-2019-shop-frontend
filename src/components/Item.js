@@ -35,10 +35,10 @@ const Item = ({ addCartItem, row }) => {
         title={row.name}
       />
       <CardContent className={classes.cardContent}>
-        <Box fontWeight={600} class="nameTxt">
+        <Box fontWeight={600} className="nameTxt">
           {row.name}
         </Box>
-        <Box class="priceTxt">
+        <Box className="priceTxt">
           Price: {row.price} Ks
         </Box>
       </CardContent>

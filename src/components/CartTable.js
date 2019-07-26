@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const CartTable = ({ cart,showMobile,showQty }) => {
+const CartTable = ({ cart, showQty }) => {
   const classes = useStyles();
   
   
@@ -57,8 +57,8 @@ const CartTable = ({ cart,showMobile,showQty }) => {
   const tableRows = []; //for PC
  
   tableRows.push(
-    <div className={classes.girdDv}>
-    <Grid key={uuidv1()} container className={classes.gridRow} variant='contained'>
+    <div key={uuidv1()}  className={classes.girdDv}>
+    <Grid container className={classes.gridRow} variant='contained'>
       <Grid item xs={3} className={classes.gridCell}>
         <Box ml="0" mr="auto" flexGrow={1} fontWeight={600} color='#cccccc' >Description</Box>
       </Grid>
@@ -97,12 +97,12 @@ const CartTable = ({ cart,showMobile,showQty }) => {
         
         </Grid>
          <Grid item xs={3} className={classes.gridCell}>
-          <Box ml="0" mr="auto" fontWeight={600} class='nameTxt'>
+          <Box ml="0" mr="auto" fontWeight={600} className='nameTxt'>
             {row.name}
           </Box>
         </Grid>
         <Grid item xs={2} className={classes.gridCell}>
-          <Box ml="0" mr="auto" class='priceTxt'>
+          <Box ml="0" mr="auto" className='priceTxt'>
             {row.price}
           </Box>
         </Grid>
@@ -172,9 +172,6 @@ const CartTable = ({ cart,showMobile,showQty }) => {
 
 CartTable.propTypes = {
   cart: PropTypes.arrayOf(CartItemPropTypes.isRequired).isRequired,
-  showMobile: PropTypes.bool.isRequired,
-
- 
 };
 
 export default CartTable;

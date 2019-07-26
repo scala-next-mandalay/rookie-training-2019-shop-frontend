@@ -3,16 +3,15 @@ import moment from 'moment';
 import axios from 'axios';
 
 const initialState = {
-  // postResultObj: null,
-   requestParams: null,
-   alreadyFetched: false,
-   rows: [],
-   selectedOrderId: null,
-   searchText: '',
-   clickedOrderId : '',
-   searchTextBegin:'',
-   searchTextEnd:''
-  
+  postResultObj: null,
+  requestParams: null,
+  alreadyFetched: false,
+  rows: [],
+  selectedOrderId: null,
+  searchText: '',
+  clickedOrderId : '',
+  searchTextBegin:'',
+  searchTextEnd:''
 };
 
 //=============================================================================
@@ -20,42 +19,49 @@ const initialState = {
 //=============================================================================
 export const ordersReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'FETCH_ORDERS_DONE':
+    case 'ORDERS_FETCH_DONE':
       return {
         ...state,
         rows: action.payload
       };
-      case 'ORDERS_SET_REQUEST_PARAMS':
+    case 'ORDERS_SET_REQUEST_PARAMS':
       return {
         ...state,
         requestParams: action.payload,
       };
-      case 'ORDER_SET_BY_ID':
+    case 'ORDERS_SET_BY_ID':
       return {
         ...state,
         selectedOrderId: action.payload
       };
-    case 'ORDER_SET_SEARCH_TEXT':
-      console.log('ORDER_SET_SEARCH_TEXT',action.payload);
+    case 'ORDERS_SET_SEARCH_TEXT':
+      console.log('ORDERS_SET_SEARCH_TEXT',action.payload);
       return {
         
         ...state,
         searchText: action.payload
       };
-       case 'ORDER_SET_BEGIN_DATE':
-         console.log('ORDER_SET_BEGIN_DATE',action.payload);
+    case 'ORDERS_SET_BEGIN_DATE':
+      console.log('ORDERS_SET_BEGIN_DATE',action.payload);
       return {
         
         ...state,
         searchTextBegin : action.payload
        
       };
-       case 'ORDER_SET_END_DATE':
-         console.log('ORDER_SET_END_DATE',action.payload);
+    case 'ORDERS_SET_END_DATE':
+      console.log('ORDERS_SET_END_DATE',action.payload);
       return {
         ...state,
         searchTextEnd : action.payload
        
+      };
+    case 'ORDERS_POST_DONE':
+      console.log('ORDERS_POST_DONE', action.payload);
+      return {
+        ...state,
+        requestParams: null,
+        postResultObj: action.payload
       };
     default:
       return state;
@@ -107,25 +113,14 @@ const _fetchRows = async (beginDate=null, endDate=null) => {
   console.log(url);
   
   const axRes = await axios.get(url); 
-  
-   /* axRes = {
-    data: {
-      data: [
-          {id:1,created_at:'2018-09-23',first_name:"Yu Yu1",last_name:"Mon1",address1:'80,23x22 street,',address2:'ChanAyeTharZan',country:'Myanmar',state:'Mandalay',city:'Mandalay',total_price:'50000'},
-          {id:2,created_at:'2018-06-29',first_name:"Yu Yu2",last_name:"Mon2",address1:'80,23x22 street',address2:'ChanAyeTharZan',country:'Myanmar',state:'Mandalay',city:'Mandalay',total_price:'15000'},
-          {id:3,created_at:'2019-01-06',first_name:"Yu Yu3",last_name:"Mon3",address1:'80,23x22 street',address2:'ChanAyeTharZan',country:'Myanmar',state:'Mandalay',city:'Mandalay',total_price:'12000'},
-          {id:4,created_at:'2019-05-06',first_name:"Yu Yu4",last_name:"Mon4",address1:'80,23x22 street',address2:'ChanAyeTharZan',country:'Myanmar',state:'Mandalay',city:'Mandalay',total_price:'1000'},
 
-      ]
-    }
-  };*/
   return axRes.data.data;
 }
 
 export const fetchAllOrders = () => {
   return async (dispatch, getState) => {
     dispatch({
-      type: 'FETCH_ORDERS_DONE',
+      type: 'ORDERS_FETCH_DONE',
       payload: await _fetchRows()
     });
   };
@@ -136,24 +131,24 @@ export const clickOrderId = order_id => ({
 }) ;
 
 export const setOrderId = orderId => ({
-  type: 'ORDER_SET_BY_ID',
+  type: 'ORDERS_SET_BY_ID',
   payload: orderId
 });
 
 export const setSearchText = text => ({
-  type: 'ORDER_SET_SEARCH_TEXT',
+  type: 'ORDERS_SET_SEARCH_TEXT',
   payload: text
 });
 
 export const setbeginDate = (date) => {
   return async (dispatch, getState) => {
     dispatch({
-      type: 'ORDER_SET_BEGIN_DATE',
+      type: 'ORDERS_SET_BEGIN_DATE',
       payload: date
     });
     
     dispatch({
-      type: 'FETCH_ORDERS_DONE',
+      type: 'ORDERS_FETCH_DONE',
       payload: await _fetchRows(date, getState().orders.searchTextEnd)
     });
   };
@@ -162,15 +157,30 @@ export const setbeginDate = (date) => {
 export const setendDate = (date) => {
   return async (dispatch, getState) => {
     dispatch({
-      type: 'ORDER_SET_END_DATE',
+      type: 'ORDERS_SET_END_DATE',
       payload: date
     });
     
     dispatch({
-      type: 'FETCH_ORDERS_DONE',
+      type: 'ORDERS_FETCH_DONE',
       payload: await _fetchRows(getState().orders.searchTextBegin, date)
     });
   };
 };
+
+export const postOrder = () => {
+  return async (dispatch, getState) => {
+    const reqParams = getState().orders.requestParams;
+    const axRes = await axios.post(URL_REST_ORDERS, reqParams);
+    
+    dispatch({
+      type: 'ORDERS_POST_DONE',
+      payload: axRes.data.data
+    });
+    dispatch({
+      type: 'CART_CLEAR_CART' //modules/cart.js
+    });
+  }
+}
 
 

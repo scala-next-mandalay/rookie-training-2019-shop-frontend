@@ -14,17 +14,17 @@ const initialState = {
 //=============================================================================
 export const itemsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_CATEGORY_ID':
+    case 'ITEMS_SET_CATEGORY_ID':
       return {
         ...state,
         selectedCateogryId: action.payload
       };
-    case 'FETCH_ITEMS_DONE':
+    case 'ITEMS_FETCH_DONE':
       return {
         ...state,
         rows:[...state.rows , ...action.payload] 
       };
-    case 'NO_MORE_FETCH':
+    case 'ITEMS_NO_MORE_FETCH':
       return {
         ...state,
         noMoreFetch: true
@@ -38,21 +38,21 @@ export const itemsReducer = (state = initialState, action) => {
 //　ActionCreators
 //=============================================================================
 export const setCategoryId = categoryId => ({
-  type: 'SET_CATEGORY_ID',
+  type: 'ITEMS_SET_CATEGORY_ID',
   payload: categoryId
 });
 
-export const fetchAllItems = () => {
+export const fetchItems = () => {
   return async (dispatch, getState) => {
     const axRes = await axios.get(format(URL_GET_ALL_ITEMS, getState().items.rows.length));
      console.log("leingth is ",axRes.data.data.length);
     if (axRes.data.data.length === 0) {
       dispatch({
-        type: 'NO_MORE_FETCH'
+        type: 'ITEMS_NO_MORE_FETCH'
       });
     }
     dispatch({
-      type: 'FETCH_ITEMS_DONE',
+      type: 'ITEMS_FETCH_DONE',
       payload: axRes.data.data
     });
    

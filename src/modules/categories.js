@@ -11,12 +11,12 @@ const initialState = {
 //=============================================================================
 export const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_ALREADY_FETCHED':
+    case 'CATEGORIES_SET_ALREADY_FETCHED':
       return {
         ...state,
         alreadyFetched: true
       };
-    case 'FETCH_CATEGORIES_DONE':
+    case 'CATEGORIES_FETCH_DONE':
       return {
         ...state,
         rows: [{id:-1, name:'ALL'}, ...action.payload]
@@ -37,13 +37,13 @@ export const fetchAllCategories = () => {
     }
 
     dispatch({
-        type: 'SET_ALREADY_FETCHED'
+        type: 'CATEGORIES_SET_ALREADY_FETCHED'
     });
 
     const axRes = await axios.get(URL_GET_ALL_CATEGORIES);
    
     dispatch({
-      type: 'FETCH_CATEGORIES_DONE',
+      type: 'CATEGORIES_FETCH_DONE',
       payload: axRes.data.data
     });
   };

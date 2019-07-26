@@ -12,7 +12,7 @@ const CategoryList = ({ categories, setCategoryId, handleDrawerClose }) => {
             setCategoryId(obj.id);
           }}  >
             <ListItemText>
-            <Box fontWeight={600} color='#9A7B66' fontStyle='italic' class='ho'>
+            <Box fontWeight={600} color='#9A7B66' fontStyle='italic' className='ho'>
               {obj.name}
             </Box>
             </ListItemText>

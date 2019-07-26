@@ -159,10 +159,6 @@ const CheckoutConfirm = ({orders,cart,requestParams,showMenu,totalPrice,totalQua
                <TableCell align="left"><div>{obj.total_price}</div></TableCell>
                <TableCell> 
                <Link
-                 type="submit"
-                 fullWidth
-                 variant="contained"
-                 color="primary"
                  to="/orderdetail"
                  component={RouterLink}  onClick={link(obj.id)}
             >

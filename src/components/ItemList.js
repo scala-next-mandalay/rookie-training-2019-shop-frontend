@@ -6,12 +6,12 @@ import InfiniteScroll from 'react-infinite-scroller';
 import ItemPropTypes from './ItemPropTypes';
 
 
-const ItemList = ({ items, fetchAllItems, noMoreFetch }) => {
+const ItemList = ({ items, fetchItems, noMoreFetch }) => {
   return (
    
     <InfiniteScroll
         pageStart={0}
-        loadMore={fetchAllItems}
+        loadMore={fetchItems}
         hasMore={!noMoreFetch}
         initialLoad={true}
         loader={<div className="loader" key={0}></div>}
@@ -39,7 +39,7 @@ const ItemList = ({ items, fetchAllItems, noMoreFetch }) => {
 
 ItemList.propTypes = {
   items: PropTypes.arrayOf(ItemPropTypes.isRequired).isRequired,
-  fetchAllItems: PropTypes.func,
+  fetchItems: PropTypes.func,
   noMoreFetch: PropTypes.bool.isRequired,
 };
 

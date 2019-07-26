@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ItemList from '../components/ItemList';
-import { fetchAllItems} from '../modules/items';
+import { fetchItems} from '../modules/items';
 
 const _getItemsByCategory = (rows, categoryId) => {
   console.log("item lis ",rows);
@@ -18,6 +18,6 @@ export default connect(
     noMoreFetch: state.items.noMoreFetch
   }),
   (dispatch) => ({
-    fetchAllItems: () => dispatch(fetchAllItems()),
+    fetchItems: () => dispatch(fetchItems()),
   })
 )(ItemList);
