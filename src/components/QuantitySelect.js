@@ -1,13 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-import { NativeSelect } from '@material-ui/core'
+import PropTypes from 'prop-types';
+import { NativeSelect } from '@material-ui/core';
 
 const QuantitySelect = ({ id, quantity, maxQuantity, changeQuantity }) => {
-  const options = []
+  const options = [];
   for (let i = 1; i <= Math.max(20, maxQuantity); i++) {
     options.push(
       <option key={i} value={i}>{i}</option>
-    )
+    );
   }
   return (
     <NativeSelect
@@ -16,14 +16,14 @@ const QuantitySelect = ({ id, quantity, maxQuantity, changeQuantity }) => {
     >
       {options}
     </NativeSelect>
-  )
-}
+  );
+};
 
 QuantitySelect.propTypes = {
   id: PropTypes.number.isRequired,
   quantity: PropTypes.number.isRequired,
   maxQuantity: PropTypes.number.isRequired,
   changeQuantity: PropTypes.func,
-}
+};
 
-export default QuantitySelect
+export default QuantitySelect;

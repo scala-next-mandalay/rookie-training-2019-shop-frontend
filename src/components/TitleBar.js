@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
-import { Box, IconButton, AppBar, Toolbar, Badge,Divider,Button } from '@material-ui/core'
-import { Menu as MenuIcon, ShoppingCart as ShoppingCartIcon } from '@material-ui/icons'
-import { FormattedMessage } from 'react-intl'
-import CartItemPropTypes from './CartItemPropTypes'
-import IconLinkButton from './IconLinkButton'
-import './style.css'
-import { Link as RouterLink } from 'react-router-dom'
-import NavTesting from '../containers/NavTesting'
-import CartTable from '../containers/CartTable'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import { Box, IconButton, AppBar, Toolbar, Badge,Divider,Button } from '@material-ui/core';
+import { Menu as MenuIcon, ShoppingCart as ShoppingCartIcon } from '@material-ui/icons';
+import { FormattedMessage } from 'react-intl';
+import CartItemPropTypes from './CartItemPropTypes';
+import IconLinkButton from './IconLinkButton';
+import './style.css';
+import { Link as RouterLink } from 'react-router-dom';
+import NavTesting from '../containers/NavTesting';
+import CheckoutOrder from '../containers/CheckoutOrder';
 import Drawer from "@material-ui/core/Drawer";
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   list: {
     width: 300,
     [theme.breakpoints.up('sm')]: {
-    width :550
+    width :600
     },
   },
   closebtn:{
@@ -40,12 +40,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,totalPrice}) => {
-  const classes = useStyles()
+const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,totalPrice,showIcon}) => {
+  const classes = useStyles();
   const [state, setState] = React.useState({
-    // top: false,
-    // left: false,
-    // bottom: false,
     right: false
   });
 
@@ -61,12 +58,7 @@ const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,to
   };
 
   const sideList = side => (
-    <div
-      className={classes.list}
-      // role="presentation"
-      // onClick={toggleDrawer(side, false)}
-      // onKeyDown={toggleDrawer(side, false)}
-    >
+    <div className={classes.list}>
        <Box display="flex">
        <Box ml={1} mr="auto" my="auto"> 
        <IconButton edge="start"  onClick={toggleDrawer(side, false)} aria-label="Close" className={classes.closebtn}>
@@ -74,30 +66,10 @@ const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,to
        </IconButton>
        </Box>
        <Box mr={2} ml="auto" my="auto">Your Cart List </Box></Box> 
-            
             <Divider />
-          
-        <CartTable/>
+        <CheckoutOrder/>
         
-        <Divider />
-       <Box display="flex" className="shopping_cart_style">
-        <Box  ml={1} mr="auto" my="auto">
-          Your Shopping Cart 
-        </Box>
-        <Box mr={1} ml="auto" my="auto">
-        Free
-        </Box>
-        </Box>
-        <Divider/>
-        <Box display="flex" className="shopping_cart_style">
-        <Box  ml={1} mr="auto" my="auto">
-          Total Amount ( Items)
-        </Box>
-        <Box mr={1} ml="auto" my="auto">
-        {totalPrice} Ks
-        </Box>
-        </Box>
-        <Divider/>
+      
         <Button
            onClick={toggleDrawer(side, false)}
             className="btn_Purchase"
@@ -109,8 +81,6 @@ const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,to
               SECURE CHECKOUT
             </Button>
          <Divider/>
-          
-     
     </div>
   );
   
@@ -131,14 +101,11 @@ const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,to
 
         <Box fontSize={{xs:"subtitle1", sm:"h6.fontSize"}} ml={0} display="flex" flexDirection="row" class="title">
           <FormattedMessage id="Top.Title" />
-         
         </Box>
          <Box>
          {showNav ? <NavTesting /> : null}
-        
         </Box>
-        
-
+          {showIcon ?
         <Box mr={0} ml="auto">
           <IconLinkButton color="primary" onClick={toggleDrawer("right", true)}>
             <Badge 
@@ -149,8 +116,7 @@ const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,to
               <ShoppingCartIcon />
             </Badge>
           </IconLinkButton>
-        </Box>
-        
+        </Box>: null}
       </Toolbar>
     </AppBar>
     <Drawer
@@ -161,20 +127,15 @@ const TitleBar = ({cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,to
         {sideList("right")}
       </Drawer>
     </div>
-  )
-}
-
+  );
+};
 TitleBar.propTypes = {
   cart: PropTypes.arrayOf(CartItemPropTypes.isRequired).isRequired,
   totalQuantity: PropTypes.number.isRequired,
   showNav: PropTypes.bool.isRequired,
   showMenu: PropTypes.bool.isRequired,
-  //handleDrawerToggle: PropTypes.func,
    totalPrice: PropTypes.number.isRequired,
-}
+   showIcon: PropTypes.bool.isRequired,
+};
 
-// TitleBar.defaultProps = {
-//   handleDrawerToggle: null,
-// }
-
-export default TitleBar
+export default TitleBar;

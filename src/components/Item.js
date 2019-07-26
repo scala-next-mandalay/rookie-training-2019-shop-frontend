@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
-import { Box, Card, CardMedia, CardContent, CardActions, Button } from '@material-ui/core'
-import { BASEURL_ITEM_IMAGES } from '../constants'
-import { AddShoppingCart as AddShoppingCartIcon } from '@material-ui/icons'
-import './style.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import { Box, Card, CardMedia, CardContent, CardActions, Button } from '@material-ui/core';
+import { BASEURL_ITEM_IMAGES } from '../constants';
+import { AddShoppingCart as AddShoppingCartIcon } from '@material-ui/icons';
+import './style.css';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -23,10 +23,10 @@ const useStyles = makeStyles(theme => ({
   cardActions: {
     margin: theme.spacing(1),
   },
-}))
+}));
 
 const Item = ({ addCartItem, row }) => {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <Card className={classes.card}>
       <CardMedia
@@ -48,7 +48,7 @@ const Item = ({ addCartItem, row }) => {
           fullWidth 
           color="primary"
           onClick={()=>{
-            addCartItem(row)
+            addCartItem(row);
           }}
         >
           <Box mr={1}>Add to Cart</Box>
@@ -56,8 +56,8 @@ const Item = ({ addCartItem, row }) => {
         </Button>
       </CardActions>
     </Card>
-  )
-}
+  );
+};
 
 Item.propTypes = {
   row: PropTypes.shape({
@@ -67,6 +67,6 @@ Item.propTypes = {
     image: PropTypes.string,
   }).isRequired,
   addCartItem: PropTypes.func,
-}
+};
 
-export default Item
+export default Item;

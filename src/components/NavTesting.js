@@ -1,19 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box} from '@material-ui/core'
-//import { makeStyles } from '@material-ui/core/styles'
-import "./style.css"
-import Hidden from "@material-ui/core/Hidden"
-
-
-// const useStyles = makeStyles(theme => ({
- 
-//   navButton: {
-//     // [theme.breakpoints.up('xs')]: {
-//     //   display: 'none',
-//     // },
-//   }
-// }));
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Box} from '@material-ui/core';
+import "./style.css";
+import Hidden from "@material-ui/core/Hidden";
 
 const NavTesting = ({ categories, setCategoryId, handleDrawerClose }) => {
     // const classes = useStyles()
@@ -23,7 +12,7 @@ const NavTesting = ({ categories, setCategoryId, handleDrawerClose }) => {
         {categories.map((obj) => (
           <Box button key={obj.id} onClick={()=>{
             // handleDrawerClose()
-            setCategoryId(obj.id)
+            setCategoryId(obj.id);
           }}  >
                         <div style={{ width: '100%' }}>
             <Box display="flex" flexDirection="row" p={1} m={1}>
@@ -38,8 +27,8 @@ const NavTesting = ({ categories, setCategoryId, handleDrawerClose }) => {
         ))}
       </Box>
       </Hidden>
-  )
-}
+  );
+};
 
 NavTesting.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.shape({
@@ -48,6 +37,6 @@ NavTesting.propTypes = {
   }).isRequired).isRequired,
   setCategoryId: PropTypes.func,
   handleDrawerClose: PropTypes.func,
-}
+};
 
-export default NavTesting
+export default NavTesting;

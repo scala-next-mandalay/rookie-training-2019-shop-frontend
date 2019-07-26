@@ -1,17 +1,16 @@
-import { connect } from 'react-redux'
-import ItemList from '../components/ItemList'
-import { 
-  fetchAllItems,
-} from '../modules/items'
+import { connect } from 'react-redux';
+import ItemList from '../components/ItemList';
+import { fetchAllItems} from '../modules/items';
 
 const _getItemsByCategory = (rows, categoryId) => {
+  console.log("item lis ",rows);
   if (categoryId <= 0) {
-    return rows
+    return rows;
   }
   else {
-    return rows.filter(t => t.category_id === categoryId)
+    return rows.filter(t => t.category_id === categoryId);
   }
-}
+};
 
 export default connect(
   (state) => ({
@@ -21,4 +20,4 @@ export default connect(
   (dispatch) => ({
     fetchAllItems: () => dispatch(fetchAllItems()),
   })
-)(ItemList)
+)(ItemList);

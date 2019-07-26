@@ -1,6 +1,6 @@
-import { connect } from 'react-redux'
-import CategoryList from '../components/CategoryList'
-import { setCategoryId } from '../modules/items'
+import { connect } from 'react-redux';
+import CategoryList from '../components/CategoryList';
+import { setCategoryId } from '../modules/items';
 
 export default connect(
   (state) => ({
@@ -9,4 +9,4 @@ export default connect(
   (dispatch) => ({
     setCategoryId: (id) => dispatch(setCategoryId(id)),
   })
-)(CategoryList)
+)(CategoryList);

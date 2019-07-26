@@ -1,7 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { IconButton } from '@material-ui/core'
-// import { Link as RouterLink } from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { IconButton } from '@material-ui/core';
 
 const IconLinkButton = ({children, className,onClick, color='inherit'}) => {
   return (
@@ -14,13 +13,12 @@ const IconLinkButton = ({children, className,onClick, color='inherit'}) => {
     >
       {children}
     </IconButton>
-  )
-}
+  );
+};
 
 IconLinkButton.propTypes = {
   children: PropTypes.element.isRequired,
-  // to: PropTypes.string.isRequired,
   className: PropTypes.string,
-}
+};
 
-export default IconLinkButton
+export default IconLinkButton;

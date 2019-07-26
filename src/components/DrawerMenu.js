@@ -1,28 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import { Box, Drawer, Hidden, IconButton, Divider } from '@material-ui/core'
-import { Close as CloseIcon } from '@material-ui/icons'
-import CategoryList from '../containers/CategoryList'
-// import ToolbarSpacer from './ToolbarSpacer'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Box, Drawer, Hidden, IconButton, Divider } from '@material-ui/core';
+import { Close as CloseIcon } from '@material-ui/icons';
+import CategoryList from '../containers/CategoryList';
 
 const drawerWidth = 300;
 
 const useStyles = makeStyles(theme => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-  },
-  // drawer: {
-  //   [theme.breakpoints.up('xs')]: {
-  //     width: drawerWidth,
-  //     flexShrink: 0,
-  //   },
-  // },
+  }
 }));
 
 const DrawerMenu = ({mobileOpen, handleDrawerClose}) => {
-  const classes = useStyles()
-  const theme = useTheme()
+  const classes = useStyles();
+  const theme = useTheme();
 
   return (
     <nav className={classes.drawer}>
@@ -48,12 +41,12 @@ const DrawerMenu = ({mobileOpen, handleDrawerClose}) => {
 
       
     </nav>
-  )
-}
+  );
+};
 
 DrawerMenu.propTypes = {
   mobileOpen: PropTypes.bool.isRequired,
   handleDrawerClose: PropTypes.func.isRequired
-}
+};
 
-export default DrawerMenu
+export default DrawerMenu;

@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box, Grid } from '@material-ui/core'
-import Item from '../containers/Item'
-import InfiniteScroll from 'react-infinite-scroller'
-import ItemPropTypes from './ItemPropTypes'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Box, Grid } from '@material-ui/core';
+import Item from '../containers/Item';
+import InfiniteScroll from 'react-infinite-scroller';
+import ItemPropTypes from './ItemPropTypes';
 
 
 const ItemList = ({ items, fetchAllItems, noMoreFetch }) => {
@@ -34,13 +34,13 @@ const ItemList = ({ items, fetchAllItems, noMoreFetch }) => {
       
     </InfiniteScroll>
  
-  )
-}
+  );
+};
 
 ItemList.propTypes = {
   items: PropTypes.arrayOf(ItemPropTypes.isRequired).isRequired,
   fetchAllItems: PropTypes.func,
   noMoreFetch: PropTypes.bool.isRequired,
-}
+};
 
-export default ItemList
+export default ItemList;

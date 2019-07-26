@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box, List, ListItem, ListItemText } from '@material-ui/core'
-import './style.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Box, List, ListItem, ListItemText } from '@material-ui/core';
+import './style.css';
 
 const CategoryList = ({ categories, setCategoryId, handleDrawerClose }) => {
   return (
     <List>
         {categories.map((obj) => (
           <ListItem button key={obj.id} onClick={()=>{
-           handleDrawerClose()
-            setCategoryId(obj.id)
+           handleDrawerClose();
+            setCategoryId(obj.id);
           }}  >
             <ListItemText>
             <Box fontWeight={600} color='#9A7B66' fontStyle='italic' class='ho'>
@@ -19,8 +19,8 @@ const CategoryList = ({ categories, setCategoryId, handleDrawerClose }) => {
           </ListItem>
         ))}
       </List>
-  )
-}
+  );
+};
 
 CategoryList.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.shape({
@@ -29,6 +29,6 @@ CategoryList.propTypes = {
   }).isRequired).isRequired,
   setCategoryId: PropTypes.func,
   handleDrawerClose: PropTypes.func,
-}
+};
 
-export default CategoryList
+export default CategoryList;
