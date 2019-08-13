@@ -36,7 +36,6 @@ const ItemList = ({ items, fetchItems, noMoreFetch }) => {
  
   );
 };
-
 ItemList.propTypes = {
   items: PropTypes.arrayOf(ItemPropTypes.isRequired).isRequired,
   fetchItems: PropTypes.func,

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Checkout from '../components/Checkout';
-import { setRequestParams, postOrder } from '../modules/orders';
+import { setRequestParams} from '../modules/orders';
 
 export default connect(
   (state) => ({
@@ -9,6 +9,6 @@ export default connect(
   }),
   (dispatch) => ({
     setRequestParams: (addressForm) =>  dispatch(setRequestParams(addressForm)),
-    postOrder: () =>  dispatch(postOrder()),
+   
   })
 )(Checkout);

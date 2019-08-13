@@ -4,11 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Paper, CardMedia, Divider, Hidden } from '@material-ui/core';
 import { BASEURL_ITEM_IMAGES } from '../constants';
 import QuantitySelect from '../containers/QuantitySelect';
-import CartItemPropTypes from './CartItemPropTypes';
-import './style.css';
+ import CartItemPropTypes from './CartItemPropTypes';
+import '../assets/style.css';
+import { FormattedMessage } from 'react-intl';
+
+
 const uuidv1 = require('uuid/v1');
-
-
 const useStyles = makeStyles(theme => ({
   gridRow: {
     padding: theme.spacing(2),
@@ -60,19 +61,25 @@ const CartTable = ({ cart, showQty }) => {
     <div key={uuidv1()}  className={classes.girdDv}>
     <Grid container className={classes.gridRow} variant='contained'>
       <Grid item xs={3} className={classes.gridCell}>
-        <Box ml="0" mr="auto" flexGrow={1} fontWeight={600} color='#cccccc' >Description</Box>
+        <Box ml="0" mr="auto" flexGrow={1} fontWeight={600} color='#cccccc' >
+        <FormattedMessage id="Label.Image" defualtMessage="Image" />
+        </Box>
       </Grid>
        <Grid item xs={3} className={classes.gridCell}>
-        <Box ml="0" mr="auto" my="auto" fontWeight={600} color='#cccccc'>Name</Box>
+        <Box ml="0" mr="auto" my="auto" fontWeight={600} color='#cccccc'>
+        <FormattedMessage id="Label.Description" defualtMessage="Description" /></Box>
       </Grid>
       <Grid item xs={2} className={classes.gridCell}>
-        <Box ml="0" mr="auto" my="auto" fontWeight={600} color='#cccccc'>Kyats (Ks)</Box>
+        <Box ml="0" mr="auto" my="auto" fontWeight={600} color='#cccccc'>
+        <FormattedMessage id="Label.Price" defualtMessage="Price" /></Box>
       </Grid>
       <Grid item xs={2} className={classes.gridCell}>
-        <Box ml="0" mr="auto" my="auto" fontWeight={600} color='#cccccc'>Qty.</Box>
+        <Box ml="0" mr="auto" my="auto" fontWeight={600} color='#cccccc'>
+        <FormattedMessage id="Label.Quantity" defualtMessage="Quantity" /></Box>
       </Grid>
       <Grid item xs={2} className={classes.gridCell}>
-        <Box ml="0" mr="auto" my="auto" fontWeight={600} color='#cccccc'>Price (Ks)</Box>
+        <Box ml="0" mr="auto" my="auto" fontWeight={600} color='#cccccc'>
+        <FormattedMessage id="Label.TotalPrice" defualtMessage="Total Price" /></Box>
       </Grid>
      </Grid>
     </div>
@@ -97,7 +104,7 @@ const CartTable = ({ cart, showQty }) => {
         
         </Grid>
          <Grid item xs={3} className={classes.gridCell}>
-          <Box ml="0" mr="auto" fontWeight={600} className='nameTxt'>
+          <Box ml="0" mr="auto" fontWeight={600} className='priceTxt'>
             {row.name}
           </Box>
         </Grid>
@@ -170,8 +177,16 @@ const CartTable = ({ cart, showQty }) => {
   );
 };
 
+// const CartItemPropTypes = PropTypes.shape({
+// const propTypes = {...ItemPropTypes};
+// propTypes.quantity = PropTypes.number.isRequired;
+// propTypes.subTotal = PropTypes.number.isRequired;
+// });
+
 CartTable.propTypes = {
   cart: PropTypes.arrayOf(CartItemPropTypes.isRequired).isRequired,
+  
+  
 };
 
 export default CartTable;

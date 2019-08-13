@@ -4,7 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Card, CardMedia, CardContent, CardActions, Button } from '@material-ui/core';
 import { BASEURL_ITEM_IMAGES } from '../constants';
 import { AddShoppingCart as AddShoppingCartIcon } from '@material-ui/icons';
-import './style.css';
+import '../assets/style.css';
+import { FormattedMessage } from 'react-intl';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -39,7 +40,8 @@ const Item = ({ addCartItem, row }) => {
           {row.name}
         </Box>
         <Box className="priceTxt">
-          Price: {row.price} Ks
+        <FormattedMessage id="Label.Price" defualtMessage="Price" />:{row.price} Ks
+       
         </Box>
       </CardContent>
       <CardActions className={classes.cardActions}>
@@ -51,7 +53,7 @@ const Item = ({ addCartItem, row }) => {
             addCartItem(row);
           }}
         >
-          <Box mr={1}>Add to Cart</Box>
+          <Box mr={1}><FormattedMessage id="Button.Add" defualtMessage="Add Button" /></Box>
           <AddShoppingCartIcon />
         </Button>
       </CardActions>

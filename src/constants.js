@@ -4,5 +4,5 @@ export const BASEURL_ITEM_IMAGES = 'http://dg9c95ld8mycd.cloudfront.net/items/';
 export const URL_GET_ALL_ITEMS = BASEURL_API+'/api/items?offset={0}';
 export const URL_GET_ALL_CATEGORIES = BASEURL_API+'/api/categories';
 export const URL_REST_ORDERS = BASEURL_API+'/api/orders';
-
-
+export const URL_REST_ORDER_ID = BASEURL_API+'/api/orders';
+export const URL_REST_ORDERITEMS_ID = BASEURL_API+'/api/orderitems';

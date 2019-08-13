@@ -1,9 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { BASEURL_ITEM_IMAGES } from '../constants';
-import { Grid, Box, CardMedia, Paper, Divider, Hidden } from '@material-ui/core';
+import { Grid, Box, CardMedia, Paper, Divider, Hidden,Link } from '@material-ui/core';
 import QuantitySelect from '../containers/QuantitySelect';
-import DeleteCartItemLink from '../containers/DeleteCartItemLink';
+import DeleteOutlinedIcon from '@material-ui/icons/DeleteSharp';
+import Tooltip from '@material-ui/core/Tooltip';
+ import { FormattedMessage } from 'react-intl';
 
 
 const useStyles = makeStyles(theme => ({
@@ -21,10 +23,19 @@ const useStyles = makeStyles(theme => ({
   menu: {
     width: 200,
   },
+  btnRemoveItem:{
+    cursor:'pointer'
+  },
+  iconSpace:{
+     marginTop: theme.spacing(1),
+     marginRight: theme.spacing(1),
+  }
 }));
 
-const CheckoutOrder = ({ cart, totalPrice,totalQuantity}) => {
-  console.log(cart);
+const CheckoutOrder = ({ cart, totalPrice,totalQuantity,deleteCartItem}) => {
+  const removeCartItem= (id)=>{
+    deleteCartItem(id);
+  };
   const classes = useStyles();
   const mobileView = [];
   const pcView = [];
@@ -34,12 +45,12 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity}) => {
         <Box> </Box>
       </Grid>
       <Grid item xs={6} sm={4}>
-        <Box>TOTAL QUANTITY(Items</Box>
-        <Box> SUBTOTAL </Box>
-        <Box>SALES TAX(0%)</Box>
-        <Box>TOTAL</Box>
+        <Box><FormattedMessage id="Label.TotalQuantity" defualtMessage="Total Quantity" /></Box>
+        <Box><FormattedMessage id="Label.SubTotal" defualtMessage="SubTotal" /> </Box>
+        <Box><FormattedMessage id="Label.Tax" defualtMessage="Sales Tax" /></Box>
+        <Box><FormattedMessage id="Label.TotalPrice" defualtMessage="Total Price" /></Box>
       </Grid>
-      <Grid item xs={6} sm={4} >
+      <Grid item xs={6} sm={4} className="text1">
         <Box textAlign="right" pr={3}>{totalQuantity} (Items)</Box>
         <Box textAlign="right" pr={3}> {totalPrice} MMK </Box>
         <Box textAlign="right" pr={3}> 0.0 MMK </Box>
@@ -49,7 +60,7 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity}) => {
   );
   cart.forEach((cartList, k) => {
     pcView.push(
-      <Grid container key={cartList.id}>
+      <Grid container key={cartList.id} className="text2">
         <Box flexGrow={1} display="flex">
           <Grid item xs={3}>
             <Box textAlign="left" my={2} pl={3}>
@@ -72,10 +83,18 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity}) => {
           </Grid>
         </Box>
         <Grid item xs={2}>
-          <Box textAlign="right" my={2} pr={3}>
-            <Box pb={2}>({cartList.quantity}x{cartList.price})</Box>
-            <Box> {cartList.subTotal} </Box>
-            <Box><DeleteCartItemLink id={cartList.id}/></Box>
+          <Box textAlign="right" my={2} mr={3}>
+            <Box pb={2} mr={0}>({cartList.quantity}x{cartList.price})MMK</Box>
+            <Box mr={0}> {cartList.subTotal}MMK </Box>
+          <Box>  
+           <Link className={classes.btnRemoveItem} onClick={()=> removeCartItem(cartList.id)} color="secondary" fontSize="10px">
+           <Box mr={0}>
+           <Tooltip title="Delete">
+           <DeleteOutlinedIcon/>
+           </Tooltip>
+           </Box>
+           </Link>
+          </Box>
           </Box>
         </Grid>
         <Grid item xs={12}><Divider /></Grid>
@@ -95,19 +114,28 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity}) => {
               />
             </Box>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={6} className="text2">
             <Box textAlign="right" my={2} pr={3} fontWeight="fontWeightBold">
               {cartList.name}
             </Box>
+             <Box textAlign="right" my={2} pr={3}>
+             <QuantitySelect id={cartList.id} quantity={cartList.quantity} />
+             </Box>
             <Box textAlign="right" my={2} pr={3} >
               {cartList.quantity}x {cartList.price}MMK
-                        </Box>
+            </Box>
             <Box textAlign="right" my={2} pr={3}>
               {cartList.subTotal} MMK
-                        </Box>
-                         <Box textAlign="right" my={2} pr={3}>
-                        <DeleteCartItemLink id={cartList.id}/>
-                        </Box>
+            </Box>
+            <Box textAlign="right" my={2} pr={3}>
+              <Link className={classes.btnRemoveItem} onClick={()=> removeCartItem(cartList.id)} color="secondary" fontSize="10px">
+                <Box mr={0}>
+                <Tooltip title="Delete">
+                <DeleteOutlinedIcon className={classes.iconSpace}/>
+                </Tooltip>
+                </Box>
+              </Link>
+             </Box>
           </Grid>
         </Box>
         <Grid item xs={12}><Divider /></Grid>
@@ -120,17 +148,17 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity}) => {
         <Grid key={0} container>
           <Box flexGrow={1} display="flex" >
             <Grid item xs={3} >
-              <Box textAlign="left" my={2} pl={3}>PRODUCT</Box>
+              <Box textAlign="left" my={2} pl={3}><FormattedMessage id="Label.Product" defualtMessage="Product" /></Box>
             </Grid>
             <Grid item xs={3}>
-              <Box textAlign="left" my={2} xs={3} >DESCRIPTION</Box>
+              <Box textAlign="left" my={2} xs={3} ><FormattedMessage id="Label.Description" defualtMessage="Description" /></Box>
             </Grid>
             <Grid item xs={2}>
-              <Box textAlign="left" my={2} xs={3}>QUANTITY</Box>
+              <Box textAlign="left" my={2} xs={3}><FormattedMessage id="Label.Quantity" defualtMessage="Quantity" /></Box>
             </Grid>
           </Box>
           <Grid item xs={2}>
-            <Box textAlign="right" my={2} pr={3} xs={3}>PRICE</Box>
+            <Box textAlign="right" my={2} pr={3} xs={3}><FormattedMessage id="Label.Price" defualtMessage="Price" /></Box>
           </Grid>
           <Grid item xs={12}><Divider /></Grid>
         </Grid>

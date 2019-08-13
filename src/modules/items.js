@@ -45,7 +45,7 @@ export const setCategoryId = categoryId => ({
 export const fetchItems = () => {
   return async (dispatch, getState) => {
     const axRes = await axios.get(format(URL_GET_ALL_ITEMS, getState().items.rows.length));
-     console.log("leingth is ",axRes.data.data.length);
+     
     if (axRes.data.data.length === 0) {
       dispatch({
         type: 'ITEMS_NO_MORE_FETCH'

@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Button, Container, Link, TextField,Grid}  from '@material-ui/core';
-// import { FormattedMessage } from 'react-intl';
-import { withRouter } from 'react-router-dom';
-import '../../assets/style.css';
-import { makeStyles,createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
+import { Box, Container, Link, Button, TextField,Grid}  from '@material-ui/core';
 import { green } from '@material-ui/core/colors';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { withRouter } from 'react-router-dom';
+import '../../assets/style.css';
+import { ThemeProvider } from '@material-ui/styles';
+import { makeStyles,createMuiTheme } from '@material-ui/core/styles';
  import { FormattedMessage } from 'react-intl';
 
 const useStyles = makeStyles(theme => ({
@@ -15,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(2),
     position: 'relative',
   },
-   btnProgress: {
+  btnProgress: {
     color: green[500],
     position: 'absolute',
     top: '50%',
@@ -25,16 +24,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const SignUp = React.memo(({
+const ConfirmSignUp = React.memo(({
   authState, 
   changeAuthState,
-  signUp,
   loading,
   error,
+  email,
+  confirmSignUp,
   history
 }) => {
   const classes = useStyles();
-  const [form, setForm] = React.useState({email:"", password:""});
+  const [form, setForm] = React.useState({email:"", password:"",confirmationCode:""});
   
   const handleChangeValue = fieldName => event => {
     const newForm = {...form};
@@ -44,29 +44,25 @@ const SignUp = React.memo(({
   
   const handleSubmit = event => {
     event.preventDefault();
-    signUp( form['email'], form['password']);
+    confirmSignUp(email, form['confirmationCode']);
   };
-  
-  const handleSignIn = event => {
-    event.preventDefault();
-    changeAuthState('signIn');
-  };
-  const handleClose=event=>{
+   const handleClose=event=>{
     event.preventDefault();
     history.push("/");
   };
-    const theme = createMuiTheme({
+  const theme = createMuiTheme({
   palette: {
     primary: {
        main:'#cccccc'
     }
   },
 });
-  
-  
+ 
   const content = (
-   <Container component="main" maxWidth="xs" className="container">
-  <Box className="authTitle"><FormattedMessage id="Label.SignUp" defualtMessage="Sign Up" /></Box>
+    <Container component="main" maxWidth="xs" className="container">
+  <Box className="authTitle">
+  <FormattedMessage id="Label.CheckEmail" defualtMessage="Please check your email" />
+  </Box>
   
   
   <Link onClick={handleClose}>
@@ -87,36 +83,38 @@ const SignUp = React.memo(({
         <Grid item xs={12} sm={12}  >
         <Box mx="auto" my="auto" p={1} mt={2}>
             <TextField
-              id="email"
-              autoComplete="email"
-              type="email"
-              onChange={handleChangeValue("email")}
-              value={form.email}
-              label="Email Address"
+              id="confirmationCode"
+              name="confirmationCode"
+              label="Confirmation Code"
+              onChange={handleChangeValue("confirmationCode")} 
+              value={form.confirmationCode}
               variant="outlined"
               required
               fullWidth
-              InputLabelProps={{
+	             InputLabelProps={{
               style: {
               color: "#ffffff",
               }
              }}
             />
+             
+           
+          
              </Box>
         </Grid>
         <Grid item xs={12} sm={12}  >
          <Box mx="auto" my="auto"  p={1} mt={2}>
             <TextField
               id="password"
-              label="Password"
+              label="New Password"
               type="password"
-              autoComplete="current-password"
+              autoComplete="new-password"
               onChange={handleChangeValue("password")}
               value={form.password}
               variant="outlined"
               required
               fullWidth
-              InputLabelProps={{
+               InputLabelProps={{
               style: {
               color: "#ffffff",
               }
@@ -125,40 +123,44 @@ const SignUp = React.memo(({
             </Box>
         </Grid>
         </Grid>
-         </ThemeProvider>
+        </ThemeProvider>
         </Box>
            <Grid container className={classes.btnWrapper}>
               <Button
-              className="btnSign"
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               disabled={loading}
+              className="btnSign"
             >
-              <FormattedMessage id="Button.CreateAccount" defualtMessage="CreateAccount" />
+        
+              <FormattedMessage id="Label.Confirm" defualtMessage="Confirm" />
             </Button>
               {loading && <CircularProgress size={24} className={classes.btnProgress} />}
- 
-              
              </Grid>  
-             <Grid container>
-             <Box mt={2}>
-             <Link variant="body2" onClick={handleSignIn} className="ho">
-              <FormattedMessage id="Label.AlreadyAccount" defualtMessage="Already have an account? Sign in" />
-            </Link>
-            </Box>
+             <Grid container >
+              <Grid item xs={12}>
+              <Box mt={2}>
+                  <Link className="ho" variant="body2" onClick={handleSubmit}>
+                    <FormattedMessage id="Label.ResendCode" defualtMessage="Resend code to" />
+                  </Link>
+                </Box>
+              </Grid>
             </Grid>
      </form>
     </Container>
+   
   );
-  return (authState === 'signUp') ? content : null;
+  return (authState === 'confirmSignUp') ? content : null;
 });
 
-SignUp.propTypes = {
+ConfirmSignUp.propTypes = {
   authState: PropTypes.string.isRequired,
   changeAuthState: PropTypes.func.isRequired,
-  signUp: PropTypes.func.isRequired
+  loading: PropTypes.bool.isRequired,
+  email: PropTypes.string,
+  confirmSignUp: PropTypes.func.isRequired,
 };
 
-export default withRouter(SignUp);
+export default withRouter(ConfirmSignUp);

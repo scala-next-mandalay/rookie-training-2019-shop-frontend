@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Button, Container, Link, TextField,Grid}  from '@material-ui/core';
-// import { FormattedMessage } from 'react-intl';
+import { Box, Container, Link, Button, TextField,Grid}  from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 import '../../assets/style.css';
 import { makeStyles,createMuiTheme } from '@material-ui/core/styles';
@@ -25,12 +24,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const SignUp = React.memo(({
+const ForgotPassword = React.memo(({
   authState, 
   changeAuthState,
-  signUp,
   loading,
   error,
+  email,
+  forgotPassword,
   history
 }) => {
   const classes = useStyles();
@@ -44,7 +44,7 @@ const SignUp = React.memo(({
   
   const handleSubmit = event => {
     event.preventDefault();
-    signUp( form['email'], form['password']);
+    forgotPassword(form['email']);
   };
   
   const handleSignIn = event => {
@@ -55,18 +55,21 @@ const SignUp = React.memo(({
     event.preventDefault();
     history.push("/");
   };
-    const theme = createMuiTheme({
+  const theme = createMuiTheme({
   palette: {
     primary: {
        main:'#cccccc'
     }
+   
+    
   },
 });
   
-  
   const content = (
    <Container component="main" maxWidth="xs" className="container">
-  <Box className="authTitle"><FormattedMessage id="Label.SignUp" defualtMessage="Sign Up" /></Box>
+  <Box className="authTitle">
+  <FormattedMessage id="Label.PasswordReset" defualtMessage="Reset Password" />
+  </Box>
   
   
   <Link onClick={handleClose}>
@@ -81,11 +84,11 @@ const SignUp = React.memo(({
       <Box display="flex" mx="auto" my="auto" mt={2} fontWeight={600} color="error.main">
             {error}
       </Box>
-      <Box mt={3}>
-      <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
         <Grid container>
         <Grid item xs={12} sm={12}  >
-        <Box mx="auto" my="auto" p={1} mt={2}>
+        <Box mx="auto" my="auto" p={1} mt={5}>
+         
             <TextField
               id="email"
               autoComplete="email"
@@ -99,66 +102,54 @@ const SignUp = React.memo(({
               InputLabelProps={{
               style: {
               color: "#ffffff",
-              }
-             }}
+          }
+        }}
+            
             />
+            
+          
              </Box>
-        </Grid>
-        <Grid item xs={12} sm={12}  >
-         <Box mx="auto" my="auto"  p={1} mt={2}>
-            <TextField
-              id="password"
-              label="Password"
-              type="password"
-              autoComplete="current-password"
-              onChange={handleChangeValue("password")}
-              value={form.password}
-              variant="outlined"
-              required
-              fullWidth
-              InputLabelProps={{
-              style: {
-              color: "#ffffff",
-              }
-             }}
-            />
-            </Box>
         </Grid>
         </Grid>
          </ThemeProvider>
-        </Box>
+   
            <Grid container className={classes.btnWrapper}>
-              <Button
-              className="btnSign"
+            <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               disabled={loading}
+              className="btnSign"
             >
-              <FormattedMessage id="Button.CreateAccount" defualtMessage="CreateAccount" />
+              <FormattedMessage id="Label.SendCode" defualtMessage="Send Code" />
             </Button>
-              {loading && <CircularProgress size={24} className={classes.btnProgress} />}
- 
-              
-             </Grid>  
-             <Grid container>
+             {loading && <CircularProgress size={24} className={classes.btnProgress} />}
+        
+            </Grid> 
+            
+             <Grid container >
+             <Grid item xs={12}>
              <Box mt={2}>
-             <Link variant="body2" onClick={handleSignIn} className="ho">
-              <FormattedMessage id="Label.AlreadyAccount" defualtMessage="Already have an account? Sign in" />
+              <Link className="ho" variant="body2" onClick={handleSignIn}>
+              <FormattedMessage id="Label.BackSignin" defualtMessage="Back to Signin" />
             </Link>
             </Box>
             </Grid>
+            </Grid>
+            
      </form>
     </Container>
   );
-  return (authState === 'signUp') ? content : null;
+  return (authState === 'forgotPassword') ? content : null;
 });
 
-SignUp.propTypes = {
+ForgotPassword.propTypes = {
   authState: PropTypes.string.isRequired,
   changeAuthState: PropTypes.func.isRequired,
-  signUp: PropTypes.func.isRequired
+  loading: PropTypes.bool.isRequired,
+  email: PropTypes.string,
+  forgotPassword: PropTypes.func.isRequired,
 };
 
-export default withRouter(SignUp);
+export default withRouter(ForgotPassword);

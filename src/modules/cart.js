@@ -1,3 +1,4 @@
+/*global localStorage*/
 const initialState = {
   rows: [],
   totalQuantity: 0,
@@ -14,54 +15,53 @@ export const cartReducer = (state = initialState, action) => {
       return _updateState({
         ...state,
         rows: action.payload,
-      })
+      });
     case 'CART_FETCH_DATA':
       return _updateState({
         ...state,
-        rows:action.payload})
+        rows:action.payload});
     case 'CART_CHANGE_QUANTITY':
       return _updateState({
         ...state,
         rows: action.payload,
-      })
+      });
     case 'CART_DELETE_ITEM':
       return _updateState({
         ...state,
         rows: action.payload,
-      })
+      });
     case 'CART_CLEAR_CART':
-      return initialState
+      return initialState;
     default:
-      return state
+      return state;
   }
-}
+};
 
 const _updateState = (state) => {
-  const newState = { ...state }
-  let totalQuantity = 0
-  let maxQuantity = 0
-  let totalPrice = 0
+  const newState = { ...state };
+  let totalQuantity = 0;
+  let maxQuantity = 0;
+  let totalPrice = 0;
   for (const row of newState.rows) {
     //calcurate about quantity
-    const qty =row.quantity
-    totalQuantity += qty
+    const qty =row.quantity;
+    totalQuantity += qty;
     if (qty > maxQuantity) {
-      maxQuantity = qty
+      maxQuantity = qty;
     }
 
     //Add subtotal column here.
-    row.subTotal = row.price * qty
+    row.subTotal = row.price * qty;
 
     //calcurate total price
-    totalPrice += row.subTotal
+    totalPrice += row.subTotal;
 
   }
-  newState.totalQuantity = totalQuantity
-  newState.maxQuantity = maxQuantity
-  newState.totalPrice = totalPrice
-
-  return newState
-}
+  newState.totalQuantity = totalQuantity;
+  newState.maxQuantity = maxQuantity;
+  newState.totalPrice = totalPrice;
+  return newState;
+};
 
 
 //=============================================================================
@@ -71,17 +71,17 @@ const _updateState = (state) => {
 export const addCartItem = (item) => {
   return (dispatch, getState) => {
     //Define cart item object
-    const cartItem = { ...item }
-    cartItem.quantity = 1
+    const cartItem = { ...item };
+    cartItem.quantity = 1;
     //All cart data
-    const cartItems = [...getState().cart.rows]
+    const cartItems = [...getState().cart.rows];
     //count up if found the item.
-    let found = false
+    let found = false;
     for (const row of cartItems) {
       if (row.id === cartItem.id) {
-        row.quantity += 1
-        found = true
-        break
+        row.quantity += 1;
+        found = true;
+        break;
       }
     }
 

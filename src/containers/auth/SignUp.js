@@ -1,6 +1,6 @@
-import { connect } from 'react-redux'
-import SignUp from '../../components/auth/SignUp'
-import { changeAuthState, signUp } from '../../modules/auth'
+import { connect } from 'react-redux';
+import SignUp from '../../components/auth/SignUp';
+import { changeAuthState, signUp } from '../../modules/auth';
 
 export default connect(
   (state) => ({
@@ -12,4 +12,4 @@ export default connect(
     changeAuthState: (value) => dispatch(changeAuthState(value)),
     signUp: (email, password) => dispatch(signUp(email, password))
   })
-)(SignUp)
+)(SignUp);

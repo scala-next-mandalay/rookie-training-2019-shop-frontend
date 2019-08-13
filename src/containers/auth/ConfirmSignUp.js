@@ -1,15 +1,16 @@
 import { connect } from 'react-redux';
-import SignIn from '../../components/auth/SignIn';
-import { changeAuthState,signIn } from '../../modules/auth';
+import ConfirmSignUp from '../../components/auth/ConfirmSignUp';
+import { changeAuthState, confirmSignUp } from '../../modules/auth';
 
 export default connect(
   (state) => ({
     authState: state.auth.authState,
     loading: state.auth.loading,
     error: state.auth.error,
+    email: state.auth.email,
   }),
   (dispatch) => ({
     changeAuthState: (value) => dispatch(changeAuthState(value)),
-    signIn:(email,password)=> dispatch(signIn(email,password)),
+    confirmSignUp: (email, code) => dispatch(confirmSignUp(email, code)),
   })
-)(SignIn);
+)(ConfirmSignUp);

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import SignIn from '../../components/auth/SignIn';
-import { changeAuthState,signIn } from '../../modules/auth';
+import ForgotPassword from '../../components/auth/ForgotPassword';
+import { changeAuthState, forgotPassword } from '../../modules/auth';
 
 export default connect(
   (state) => ({
@@ -10,6 +10,6 @@ export default connect(
   }),
   (dispatch) => ({
     changeAuthState: (value) => dispatch(changeAuthState(value)),
-    signIn:(email,password)=> dispatch(signIn(email,password)),
+    forgotPassword: (email) => dispatch(forgotPassword(email))
   })
-)(SignIn);
+)(ForgotPassword);

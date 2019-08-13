@@ -1,32 +1,64 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box} from '@material-ui/core';
-import "./style.css";
+import {Grid,TextField} from '@material-ui/core';
+import '../assets/style.css';
 import Hidden from "@material-ui/core/Hidden";
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles(theme => ({
+ root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+     
+  },
+  margin: {
+    margin: theme.spacing(1),
+     
+  },
+  textField: {
+    flexBasis: 100,
+    
+  },
+ 
+}));
 const NavTesting = ({ categories, setCategoryId, handleDrawerClose }) => {
-    // const classes = useStyles()
+  const classes = useStyles();
+  const [values, setValues] = React.useState(1);
+  const handleChangeCategory = name => event => {
+    setValues({ ...values, [name]: event.target.value });
+  };
+  
+ 
   return (
-      <Hidden only={["sm", "xs","md"]}>
-         <Box display="flex" flexDirection="row" p={1} m={1} >
-        {categories.map((obj) => (
-          <Box key={obj.id} onClick={()=>{
-            // handleDrawerClose()
-            setCategoryId(obj.id);
-          }}  >
-                        <div style={{ width: '100%' }}>
-            <Box display="flex" flexDirection="row" p={1} m={1}>
-             <Box p={1} bgcolor="none" marginLeft="3px" color="#000000" className="ho">
-                    {obj.name}
-                </Box>
-       
-             </Box>
-            </div>
-            
-          </Box>
+    <Hidden only={["sm", "xs","md"]}>
+    <Grid container>
+      <Grid item xs={12} align="center">
+      <div className="root">
+      <TextField
+        select
+        className={clsx(classes.margin, classes.textField)}
+        onChange={handleChangeCategory('category')}
+        SelectProps={{
+          native: true,
+          MenuProps: {
+            className: classes.menu,
+          },
+        }}
+        margin="dense"
+        variant="outlined"
+      >
+        {categories.map(obj => (
+          <option key={obj.id} onClick={()=>{ setCategoryId(obj.id); }} className="text2">
+            {obj.name}
+          </option>
         ))}
-      </Box>
-      </Hidden>
+      </TextField>
+      </div>
+     
+      </Grid>
+      </Grid>
+    </Hidden>
   );
 };
 

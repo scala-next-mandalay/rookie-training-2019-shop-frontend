@@ -1,18 +1,17 @@
 import React from 'react';
-import {Button,Grid,Divider,Dialog,Box,Container,Paper,Link,TextField} from '@material-ui/core';
+import {Button,Grid,Divider,Box,Paper,TextField} from '@material-ui/core';
 import TitleBar from '../containers/TitleBar';
-import ToolbarSpacer from './ToolbarSpacer';
+import { FormattedMessage } from 'react-intl';
 import CartTable from '../containers/CartTable';
-import { Link as RouterLink } from 'react-router-dom';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { validateForm } from '../util';
 import clsx from 'clsx';
-import './style.css';
+import '../assets/style.css';
+import { withRouter } from 'react-router-dom';
+import HomeIcon from '@material-ui/icons/Home';
+
+
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -51,10 +50,21 @@ const useStyles = makeStyles(theme => ({
   },
   dense: {
     marginTop: theme.spacing(2),
+  },
+   title: {
+    marginLeft: theme.spacing(2),
+    flex: 1,
+  },
+  toolbar:{
+  marginTop: theme.spacing(10),
+  },
+  homeSpace: {
+    marginRight: theme.spacing(1),
   }
+ 
 }));
 
-const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity, postOrder}) => {
+const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity,showMenu,showNav,showIcon}) => {
    const classes = useStyles();
    const validationSetting = {
     isEmpty: ['first_name', 'address1', 'country', 'city']
@@ -70,26 +80,13 @@ const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity, postOrde
     city: "",
   };
   const [form, setForm] = React.useState(state );
-  const [open, setOpen] = React.useState(false);
   const [errors, setErrors] = React.useState({});
-
-  function handleClickOpen() {
-    setOpen(true);
-  }
-
-  function handleClose() {
-    setOpen(false);
-  }
-  
   const handleChangeValue = fieldName => event => {
     const newForm = {...form};
     newForm[fieldName] =  event.target.value;
     setForm(newForm);
   };
   
-  const handleOrderSubmit = event => {
-    postOrder();
-  }
   
   const handleSubmit = event => {
     event.preventDefault();
@@ -98,23 +95,12 @@ const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity, postOrde
       setErrors(errs);
        if(form.first_name===""||form.last_name===""||form.address1===""||form.address2===""||form.country===""||form.state===""||form.city===""){
        alert("fill your information form fully.");
-       handleClose(false);
     }
     }
     else {
+       
        setRequestParams(form);
-     // history.push('/confirm')
-     
-      console.log(`
-        --CustomerForm--
-        First Name: ${form.first_name}
-        Last Name: ${form.last_name}
-        Address1: ${form.address1}
-        Address2: ${form.address2}
-        Country :${form.country}
-        State :${form.state}
-        City :${form.city}
-      `);
+       history.push("/checkoutconfirm");
     }
     };
   const addressForm = (
@@ -235,148 +221,87 @@ const Checkout = ({ setRequestParams, history,totalPrice,totalQuantity, postOrde
               fullWidth
               variant="contained"
               color="secondary"
-              onClick={handleClickOpen}
+             onClick={handleSubmit}
+           
             >
-              Confirm
+             <FormattedMessage id="Button.Confirm" defualtMessage="Confirm" />
             </Button>
-            
             </div>
         
            </form>
-            <Dialog fullScreen open={open} onClose={handleClose}>
-           <AppBar>
-          <Toolbar>
-         
-           <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="Close"
-            >
-              <CloseIcon />
-           </IconButton>
-         </Toolbar>
-        </AppBar>
-         <Container maxWidth="lg" className={classes.main}>
-           <Paper className={classes.paper} >
-           <Box display="flex" flexDirection="column">
-            <Box display="flex" flexDirection="row">
-              <Box className={classes.boxTitle}>First name : </Box>
-              <Box className={classes.boxValue}>{form.first_name}</Box>
-            </Box>
-            <Divider />
-           
-            <Box display="flex" flexDirection="row">
-              <Box className={classes.boxTitle}>Last name : </Box>
-              <Box className={classes.boxValue}>{form.last_name}</Box>
-            </Box>
-            <Divider />
-            <Box display="flex" flexDirection="row">
-              <Box className={classes.boxTitle}>Address1 : </Box>
-              <Box className={classes.boxValue}>{form.address1}</Box>
-            </Box>
-             <Divider />
-            <Box display="flex" flexDirection="row">
-              <Box className={classes.boxTitle}>Address2 : </Box>
-              <Box className={classes.boxValue}>{form.address2}</Box>
-            </Box>
-             <Divider />
-            <Box display="flex" flexDirection="row">
-              <Box className={classes.boxTitle}>Country : </Box>
-              <Box className={classes.boxValue}>{form.country}</Box>
-            </Box>
-             <Divider />
-            <Box display="flex" flexDirection="row">
-              <Box className={classes.boxTitle}>State : </Box>
-              <Box className={classes.boxValue}>{form.state}</Box>
-            </Box>
-             <Divider />
-           <Box display="flex" flexDirection="row">
-              <Box className={classes.boxTitle}>City : </Box>
-              <Box className={classes.boxValue}>{form.city}</Box>
-           </Box>
-           
-           </Box>
-           </Paper>
-           <Paper className={classes.paper}>
-              <Box display="flex" flexDirection="column">
-              <Box display="flex" flexDirection="row">
-              <Box className={classes.boxTitle}>Total</Box>
-              <Box className={classes.boxValue}>{totalPrice}(Kyats)</Box>
-             </Box>
-             </Box>
-          </Paper>
-        <Button
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submitButton}
-            onClick={handleOrderSubmit}
-            to="/checkoutconfirm"
-            component={RouterLink}
-          >
-            Confirm
-          </Button>
-      </Container>
-      </Dialog>
       </div>
       
   );
-  
+   const handleHome = event => {
+    event.preventDefault();
+    history.push("/");
+  };
+
   return (
     <React.Fragment>
-    <TitleBar showMenu={false} showIcon={true} showNav={false} />
-
-     
-      <ToolbarSpacer />
-     <div className="title_Ship">
-      <div className="ho">1. Shipping information</div>
-      <div className="priceTxt">If shipping to a work address, please include the company name.</div>
-      <div className="txt3">Your information</div>
-      </div>
-      <Grid display="flex" flexDirection="row">
-      <Grid item xs={12} sm={12} md={8} lg={8}>
-       <Box display="flex" >
-       <Box ml="auto" my="auto" mr={3}>
-       <Link className='priceTxt' to="/"
-            component={RouterLink}
-            >
-            Continue Shopping
-       </Link>
-       </Box>
-      </Box>
-       <div className="wrapper">
-       <div className="form-wrapper">
-       {addressForm}
-        </div>
-        </div>
-        </Grid>
-        </Grid>
-        <Grid item xs={12} sm={12} md={8} lg={8}>
-        <Divider marginTop="2px"/>
-        </Grid>
+    <TitleBar showMenu={false} showNav={false} showIcon={true} />
+        <div className={classes.toolbar}/>
+        
         <div className="title_Ship">
-        <div className="ho">2. Order review</div>
-        <Grid display="flex" flexDirection="row">
+        
+        <div className="ho">1.<FormattedMessage id="Label.ShippingInformation" defualtMessage="Shipping Information" /></div>
+        <div className="txt3"><FormattedMessage id="Label.Information" defualtMessage="Information" /></div>
+        <div className="text2"><FormattedMessage id="Label.InformationDetail" defualtMessage="Please fill your information fully" /></div>
+      
+        
+        <Grid>
         <Grid item xs={12} sm={12} md={8} lg={8}>
-        <CartTable showQty={true}/>
+        <Box display="flex" >
+          <Box ml="auto" my="auto" mr={1}>
+           
+           <Button onClick={handleHome} variant="contained" color="primary">
+              <HomeIcon className={classes.homeSpace} />
+               <FormattedMessage id="Button.Shopping" defualtMessage="ShoppingContinuation" />
+          </Button>
+         
+          </Box>
+         </Box>
+         
+           {addressForm}
+            <Divider/> 
+        </Grid>
+        </Grid>
+        </div>
+        
+        
+        
+        
+        
+        <div className="title_Ship">
+        <div className="ho">2.<FormattedMessage id="Label.OrderReview" defualtMessage="Order Review" /></div>
+         
+         
+         
+        <Grid>
+        <Grid item xs={12} sm={12} md={8} lg={8}>
+         <CartTable showQty={true}/>
           <Box display="flex" flexDirection="column" marginTop="20px" bgcolor="#f2f2f2">
           <Paper className={classes.gridPaper}>
-          <Box  mt={1} mb={1} fontSize="h6.fontSize" textAlign="right" className="nameTxt" mr={0} display="flex">
-          <Grid className="nameTxt" item xs={8} sm={8}> Total Quantity(Items) :</Grid> <Grid item xs={4} sm={4} className={classes.gridTotalPrice}> {totalQuantity}(Items)</Grid>
+          <Box  mt={1} mb={1}  textAlign="right" className="text1" mr={0} display="flex">
+          <Grid className="text1" item xs={9} sm={8}><FormattedMessage id="Label.TotalQuantity" defualtMessage="Total Quantity" />:</Grid> <Grid item xs={3} sm={4} className={classes.gridTotalPrice}> {totalQuantity}(Items)</Grid>
           </Box>
-          <Box  mt={1} mb={1} fontSize="h6.fontSize" textAlign="right" className="nameTxt" mr={0} display="flex">
-          <Grid className="nameTxt" item xs={8} sm={8}> Total Price :</Grid> <Grid item xs={4} sm={4} className={classes.gridTotalPrice}> {totalPrice}(MMK)</Grid>
+          <Box  mt={1} mb={1} textAlign="right" className="text1" mr={0} display="flex">
+          <Grid className="text1" item xs={9} sm={8}><FormattedMessage id="Label.TotalPrice" defualtMessage="Total Price" />:</Grid> <Grid item xs={3} sm={4} className={classes.gridTotalPrice}> {totalPrice}(MMK)</Grid>
           </Box>
         </Paper>
-      </Box>  
-      <Divider marginTop="2px"/> 
+        </Box>  
+         <Divider/> 
        </Grid>
        </Grid>
+      
         </div>
-
+         
     </React.Fragment>
     
   );
-}
+};
 Checkout.propTypes = {
-  totalPrice: PropTypes.number.isRequired,
+   totalPrice: PropTypes.number.isRequired,
    totalQuantity: PropTypes.number.isRequired,
-}
-export default Checkout
+};
+export default withRouter(Checkout);

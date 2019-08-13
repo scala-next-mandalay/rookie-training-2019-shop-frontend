@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <TitleBar handleDrawerToggle={handleDrawerToggle} showNav={true} showMenu={true}  showIcon={true} />
+      <TitleBar handleDrawerToggle={handleDrawerToggle} showNav={true} showMenu={true}  showIcon={true} showLogIn={true}/>
       <DrawerMenu mobileOpen={mobileOpen} handleDrawerClose={handleDrawerClose} />
     </React.Fragment>
   );

@@ -1,25 +1,27 @@
 import { connect } from 'react-redux';
 import OrderHistory from '../components/OrderHistory';
-import { fetchAllOrders,setOrderId, setSearchText,clickOrderId ,setbeginDate,setendDate} from '../modules/orders';
-
+import { fetchAllOrders, setSearchByOrderId,clickOrderId ,setbeginDate,setendDate} from '../modules/orders';
+import { fetchAuthedUser, refreshToken } from '../modules/auth';
 
 export default connect(
   (state) => ({
-    // cart: state.cart.rows,
-    //orders: state.orders.rows,
     orders: state.orders.rows, 
-    searchText: state.orders.searchText,
+    searchTextOrderId: state.orders.searchTextOrderId,
     searchTextBegin: state.orders.searchTextBegin,
-    searchTextEnd: state.orders.searchTextEnd
+    searchTextEnd: state.orders.searchTextEnd,
+    user: state.auth.user,
+    authState: state.auth.authState,
+    loading: state.auth.loading,
   }),
    
   (dispatch) => ({
     fetchAllOrders: () => dispatch(fetchAllOrders()),
-    setOrderId: (orderId) =>  dispatch(setOrderId(orderId)),
-    setSearchText: (text) =>  dispatch(setSearchText(text)),
+    setSearchByOrderId: (text) =>  dispatch(setSearchByOrderId(text)),
     clickOrderId :(orderId) => dispatch(clickOrderId(orderId)),
     setbeginDate: (date) =>  dispatch(setbeginDate(date)),
     setendDate: (date) =>  dispatch(setendDate(date)),
+    fetchAuthedUser: () => dispatch(fetchAuthedUser()),
+    refreshToken: () => dispatch( refreshToken() )
   })
   
  

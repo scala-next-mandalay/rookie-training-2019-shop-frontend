@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Box, Drawer, Hidden, IconButton, Divider } from '@material-ui/core';
+import { Box, Drawer, Hidden, IconButton, Divider,Grid } from '@material-ui/core';
 import { Close as CloseIcon } from '@material-ui/icons';
 import CategoryList from '../containers/CategoryList';
+import { FormattedMessage } from 'react-intl';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const drawerWidth = 300;
 
@@ -30,9 +32,38 @@ const DrawerMenu = ({mobileOpen, handleDrawerClose}) => {
           }}
         >
           <Box width={drawerWidth}>
-            <IconButton onClick={handleDrawerClose}>
+          <Grid container>
+         
+           <Grid container>
+          
+          <Hidden mdUp>
+           <Box ml={1} mr="auto" my="auto">
+             <Box fontSize={{xs:"subtitle1", sm:"h6.fontSize"}} className="title">
+                <FormattedMessage id="Top.Title" defualtMessage="Title"/>
+              </Box>
+           </Box>
+           </Hidden>
+           <Hidden smDown>
+           <Box ml={1} mr="auto" my="auto">
+             <Box fontSize={{xs:"subtitle1", sm:"h6.fontSize"}} className="title">
+               <FormattedMessage id="Label.Category" defualtMessage="Categories"/>
+              </Box>
+           </Box>
+           </Hidden>
+             <Box mr={1} ml="auto" my="auto"> 
+              <IconButton onClick={handleDrawerClose}>
+              <Tooltip title="close">
               <CloseIcon />
-            </IconButton>
+              </Tooltip>
+              </IconButton>
+            </Box>
+          </Grid>
+          
+       
+       
+       
+           
+            </Grid>
           </Box>
           <Divider />
           <CategoryList handleDrawerClose={handleDrawerClose} />
