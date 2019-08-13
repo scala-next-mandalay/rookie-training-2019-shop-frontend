@@ -6,7 +6,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Shop from './Shop';
 import Checkout from '../containers/Checkout';
-import OrderSuccess from '../containers/OrderSuccess';
 import OrderHistory from '../containers/OrderHistory';
 import OrderDetail from '../containers/OrderDetail';
 import { IntlProvider } from "react-intl";
@@ -63,12 +62,11 @@ const App = ({locale, fetchCartData, fetchAllCategories, setUser,fetchAllOrders,
           }} />
           
           <Route exact path="/checkout" render={() => {
-            return <Checkout />;
-            
+            return <Checkout showForm={true} />;
           }} />
-          <Route exact path="/checkoutconfirm" render={() => {
-            return <OrderSuccess/>;
-            
+          
+          <Route exact path="/checkout/confirm" render={() => {
+            return <Checkout showForm={false} />;
           }} />
           
           <Route exact path="/myjwt" render={() => {

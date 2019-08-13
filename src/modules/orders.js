@@ -13,7 +13,7 @@ const initialState = {
   clickedOrderItems : [],
   searchTextBegin:'',
   searchTextEnd:'',
-  loading:false,
+  loading:false
 };
 
 //=============================================================================
@@ -32,7 +32,6 @@ export const ordersReducer = (state = initialState, action) => {
         ...state,
         requestParams: action.payload,
         postResultObj: null
-        
       };
       
     case 'ORDERS_SET_BY_ID':
@@ -68,21 +67,24 @@ export const ordersReducer = (state = initialState, action) => {
     case 'ORDERS_POST_DONE':
       return {
         ..._getCommonState(state),
-        postResultObj: action.payload,
-        
-        
+        postResultObj: action.payload
       };
-     
-     
-      
+    case 'CLEAR_CHECKOUT':
+      return {
+        ..._getCommonState(state),
+        requestParams: null,
+        postResultObj: null
+      };
     default:
       return state;
   }
 };
+
 const _getCommonState = (state) => ({
   ...state, 
   loading: false,
 });
+
 //=============================================================================
 //　ActionCreators
 //=============================================================================
@@ -230,4 +232,6 @@ export const postOrder = () => {
   };
 };
 
-
+export const clearCheckout = () => ({
+  type: 'CLEAR_CHECKOUT'
+});

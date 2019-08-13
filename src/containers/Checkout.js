@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
 import Checkout from '../components/Checkout';
-import { setRequestParams} from '../modules/orders';
+import { clearCheckout } from '../modules/orders'
 
 export default connect(
   (state) => ({
-    totalPrice: state.cart.totalPrice,
-    totalQuantity: state.cart.totalQuantity,
+    cart: state.cart.rows,
+    requestParams: state.orders.requestParams,
+    postResultObj: state.orders.postResultObj,
   }),
   (dispatch) => ({
-    setRequestParams: (addressForm) =>  dispatch(setRequestParams(addressForm)),
-   
+    clearCheckout: () =>  dispatch(clearCheckout())
   })
 )(Checkout);
+
