@@ -30,8 +30,8 @@ export const cartReducer = (state = initialState, action) => {
         ...state,
         rows: action.payload,
       });
-    case 'CART_CLEAR_CART':
-      return initialState;
+    // case 'CART_CLEAR_CART':
+    //   return initialState;
     default:
       return state;
   }
@@ -73,8 +73,10 @@ export const addCartItem = (item) => {
     //Define cart item object
     const cartItem = { ...item };
     cartItem.quantity = 1;
+    
     //All cart data
     const cartItems = [...getState().cart.rows];
+   
     //count up if found the item.
     let found = false;
     for (const row of cartItems) {
@@ -87,36 +89,36 @@ export const addCartItem = (item) => {
 
     //push the item if not found.
     if (!found) {
-      cartItems.push(cartItem)
+      cartItems.push(cartItem);
     }
     localStorage.setItem('cart', JSON.stringify(cartItems));
     dispatch({
       type: 'CART_ADD_ITEM',
       payload: cartItems
-    })
-  }
-}
+    });
+  };
+};
 
 export const fetchCartData = () => {
   return (dispatch) => {
-    const jsonData = localStorage.getItem('cart')
+    const jsonData = localStorage.getItem('cart');
     let rows = [];
     if (jsonData) {
-      rows = JSON.parse(jsonData)
+      rows = JSON.parse(jsonData);
     }
     dispatch({
       type: 'CART_FETCH_DATA',
       payload: rows
-    })
-  }
-}
+    });
+  };
+};
 export const deleteCartItem = itemId => {
   return (dispatch, getState) => {
     const cartItems = [];
     const rows = [...getState().cart.rows];
     for (const row of rows) {
       if (row.id !== itemId) {
-        cartItems.push({ ...row })
+        cartItems.push({ ...row });
       }
     }
     //store in localStorage
@@ -124,26 +126,28 @@ export const deleteCartItem = itemId => {
     dispatch({
       type: 'CART_DELETE_ITEM',
       payload: cartItems
-    })
-  }
+    });
+  };
 
-}
+};
 
 export const changeQuantity = (itemId, quantity) => {
+
   return (dispatch, getState) => {
-    quantity= parseInt(quantity);
+    quantity= parseInt(quantity)
     if (!quantity || quantity <= 0) {
-      quantity = 0
+      quantity = 0;
     }
 
     //All cart data
-    const cartItems = [...getState().cart.rows]
+    const cartItems = [...getState().cart.rows];
 
     //update quantity
     for (const row of cartItems) {
       if (row.id === itemId) {
-        row.quantity =  quantity
-        break
+        row.quantity =  quantity;
+       
+        break;
       }
     }
     //store in localStorage
@@ -151,6 +155,6 @@ export const changeQuantity = (itemId, quantity) => {
     dispatch({
       type: 'CART_CHANGE_QUANTITY',
       payload: cartItems
-    })
-  }
-}
+    });
+  };
+};

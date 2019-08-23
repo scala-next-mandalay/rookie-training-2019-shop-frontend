@@ -62,7 +62,7 @@ const useStyles = makeStyles(theme => ({
  
 }));
 
-const CheckoutForm = ({ setRequestParams, history,totalPrice,totalQuantity　}) => {
+const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}) => {
   const classes = useStyles();
   
   const validationSetting = {
@@ -221,7 +221,9 @@ const CheckoutForm = ({ setRequestParams, history,totalPrice,totalQuantity　}) 
             fullWidth
             variant="contained"
             color="secondary"
-           onClick={handleSubmit}
+            onClick={handleSubmit}
+            disabled={!cart.length}
+           
           
           >
            <FormattedMessage id="Button.Confirm" defualtMessage="Confirm" />
@@ -238,7 +240,7 @@ const CheckoutForm = ({ setRequestParams, history,totalPrice,totalQuantity　}) 
 
   return (
     <React.Fragment>
-      <TitleBar showMenu={false} showNav={false} showIcon={true} />
+       <TitleBar showMenu={false} showNav={false} showIcon={true} />
         <div className={classes.toolbar} />
         
         <div className="title_Ship">

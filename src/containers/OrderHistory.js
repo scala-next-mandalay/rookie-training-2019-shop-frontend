@@ -6,7 +6,7 @@ import { fetchAuthedUser, refreshToken } from '../modules/auth';
 export default connect(
   (state) => ({
     orders: state.orders.rows, 
-    searchTextOrderId: state.orders.searchTextOrderId,
+    // searchTextOrderId: state.orders.searchTextOrderId,
     searchTextBegin: state.orders.searchTextBegin,
     searchTextEnd: state.orders.searchTextEnd,
     user: state.auth.user,

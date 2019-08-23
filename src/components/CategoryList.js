@@ -7,9 +7,10 @@ import '../assets/style.css';
 const CategoryList = ({ categories, setCategoryId, handleDrawerClose }) => {
   return (
     <List>
+       
         {categories.map((obj) => (
           <ListItem button key={obj.id} onClick={()=>{
-           handleDrawerClose();
+          handleDrawerClose();
             setCategoryId(obj.id);
           }}  >
             <ListItemText>

@@ -117,7 +117,7 @@ const useStyles2 = makeStyles(theme => ({
   
 }));
 
-const OrderHistory = ({orders,cart,requestParams,showNav,showIcon,showMenu,totalPrice,totalQuantity,searchTextOrderId,setSearchByOrderId,clickOrderId,searchTextBegin,searchTextEnd,setbeginDate,setendDate,history,fetchAuthedUser, user, refreshToken}) => {
+const OrderHistory = ({orders,setSearchByOrderId,clickOrderId,searchTextBegin,searchTextEnd,setbeginDate,setendDate,history,fetchAuthedUser, user, refreshToken}) => {
 
   const classes = useStyles2();
   const [page, setPage] = React.useState(0);
@@ -160,6 +160,14 @@ const OrderHistory = ({orders,cart,requestParams,showNav,showIcon,showMenu,total
     event.preventDefault();
     history.push("/checkout");
     };
+  
+   const isFirstRef = React.useRef(true);
+    React.useEffect(() => {
+    if (isFirstRef.current) {
+      isFirstRef.current = false;
+      fetchAuthedUser();
+    }
+  });
     
   const show=( <Container maxWidth="lg">
         <TitleBar showMenu={false} showIcon={false} showNav={false}/>
@@ -187,7 +195,6 @@ const OrderHistory = ({orders,cart,requestParams,showNav,showIcon,showMenu,total
        
          <TextField
              id="search"
-             value={searchTextOrderId}
              onChange={handleChangeSearchByOrderId}
              autoFocus
              margin="normal"
@@ -211,7 +218,7 @@ const OrderHistory = ({orders,cart,requestParams,showNav,showIcon,showMenu,total
         <Grid>  
         <Tooltip title="Select Begin Date">
         <TextField
-        id="date"
+        id="date1"
         type="date"
         className={classes.textField}
         InputLabelProps={{
@@ -233,7 +240,7 @@ const OrderHistory = ({orders,cart,requestParams,showNav,showIcon,showMenu,total
         <Grid>  
         <Tooltip title="Select End Date">
         <TextField
-        id="date"
+        id="date2"
         type="date"
         className={classes.textField}
         InputLabelProps={{
@@ -264,7 +271,7 @@ const OrderHistory = ({orders,cart,requestParams,showNav,showIcon,showMenu,total
              <TableCell align="left" className={classes.cell}>First Name</TableCell>
              <TableCell align="left" className={classes.cell}>Last Name</TableCell>
              <TableCell align="left" className={classes.cell}>Total Bill</TableCell>
-             <TableCell align="left" className={classes.cell}> Detail</TableCell>
+             <TableCell align="left" className={classes.cell}>Detail</TableCell>
             
           </TableRow>
         </TableHead>

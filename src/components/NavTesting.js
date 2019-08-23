@@ -24,21 +24,16 @@ const useStyles = makeStyles(theme => ({
 }));
 const NavTesting = ({ categories, setCategoryId, handleDrawerClose }) => {
   const classes = useStyles();
-  const [values, setValues] = React.useState(1);
-  const handleChangeCategory = name => event => {
-    setValues({ ...values, [name]: event.target.value });
-  };
-  
- 
+
+
   return (
-    <Hidden only={["sm", "xs","md"]}>
+    <Hidden only={["sm", "xs","md"]} implementation="css">
     <Grid container>
       <Grid item xs={12} align="center">
       <div className="root">
       <TextField
         select
         className={clsx(classes.margin, classes.textField)}
-        onChange={handleChangeCategory('category')}
         SelectProps={{
           native: true,
           MenuProps: {
@@ -47,7 +42,8 @@ const NavTesting = ({ categories, setCategoryId, handleDrawerClose }) => {
         }}
         margin="dense"
         variant="outlined"
-      >
+      > 
+      
         {categories.map(obj => (
           <option key={obj.id} onClick={()=>{ setCategoryId(obj.id); }} className="text2">
             {obj.name}

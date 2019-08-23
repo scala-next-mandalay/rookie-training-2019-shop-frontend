@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Card, CardMedia, CardContent, CardActions, Button } from '@material-ui/core';
 import { BASEURL_ITEM_IMAGES } from '../constants';
@@ -37,10 +36,10 @@ const Item = ({ addCartItem, row }) => {
       />
       <CardContent className={classes.cardContent}>
         <Box fontWeight={600} className="nameTxt">
-          {row.name}
+         Name {row.name}
         </Box>
         <Box className="priceTxt">
-        <FormattedMessage id="Label.Price" defualtMessage="Price" />:{row.price} Ks
+        <FormattedMessage id="Label.Price" defualtMessage="Price" />:Price{row.price} Ks
        
         </Box>
       </CardContent>
@@ -61,14 +60,5 @@ const Item = ({ addCartItem, row }) => {
   );
 };
 
-Item.propTypes = {
-  row: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    image: PropTypes.string,
-  }).isRequired,
-  addCartItem: PropTypes.func,
-};
 
 export default Item;

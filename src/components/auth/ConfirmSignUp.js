@@ -66,7 +66,7 @@ const ConfirmSignUp = React.memo(({
   
   
   <Link onClick={handleClose}>
-  <span class="close-btn">
+  <span className="close-btn">
   <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png" alt="closeicon"></img> 
    </span>
    </Link>
@@ -135,16 +135,16 @@ const ConfirmSignUp = React.memo(({
               className="btnSign"
             >
         
-              <FormattedMessage id="Label.Confirm" defualtMessage="Confirm" />
+              <FormattedMessage id="Button.Confirm" defualtMessage="Confirm" />
             </Button>
               {loading && <CircularProgress size={24} className={classes.btnProgress} />}
              </Grid>  
              <Grid container >
               <Grid item xs={12}>
               <Box mt={2}>
-                  <Link className="ho" variant="body2" onClick={handleSubmit}>
-                    <FormattedMessage id="Label.ResendCode" defualtMessage="Resend code to" />
-                  </Link>
+                   <Box color="red">
+                  <FormattedMessage id="Label.ResendCode" defualtMessage="Resend code to" />{email}
+                </Box>
                 </Box>
               </Grid>
             </Grid>

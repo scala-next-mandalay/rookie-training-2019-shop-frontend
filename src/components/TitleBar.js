@@ -60,7 +60,7 @@ const useStyles = makeStyles(theme => ({
 
 }));
 const ITEM_HEIGHT = 60;
-const TitleBar = ({locale,setLocale,cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,showIcon,changeAuthState, fetchAuthedUser, signOut, user, history,signIn,loading}) => {
+const TitleBar = ({locale,setLocale,cart, totalQuantity, handleDrawerToggle, showMenu ,showNav,showIcon, fetchAuthedUser, signOut, user, history,signIn,loading}) => {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -79,13 +79,13 @@ const TitleBar = ({locale,setLocale,cart, totalQuantity, handleDrawerToggle, sho
     setAnchorEl(null);
   };
   
-  const isFirstRef = React.useRef(true);
-  React.useEffect(() => {
-    if (isFirstRef.current) {
-      isFirstRef.current = false;
-      fetchAuthedUser();
-    }
-  });
+  // const isFirstRef = React.useRef(true);
+  // React.useEffect(() => {
+  //   if (isFirstRef.current) {
+  //     isFirstRef.current = false;
+  //     fetchAuthedUser();
+  //   }
+  // });
   
   const handleLogout = event => {
     event.preventDefault();
@@ -123,9 +123,9 @@ const TitleBar = ({locale,setLocale,cart, totalQuantity, handleDrawerToggle, sho
     <div className={classes.list}>
        <Box display="flex">
        <Box ml={1} mr="auto" my="auto"> 
-       <IconButton edge="start"  onClick={toggleDrawer(side, false)} aria-label="Close" className={classes.closebtn}>
+      <IconButton edge="start"  onClick={toggleDrawer(side, false)} aria-label="Close" className={classes.closebtn}>
         <Tooltip title="Close"><CloseIcon /></Tooltip>
-       </IconButton>
+      </IconButton>
        </Box>
        <Box mr={2} ml="auto" my="auto" className="text2"><FormattedMessage id="Label.CartList" defualtMessage="Cart List" /></Box></Box> 
        <Divider />
@@ -138,6 +138,7 @@ const TitleBar = ({locale,setLocale,cart, totalQuantity, handleDrawerToggle, sho
             variant="contained" 
             color="primary"
             to="/checkout"
+            disabled={!cart.length}
             fullWidth
             component={RouterLink}>
             <FormattedMessage id="Button.Confirm" defualtMessage="Confirm" />
@@ -162,7 +163,7 @@ const TitleBar = ({locale,setLocale,cart, totalQuantity, handleDrawerToggle, sho
           {showMenu ? <MenuIcon />:null}
         </IconButton>
         
-        <Hidden smDown>
+        <Hidden smDown implementation="css">
           <Box fontSize={{xs:"subtitle1", sm:"h6.fontSize"}} className="title">
           <FormattedMessage id="Top.Title" defualtMessage="Title"/>
          </Box>
@@ -179,13 +180,15 @@ const TitleBar = ({locale,setLocale,cart, totalQuantity, handleDrawerToggle, sho
         </Box>
          {showIcon ?
        
-          <IconButton color="primary" onClick={toggleDrawer("right", true)}>
+          <IconButton color="primary" 
+            onClick={toggleDrawer("right", true)}
+            disabled={!cart.length}>
             <Badge 
               color="secondary" 
               badgeContent={totalQuantity} 
               invisible={totalQuantity > 0 ? false: true} 
             >
-              <ShoppingCartIcon />
+             <ShoppingCartIcon />
             </Badge>
           </IconButton>
         : null}
@@ -197,7 +200,7 @@ const TitleBar = ({locale,setLocale,cart, totalQuantity, handleDrawerToggle, sho
                 onClick={handleClick}
                 color="secondary"
                >
-               {user?
+              {user?
                 <Person fontSize="large"/>:
                 <MoreVertIcon/>}
               </IconButton>

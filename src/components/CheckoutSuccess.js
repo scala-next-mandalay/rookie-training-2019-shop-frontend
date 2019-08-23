@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles'
-import {  Container, Paper,Hidden,Box,Grid,Button} from '@material-ui/core';
+import {  Container, Paper,Box,Button} from '@material-ui/core';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -58,8 +58,8 @@ const CheckoutConfirm = ({postResultObj,history}) => {
       
         <div className="title_Ship">
           <div className="ho"><FormattedMessage id="Label.OrderSuccess"/></div>
-          <div className="priceTxt"><FormattedMessage id="Label.OrderSuccessId"/>{postResultObj.id}</div>
-          <div className="nameTxt"><FormattedMessage id="Label.InfoDetail"/></div>
+          <div className="text2"><FormattedMessage id="Label.OrderSuccessId"/> {postResultObj.id}</div>
+          <div className="text1"><FormattedMessage id="Label.InfoDetail"/></div>
         </div>
         <Table className={classes.table}>
           <TableHead className={classes.tbHead}>
@@ -83,47 +83,22 @@ const CheckoutConfirm = ({postResultObj,history}) => {
                <TableCell align="left"><div className="text2">{postResultObj!==null?postResultObj.state:null}</div></TableCell>
                <TableCell align="left"><div className="text2">{postResultObj!==null?postResultObj.city:null}</div></TableCell>
               </TableRow>
-           <Hidden only={["xs","sm"]}>
             <TableRow>
-               <TableCell rowSpan={6} />
+              <TableCell rowSpan={6} />
               <TableCell colSpan={5}><div className='text1'><FormattedMessage id="Label.SubTotal"/></div></TableCell>
-              <TableCell align="left"><div className='text1'>{postResultObj!==null?postResultObj.total_price:null} MMK</div></TableCell>
+              <TableCell align="left"><div className='text1'>{postResultObj!==null?postResultObj.total_price:null}MMK</div></TableCell>
             </TableRow>
             <TableRow>
-              <TableCell colSpan={5}><div className='text1'><FormattedMessage id="Label.Tax"  /></div></TableCell>
-              <TableCell align="left"><Box className='text1'>0 MMK</Box></TableCell>
+              <TableCell colSpan={5}><div className='text1'><FormattedMessage id="Label.Tax"/></div></TableCell>
+              <TableCell align="left"><Box className='text1'>0MMK</Box></TableCell>
             </TableRow>
             <TableRow>
               <TableCell colSpan={5}><div className='text1'><FormattedMessage id="Label.TotalPrice"/></div></TableCell>
-              <TableCell align="left"><div className='text1'>{postResultObj!==null?postResultObj.total_price:null} MMK</div></TableCell>
+              <TableCell align="left"><div className='text1'>{postResultObj!==null?postResultObj.total_price:null}MMK</div></TableCell>
             </TableRow>
-           </Hidden>
           </TableBody>
+
         </Table>
-        
-        <Hidden mdUp>
-          <Box display="flex" flexDirection="column" mt="20px">
-             <Paper>
-              <Box  mt={1} mb={1} ml={2} textAlign="left" className="text1" mr={0} display="flex">
-                <Grid className="priceTxt" item xs={6} sm={6}> <FormattedMessage id="Label.SubTotal"/> :</Grid> <Grid item xs={6} sm={6} className={classes.gridTotalPrice}> {postResultObj!==null?postResultObj.total_price:null}MMK</Grid>
-              </Box>
-            </Paper>
-            <Box display="flex" flexDirection="column" marginTop="20px">
-               <Paper>
-                <Box  mt={1} mb={1} ml={2} textAlign="left" className="text1" mr={0} display="flex">
-                  <Grid className="priceTxt" item xs={6} sm={6}><FormattedMessage id="Label.Tax"/>:</Grid> <Grid item xs={6} sm={6} className={classes.gridTotalPrice}> 0 MMK</Grid>
-                </Box>
-               </Paper>
-            </Box>
-          </Box>
-          <Box display="flex" flexDirection="column" marginTop="20px">
-            <Paper>
-              <Box  mt={1} mb={1} ml={2} textAlign="left" className="text1" mr={0} display="flex">
-                <Grid className="priceTxt" item xs={6} sm={6}> <FormattedMessage id="Label.TotalPrice"/> :</Grid> <Grid item xs={6} sm={6} className={classes.gridTotalPrice}> {postResultObj!==null?postResultObj.total_price:null}MMK</Grid>
-              </Box>
-            </Paper>
-          </Box>
-        </Hidden>
       </Paper>
     </Container>
   );

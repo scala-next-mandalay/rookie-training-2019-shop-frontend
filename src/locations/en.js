@@ -32,6 +32,7 @@ const en = {
   'Label.BackSignin': 'Back to Signin ',
   'Label.PasswordReset': 'Reset Password',
   'Label.CheckEmail': 'Please check your email',
+  'Label.ResendCode': 'Send Code to ',
   'Label.Product': 'Product',
   'Label.Description': 'Description',
   'Label.Quantity': 'Quantity',

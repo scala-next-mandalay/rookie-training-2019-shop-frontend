@@ -144,7 +144,7 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity,deleteCartItem}) => {
   });
   return (
     <Paper>
-      <Hidden xsDown>
+       <Hidden xsDown implementation="css">
         <Grid key={0} container>
           <Box flexGrow={1} display="flex" >
             <Grid item xs={3} >
@@ -163,8 +163,9 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity,deleteCartItem}) => {
           <Grid item xs={12}><Divider /></Grid>
         </Grid>
         {pcView}
-      </Hidden>
-      <Hidden smUp>
+        </Hidden>
+      
+      <Hidden smUp implementation="css">
         {mobileView}
       </Hidden>
       <Netprice />

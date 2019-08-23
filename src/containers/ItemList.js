@@ -3,12 +3,15 @@ import ItemList from '../components/ItemList';
 import { fetchItems} from '../modules/items';
 
 const _getItemsByCategory = (rows, categoryId) => {
+
   if (categoryId <= 0) {
     return rows;
   }
+  
   else {
     return rows.filter(t => t.category_id === categoryId);
   }
+   
 };
 
 export default connect(
@@ -16,6 +19,7 @@ export default connect(
     items: _getItemsByCategory(state.items.rows, state.items.selectedCateogryId),
     noMoreFetch: state.items.noMoreFetch
   }),
+
   (dispatch) => ({
     fetchItems: () => dispatch(fetchItems()),
   })

@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-const OrderDetail = ({orderitems,items, selectedOrder,history}) => {
+const OrderDetail = ({orderitems, selectedOrder,history}) => {
   const classes = useStyles();
    const handleHome = event => {
     event.preventDefault();
@@ -70,7 +70,7 @@ const OrderDetail = ({orderitems,items, selectedOrder,history}) => {
                <Grid item xs={12} sm={12} ml={1} className="txt4">Order Id- {selectedOrder!==null?selectedOrder.id:null} </Grid>
                 <Grid container  mt={1} mb={1}  className="text2" >
                 <Grid item xs={12} sm={6} >Order Date- {selectedOrder!==null?selectedOrder.created_at:null}</Grid>
-                <Grid item xs={12} sm={6}>Order Total-{selectedOrder!==null?selectedOrder.total_price:null}</Grid>
+                <Grid item xs={12} sm={6}>Order Total- {selectedOrder!==null?selectedOrder.total_price:null}</Grid>
                 </Grid>
             </Grid>
       </div>
@@ -79,13 +79,13 @@ const OrderDetail = ({orderitems,items, selectedOrder,history}) => {
             <Card>
             <CardContent>
             <Box  mt={1} mb={1} ml={2} textAlign="left" className="text2" mr={0} display="flex" flexDirection="column">
-            <Grid item xs={6} sm={6} className="txt4" fontSize={20}>Billing Address</Grid>
-            <Grid item xs={6} sm={6} >{selectedOrder!==null?selectedOrder.first_name:null}{selectedOrder!==null?selectedOrder.last_name:null}</Grid>
+            <Grid item xs={6} sm={6}className="txt4" fontSize={20}>Billing Address</Grid>
+            <Grid item xs={6} sm={6}>{selectedOrder!==null?selectedOrder.first_name:null} {selectedOrder!==null?selectedOrder.last_name:null}</Grid>
             <Grid item xs={6} sm={6}>{selectedOrder===null?null:selectedOrder.address1} {selectedOrder===null?null:selectedOrder.address2}</Grid>
-            <Grid item xs={6} sm={6} > {selectedOrder===null?null:selectedOrder.city}</Grid>
-            <Grid item xs={6} sm={6} >{selectedOrder===null?null:selectedOrder.state}</Grid>
+            <Grid item xs={6} sm={6}>{selectedOrder===null?null:selectedOrder.city}</Grid>
+            <Grid item xs={6} sm={6}>{selectedOrder===null?null:selectedOrder.state}</Grid>
             <Grid item xs={6} sm={6}>{selectedOrder===null?null:selectedOrder.country}</Grid>
-            <Grid item xs={6} sm={6} ></Grid>
+            <Grid item xs={6} sm={6}></Grid>
             <Divider/>
             <Grid item xs={6} sm={6} className="txt4">Payment Method</Grid>
             <Grid item xs={6} sm={6} className="text2">Checkmoney/MoneyOrder</Grid>
@@ -100,12 +100,12 @@ const OrderDetail = ({orderitems,items, selectedOrder,history}) => {
             <CardContent>
             <Box  mt={1} mb={1} ml={2} textAlign="left" className="text2" mr={0} display="flex" flexDirection="column">
             <Grid item xs={6} sm={6} className="txt4" fontSize={20}>Delivery Address</Grid>
-            <Grid item xs={6} sm={6} >{selectedOrder!==null?selectedOrder.first_name:null}{selectedOrder!==null?selectedOrder.last_name:null}</Grid>
+            <Grid item xs={6} sm={6}>{selectedOrder!==null?selectedOrder.first_name:null} {selectedOrder!==null?selectedOrder.last_name:null}</Grid>
             <Grid item xs={6} sm={6}>{selectedOrder===null?null:selectedOrder.address1} {selectedOrder===null?null:selectedOrder.address2}</Grid>
-            <Grid item xs={6} sm={6} > {selectedOrder===null?null:selectedOrder.city}</Grid>
-            <Grid item xs={6} sm={6} >{selectedOrder===null?null:selectedOrder.state}</Grid>
+            <Grid item xs={6} sm={6}>{selectedOrder===null?null:selectedOrder.city}</Grid>
+            <Grid item xs={6} sm={6}>{selectedOrder===null?null:selectedOrder.state}</Grid>
             <Grid item xs={6} sm={6}>{selectedOrder===null?null:selectedOrder.country}</Grid>
-            <Grid item xs={6} sm={6} ></Grid>
+            <Grid item xs={6} sm={6}></Grid>
             <Divider/>
             
             <Grid item xs={6} sm={6} className="txt4">Shipping Method</Grid>
@@ -148,8 +148,7 @@ const OrderDetail = ({orderitems,items, selectedOrder,history}) => {
     <div>
   {selectedOrder===null?<OrderHistory/>:
       <Container maxWidth="lg">
-     
-        <TitleBar showMenu={false} showIcon={false} showNav={false} />
+         <TitleBar showMenu={false} showIcon={false} showNav={false} />
           <div className={classes.toolbar}/>
           <Box display="flex" >
           <Box ml="auto" my="auto" mr={0} mt={3}>
@@ -177,7 +176,7 @@ const OrderDetail = ({orderitems,items, selectedOrder,history}) => {
           <TableRow>
              <TableCell align="left" className={classes.cell}>Id</TableCell>
              <TableCell align="left" className={classes.cell}>OrderId</TableCell>
-             <TableCell align="left" className={classes.cell}>Item Id </TableCell>
+             <TableCell align="left" className={classes.cell}>Item Id</TableCell>
              <TableCell align="left" className={classes.cell}>Item Name</TableCell>
              <TableCell align="left" className={classes.cell}>Price</TableCell>
              <TableCell align="left" className={classes.cell}>Qty</TableCell>

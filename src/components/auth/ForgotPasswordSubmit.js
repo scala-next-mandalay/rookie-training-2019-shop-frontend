@@ -69,7 +69,7 @@ const ForgotPasswordSubmit = React.memo(({
   
   
   <Link onClick={handleClose}>
-  <span class="close-btn">
+  <span className="close-btn">
   <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png" alt="closeicon"></img> 
    </span>
    </Link>

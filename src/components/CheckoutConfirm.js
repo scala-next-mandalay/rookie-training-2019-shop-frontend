@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles'
-import {  Container, Paper,Hidden,Box,Grid,Button,Divider,Typography} from '@material-ui/core';
+import {  Container, Paper,Box,Grid,Button,Divider,Typography} from '@material-ui/core';
 import TitleBar from '../containers/TitleBar';
 import PropTypes from 'prop-types';
 import '../assets/style.css';
@@ -113,7 +113,7 @@ const CheckoutConfirm = ({requestParams,history, loading,postOrder,totalQuantity
                   <FormattedMessage id="Label.OrderConfirm" defualtMessage="Order Confirmation" />
                 </Typography>
                 <Button color="inherit" onClick={handleClose}>
-                  <FormattedMessage id="Button.Close" defualtMessage="Close" />
+                   <FormattedMessage id="Button.Close" defualtMessage="Close" />
                 </Button>
               </Toolbar>
               </AppBar>
@@ -200,7 +200,7 @@ const CheckoutConfirm = ({requestParams,history, loading,postOrder,totalQuantity
 };
 
 CheckoutConfirm.propTypes = {
-   totalPrice: PropTypes.number.isRequired,
+  
    totalQuantity: PropTypes.number.isRequired,
 };
 export default withRouter(CheckoutConfirm);

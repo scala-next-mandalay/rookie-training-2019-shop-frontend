@@ -1,0 +1,556 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartTable component matches the snapshot 1`] = `
+Array [
+  <div
+    className="PrivateHiddenCss-smUp-11"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation1 makeStyles-paperMobile-5 MuiPaper-rounded"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiCardMedia-root makeStyles-imageMobile-4"
+          style={
+            Object {
+              "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/undefined\\")",
+            }
+          }
+          title="a"
+        />
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+      >
+        <div
+          className="MuiBox-root MuiBox-root-155"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-156"
+          >
+            Description:
+            a
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-157"
+          >
+            Qty:
+            <div>
+              1
+            </div>
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-158"
+          >
+            Price: @
+            1000
+             Ks
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-159"
+          >
+            Total: 
+             Ks
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root MuiPaper-elevation1 makeStyles-paperMobile-5 MuiPaper-rounded"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiCardMedia-root makeStyles-imageMobile-4"
+          style={
+            Object {
+              "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/undefined\\")",
+            }
+          }
+          title="b"
+        />
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+      >
+        <div
+          className="MuiBox-root MuiBox-root-160"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-161"
+          >
+            Description:
+            b
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-162"
+          >
+            Qty:
+            <div>
+              1
+            </div>
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-163"
+          >
+            Price: @
+            1000
+             Ks
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-164"
+          >
+            Total: 
+             Ks
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="PrivateHiddenCss-xsDown-9"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <div
+        className="makeStyles-girdDv-6"
+      >
+        <div
+          className="MuiGrid-root makeStyles-gridRow-1 MuiGrid-container"
+          variant="contained"
+        >
+          <div
+            className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-3"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-165"
+            >
+              <span>
+                Image
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-3"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-166"
+            >
+              <span>
+                Description
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-167"
+            >
+              <span>
+                Price
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-168"
+            >
+              <span>
+                Quantity
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-169"
+            >
+              <span>
+                Total Price
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <hr
+          className="MuiDivider-root"
+        />
+      </div>
+      <div
+        className="MuiGrid-root makeStyles-gridRow-1 MuiGrid-container"
+      >
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-3"
+        >
+          <div
+            className="MuiCardMedia-root makeStyles-imagePC-3"
+            style={
+              Object {
+                "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/undefined\\")",
+              }
+            }
+            title="a"
+          />
+        </div>
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-3"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-175 priceTxt"
+          >
+            a
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-176 priceTxt"
+          >
+            1000
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-177"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-178"
+            >
+              <div
+                className="MuiInputBase-root MuiInput-root MuiInput-underline"
+                onClick={[Function]}
+              >
+                <select
+                  className="MuiNativeSelect-root MuiNativeSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  value={1}
+                >
+                  <option
+                    value={1}
+                  >
+                    1
+                  </option>
+                  <option
+                    value={2}
+                  >
+                    2
+                  </option>
+                  <option
+                    value={3}
+                  >
+                    3
+                  </option>
+                  <option
+                    value={4}
+                  >
+                    4
+                  </option>
+                  <option
+                    value={5}
+                  >
+                    5
+                  </option>
+                  <option
+                    value={6}
+                  >
+                    6
+                  </option>
+                  <option
+                    value={7}
+                  >
+                    7
+                  </option>
+                  <option
+                    value={8}
+                  >
+                    8
+                  </option>
+                  <option
+                    value={9}
+                  >
+                    9
+                  </option>
+                  <option
+                    value={10}
+                  >
+                    10
+                  </option>
+                  <option
+                    value={11}
+                  >
+                    11
+                  </option>
+                  <option
+                    value={12}
+                  >
+                    12
+                  </option>
+                  <option
+                    value={13}
+                  >
+                    13
+                  </option>
+                  <option
+                    value={14}
+                  >
+                    14
+                  </option>
+                  <option
+                    value={15}
+                  >
+                    15
+                  </option>
+                  <option
+                    value={16}
+                  >
+                    16
+                  </option>
+                  <option
+                    value={17}
+                  >
+                    17
+                  </option>
+                  <option
+                    value={18}
+                  >
+                    18
+                  </option>
+                  <option
+                    value={19}
+                  >
+                    19
+                  </option>
+                  <option
+                    value={20}
+                  >
+                    20
+                  </option>
+                </select>
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root MuiNativeSelect-icon"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-225"
+          />
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <hr
+          className="MuiDivider-root"
+        />
+      </div>
+      <div
+        className="MuiGrid-root makeStyles-gridRow-1 MuiGrid-container"
+      >
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-3"
+        >
+          <div
+            className="MuiCardMedia-root makeStyles-imagePC-3"
+            style={
+              Object {
+                "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/undefined\\")",
+              }
+            }
+            title="b"
+          />
+        </div>
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-3"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-226 priceTxt"
+          >
+            b
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-227 priceTxt"
+          >
+            1000
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-228"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-229"
+            >
+              <div
+                className="MuiInputBase-root MuiInput-root MuiInput-underline"
+                onClick={[Function]}
+              >
+                <select
+                  className="MuiNativeSelect-root MuiNativeSelect-select MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  value={1}
+                >
+                  <option
+                    value={1}
+                  >
+                    1
+                  </option>
+                  <option
+                    value={2}
+                  >
+                    2
+                  </option>
+                  <option
+                    value={3}
+                  >
+                    3
+                  </option>
+                  <option
+                    value={4}
+                  >
+                    4
+                  </option>
+                  <option
+                    value={5}
+                  >
+                    5
+                  </option>
+                  <option
+                    value={6}
+                  >
+                    6
+                  </option>
+                  <option
+                    value={7}
+                  >
+                    7
+                  </option>
+                  <option
+                    value={8}
+                  >
+                    8
+                  </option>
+                  <option
+                    value={9}
+                  >
+                    9
+                  </option>
+                  <option
+                    value={10}
+                  >
+                    10
+                  </option>
+                  <option
+                    value={11}
+                  >
+                    11
+                  </option>
+                  <option
+                    value={12}
+                  >
+                    12
+                  </option>
+                  <option
+                    value={13}
+                  >
+                    13
+                  </option>
+                  <option
+                    value={14}
+                  >
+                    14
+                  </option>
+                  <option
+                    value={15}
+                  >
+                    15
+                  </option>
+                  <option
+                    value={16}
+                  >
+                    16
+                  </option>
+                  <option
+                    value={17}
+                  >
+                    17
+                  </option>
+                  <option
+                    value={18}
+                  >
+                    18
+                  </option>
+                  <option
+                    value={19}
+                  >
+                    19
+                  </option>
+                  <option
+                    value={20}
+                  >
+                    20
+                  </option>
+                </select>
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root MuiNativeSelect-icon"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-230"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

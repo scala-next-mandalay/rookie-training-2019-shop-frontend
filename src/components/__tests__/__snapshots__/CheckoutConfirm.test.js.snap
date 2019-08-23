@@ -1,0 +1,1016 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirm Order component matches the snapshot 1`] = `
+<div>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <div>
+      <header
+        className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-18 MuiAppBar-colorPrimary mui-fixed"
+      >
+        <div
+          className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+        >
+          <button
+            aria-label="Open drawer"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-menuButton-19 MuiIconButton-edgeStart"
+            disabled={false}
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            />
+          </button>
+          <div
+            className="PrivateHiddenCss-smDown-84"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-95 title"
+            >
+              <span>
+                Rookie Training 2019
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-96"
+          >
+            <div
+              className="MuiGrid-root MuiGrid-container"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-200 makeStyles-navMenuList-23"
+              />
+              <button
+                aria-controls="long-menu"
+                aria-haspopup="true"
+                aria-label="More"
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div
+      className="makeStyles-toolbar-2"
+    />
+    <div
+      className="MuiBox-root MuiBox-root-225"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-226"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+              />
+            </svg>
+            <span>
+              Shopping
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <form
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <div
+        className="MuiContainer-root makeStyles-main-7 MuiContainer-maxWidthLg"
+      >
+        <div
+          className="makeStyles-AppDiv-10"
+        >
+          <header
+            className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary"
+          >
+            <div
+              className="MuiToolbar-root MuiToolbar-dense MuiToolbar-gutters"
+            >
+              <button
+                aria-label="close"
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <h6
+                className="MuiTypography-root makeStyles-title-8 MuiTypography-h6"
+              >
+                <span>
+                  Order Confirmation
+                </span>
+              </h6>
+              <button
+                className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiButton-label"
+                >
+                  <span>
+                    Close
+                  </span>
+                </span>
+              </button>
+            </div>
+          </header>
+        </div>
+        <div
+          className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-3 MuiPaper-rounded"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-274"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-275"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-276 makeStyles-boxTitle-5"
+              >
+                First name : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-277 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  khin
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-283"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-284 makeStyles-boxTitle-5"
+              >
+                Last name : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-285 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  lawoon
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-286"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-287 makeStyles-boxTitle-5"
+              >
+                Address1 : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-288 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  23 street
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-289"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-290 makeStyles-boxTitle-5"
+              >
+                Address2 : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-291 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  CMTZ
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-292"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-293 makeStyles-boxTitle-5"
+              >
+                Country : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-294 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  myanmar
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-295"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-296 makeStyles-boxTitle-5"
+              >
+                State : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-297 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  mandalay
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-298"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-299 makeStyles-boxTitle-5"
+              >
+                City : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-300 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  mandalay
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr
+            className="MuiDivider-root"
+          />
+          <div
+            className="MuiBox-root MuiBox-root-301"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-302"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-303 makeStyles-boxTitle-5"
+              >
+                <span>
+                  Total Quantity
+                </span>
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-304 makeStyles-boxValue-6"
+              >
+                5
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-305"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-306"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-307 makeStyles-boxTitle-5"
+              >
+                <span>
+                  Total Price
+                </span>
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-308 makeStyles-boxValue-6"
+              >
+                50000
+                (MMK)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-container"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root makeStyles-submitButton-4 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              <span>
+                Confirm
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </form>
+    <div
+      className="MuiBox-root MuiBox-root-309"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-310"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <span>
+              Back
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Confirm Order component matches the snapshot 2`] = `
+<div>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <div>
+      <header
+        className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-18 MuiAppBar-colorPrimary mui-fixed"
+      >
+        <div
+          className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+        >
+          <button
+            aria-label="Open drawer"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-menuButton-19 MuiIconButton-edgeStart"
+            disabled={false}
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            />
+            <span
+              className="MuiTouchRipple-root"
+            />
+          </button>
+          <div
+            className="PrivateHiddenCss-smDown-84"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-311 title"
+            >
+              <span>
+                Rookie Training 2019
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-312"
+          >
+            <div
+              className="MuiGrid-root MuiGrid-container"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-313 makeStyles-navMenuList-23"
+              />
+              <button
+                aria-controls="long-menu"
+                aria-haspopup="true"
+                aria-label="More"
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  className="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div
+      className="makeStyles-toolbar-2"
+    />
+    <div
+      className="MuiBox-root MuiBox-root-314"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-315"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+              />
+            </svg>
+            <span>
+              Shopping
+            </span>
+          </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <form
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <div
+        className="MuiContainer-root makeStyles-main-7 MuiContainer-maxWidthLg"
+      >
+        <div
+          className="makeStyles-AppDiv-10"
+        >
+          <header
+            className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary"
+          >
+            <div
+              className="MuiToolbar-root MuiToolbar-dense MuiToolbar-gutters"
+            >
+              <button
+                aria-label="close"
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  className="MuiTouchRipple-root"
+                />
+              </button>
+              <h6
+                className="MuiTypography-root makeStyles-title-8 MuiTypography-h6"
+              >
+                <span>
+                  Order Confirmation
+                </span>
+              </h6>
+              <button
+                className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiButton-label"
+                >
+                  <span>
+                    Close
+                  </span>
+                </span>
+                <span
+                  className="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </header>
+        </div>
+        <div
+          className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-3 MuiPaper-rounded"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-316"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-317"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-318 makeStyles-boxTitle-5"
+              >
+                First name : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-319 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  khin
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-320"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-321 makeStyles-boxTitle-5"
+              >
+                Last name : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-322 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  lawoon
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-323"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-324 makeStyles-boxTitle-5"
+              >
+                Address1 : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-325 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  23 street
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-326"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-327 makeStyles-boxTitle-5"
+              >
+                Address2 : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-328 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  CMTZ
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-329"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-330 makeStyles-boxTitle-5"
+              >
+                Country : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-331 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  myanmar
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-332"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-333 makeStyles-boxTitle-5"
+              >
+                State : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-334 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  mandalay
+                </div>
+              </div>
+            </div>
+            <hr
+              className="MuiDivider-root"
+            />
+            <div
+              className="MuiBox-root MuiBox-root-335"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-336 makeStyles-boxTitle-5"
+              >
+                City : 
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-337 makeStyles-boxValue-6"
+              >
+                <div
+                  className="text2"
+                >
+                  mandalay
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr
+            className="MuiDivider-root"
+          />
+          <div
+            className="MuiBox-root MuiBox-root-338"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-339"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-340 makeStyles-boxTitle-5"
+              >
+                <span>
+                  Total Quantity
+                </span>
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-341 makeStyles-boxValue-6"
+              >
+                5
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiBox-root MuiBox-root-342"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-343"
+            >
+              <div
+                className="MuiBox-root MuiBox-root-344 makeStyles-boxTitle-5"
+              >
+                <span>
+                  Total Price
+                </span>
+              </div>
+              <div
+                className="MuiBox-root MuiBox-root-345 makeStyles-boxValue-6"
+              >
+                50000
+                (MMK)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-container"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root makeStyles-submitButton-4 MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              <span>
+                Confirm
+              </span>
+            </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </form>
+    <div
+      className="MuiBox-root MuiBox-root-346"
+    >
+      <div
+        className="MuiBox-root MuiBox-root-347"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <span>
+              Back
+            </span>
+          </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

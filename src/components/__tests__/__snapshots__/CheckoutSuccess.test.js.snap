@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutSuccess  Component matches the snapshot 1`] = `
+<div
+  className="MuiContainer-root MuiContainer-maxWidthLg"
+>
+  <div>
+    <header
+      className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-12 MuiAppBar-colorPrimary mui-fixed"
+    >
+      <div
+        className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+      >
+        <button
+          aria-label="Open drawer"
+          className="MuiButtonBase-root MuiIconButton-root makeStyles-menuButton-13 MuiIconButton-edgeStart"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label"
+          />
+        </button>
+        <div
+          className="PrivateHiddenCss-smDown-78"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-89 title"
+          >
+            <span>
+              Rookie Training 2019
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiBox-root MuiBox-root-90"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-container"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-194 makeStyles-navMenuList-17"
+            />
+            <button
+              aria-controls="long-menu"
+              aria-haspopup="true"
+              aria-label="More"
+              className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div
+    className="makeStyles-toolbar-4"
+  />
+  <div
+    className="MuiBox-root MuiBox-root-219"
+  >
+    <div
+      className="MuiBox-root MuiBox-root-220"
+    >
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+          </svg>
+          <span>
+            Shopping
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    className="MuiPaper-root MuiPaper-elevation1 makeStyles-root-1 MuiPaper-rounded"
+  >
+    <div
+      className="title_Ship"
+    >
+      <div
+        className="ho"
+      >
+        <span>
+          Your Order is Complete...Success...!
+        </span>
+      </div>
+      <div
+        className="text2"
+      >
+        <span>
+          Your Order Id is
+        </span>
+         
+        5
+      </div>
+      <div
+        className="text1"
+      >
+        <span>
+          Detail  Information
+        </span>
+      </div>
+    </div>
+    <table
+      className="MuiTable-root makeStyles-table-2"
+    >
+      <thead
+        className="MuiTableHead-root makeStyles-tbHead-3"
+      >
+        <tr
+          className="MuiTableRow-root MuiTableRow-head"
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+            scope="col"
+          >
+            FirstName
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+            scope="col"
+          >
+            LastName
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+            scope="col"
+          >
+            Address1
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+            scope="col"
+          >
+            Address2
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+            scope="col"
+          >
+            Country
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+            scope="col"
+          >
+            State
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+            scope="col"
+          >
+            City
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="MuiTableBody-root"
+      >
+        <tr
+          className="MuiTableRow-root"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="text2"
+            >
+              khin
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="text2"
+            >
+              lawoon
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="text2"
+            >
+              23 street
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="text2"
+            >
+              CMTZ
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="text2"
+            >
+              myanmar
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="text2"
+            >
+              mandalay
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="text2"
+            >
+              mandalay
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body"
+            rowSpan={6}
+          />
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body"
+            colSpan={5}
+          >
+            <div
+              className="text1"
+            >
+              <span>
+                SubTotal
+              </span>
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="text1"
+            >
+              50000
+              MMK
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body"
+            colSpan={5}
+          >
+            <div
+              className="text1"
+            >
+              <span>
+                Sales Tax
+              </span>
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-257 text1"
+            >
+              0MMK
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body"
+            colSpan={5}
+          >
+            <div
+              className="text1"
+            >
+              <span>
+                Total Price
+              </span>
+            </div>
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+          >
+            <div
+              className="text1"
+            >
+              50000
+              MMK
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

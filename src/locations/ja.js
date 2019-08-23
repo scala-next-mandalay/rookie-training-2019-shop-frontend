@@ -58,10 +58,6 @@ const ja = {
     'Label.OrderSuccessId': 'あなたの注文IDは',
      'Label.InfoDetail': '詳細情報',
 
-   
-
-  
-
 };
 
 export default ja;

@@ -17,9 +17,11 @@ export const categoriesReducer = (state = initialState, action) => {
         alreadyFetched: true
       };
     case 'CATEGORIES_FETCH_DONE':
+     
       return {
         ...state,
-        rows: [{id:-1, name:'ALL'}, ...action.payload]
+       rows: [{id:0, name:'Categories'}, ...action.payload]
+        
       };
     default:
       return state;
@@ -41,7 +43,6 @@ export const fetchAllCategories = () => {
     });
 
     const axRes = await axios.get(URL_GET_ALL_CATEGORIES);
-   
     dispatch({
       type: 'CATEGORIES_FETCH_DONE',
       payload: axRes.data.data

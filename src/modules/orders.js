@@ -10,7 +10,6 @@ const initialState = {
   rows: [],
   selectedOrderId: null,
   searchTextOrderId: '',
-  clickedOrderItems : [],
   searchTextBegin:'',
   searchTextEnd:'',
   loading:false
@@ -28,6 +27,7 @@ export const ordersReducer = (state = initialState, action) => {
       };
       
     case 'ORDERS_SET_REQUEST_PARAMS':
+    
       return {
         ...state,
         requestParams: action.payload,
@@ -65,10 +65,18 @@ export const ordersReducer = (state = initialState, action) => {
           loading:true
         }; 
     case 'ORDERS_POST_DONE':
+   
       return {
         ..._getCommonState(state),
         postResultObj: action.payload
       };
+      
+    case 'FETCH_ORDERSITEM_DONE':
+      return {
+        ...state,
+        orderitems: action.payload
+      };
+      
     case 'CLEAR_CHECKOUT':
       return {
         ..._getCommonState(state),
@@ -103,6 +111,7 @@ export const setRequestParams = addressForm => {
       reqParams.item_qty_array.push(cartItem.quantity);
       reqParams.item_price_array.push(cartItem.price);
     }
+  
 
     
     dispatch({
@@ -130,7 +139,7 @@ const _fetchRows = async (beginDate=null, endDate=null, id=null) => {
   if(id){
     url = URL_REST_ORDER_ID +"?order_id="+ id;
   }
-  
+ 
   const axRes = await axios.get(url); 
   return axRes.data.data;
 };
@@ -141,6 +150,7 @@ const _fetchRows = async (beginDate=null, endDate=null, id=null) => {
 //for Fetching All Orders
 export const fetchAllOrders = () => {
   return async (dispatch, getState) => {
+    
     dispatch({
       type: 'ORDERS_FETCH_DONE',
       payload: await _fetchRows()
@@ -152,12 +162,11 @@ export const fetchAllOrders = () => {
 export const clickOrderId = order_id => {
   return async (dispatch, getState) => {
     dispatch({
-     
       type: 'ORDERS_SET_BY_ID',
       payload: order_id
     });
     const axRes = await axios.get(URL_REST_ORDERITEMS_ID+"?order_id="+order_id);
-     dispatch({
+    dispatch({
       type: 'FETCH_ORDERSITEM_DONE',
       payload: axRes.data.data
     });
@@ -226,9 +235,9 @@ export const postOrder = () => {
       type: 'ORDERS_POST_DONE',
       payload: axRes.data.data
     });
-    dispatch({
-      type: 'CART_CLEAR_CART' 
-    });
+    // dispatch({
+    //   type: 'CART_CLEAR_CART' 
+    // });
   };
 };
 

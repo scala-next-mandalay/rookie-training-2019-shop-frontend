@@ -11,8 +11,6 @@ import ForgotPasswordSubmit from '../containers/auth/ForgotPasswordSubmit';
 
 const Login = ({handleDrawerToggle, totalQuantity, authState, changeAuthState, fetchAuthedUser, signOut, user, loading, history}) => {
     
-   
-    
     const isFirstRef = React.useRef(true);
     React.useEffect(() => {
       if (isFirstRef.current) {

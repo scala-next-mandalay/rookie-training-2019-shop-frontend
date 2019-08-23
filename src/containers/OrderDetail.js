@@ -3,6 +3,7 @@ import OrderDetail from '../components/OrderDetail';
 
 
 const _getOrderById = (orders, id) => {
+
   for (const order of orders) {
     if (order.id === id) {
       return order;
@@ -10,11 +11,13 @@ const _getOrderById = (orders, id) => {
    }
    return null;
 };
-
 export default connect(
+  
   (state) => ({
+    
     orderitems: state.orderitems.rows,
     selectedOrder:  _getOrderById(state.orders.rows, state.orders.selectedOrderId)
    
   })
+  
 )(OrderDetail);

@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavTesting component matches the snapshot 1`] = `
+<div
+  className="PrivateHiddenCss-onlySm-7 PrivateHiddenCss-onlyXs-4 PrivateHiddenCss-onlyMd-10"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container"
+  >
+    <div
+      align="center"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    >
+      <div
+        className="root"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root makeStyles-margin-2 makeStyles-textField-3 MuiFormControl-marginDense"
+        >
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+            onClick={[Function]}
+          >
+            <select
+              aria-invalid={false}
+              className="MuiSelect-root MuiSelect-select MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSelect MuiOutlinedInput-inputSelect MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense MuiSelect-outlined"
+              disabled={false}
+              multiple={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+            >
+              <option
+                className="text2"
+                onClick={[Function]}
+              >
+                category1
+              </option>
+              <option
+                className="text2"
+                onClick={[Function]}
+              >
+                category2
+              </option>
+            </select>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-176 MuiOutlinedInput-notchedOutline"
+              style={
+                Object {
+                  "paddingLeft": 8,
+                }
+              }
+            >
+              <legend
+                className="PrivateNotchedOutline-legend-177"
+                style={
+                  Object {
+                    "width": 0.01,
+                  }
+                }
+              >
+                <span
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "&#8203;",
+                    }
+                  }
+                />
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
