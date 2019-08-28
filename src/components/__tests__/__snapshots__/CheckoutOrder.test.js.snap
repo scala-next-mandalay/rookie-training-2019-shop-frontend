@@ -321,7 +321,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
               className="MuiCardMedia-root makeStyles-descImagePC-3"
               style={
                 Object {
-                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/a.jpg\\")",
+                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/b.jpg\\")",
                 }
               }
               title="b"
@@ -783,7 +783,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
               className="MuiCardMedia-root makeStyles-descImagePC-3"
               style={
                 Object {
-                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/a.jpg\\")",
+                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/b.jpg\\")",
                 }
               }
               title="b"

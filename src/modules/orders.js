@@ -47,6 +47,7 @@ export const ordersReducer = (state = initialState, action) => {
       };
       
     case 'ORDERS_SET_BEGIN_DATE':
+      
       return {
         ...state,
         searchTextBegin : action.payload
@@ -54,6 +55,7 @@ export const ordersReducer = (state = initialState, action) => {
       };
       
     case 'ORDERS_SET_END_DATE':
+      
       return {
         ...state,
         searchTextEnd : action.payload
@@ -135,6 +137,7 @@ const _fetchRows = async (beginDate=null, endDate=null, id=null) => {
   }
   if (urlParams.length > 0) {
     url = url + '?' + urlParams.join('&');
+    console.log("url",url);
   }
   if(id){
     url = URL_REST_ORDER_ID +"?order_id="+ id;

@@ -117,7 +117,7 @@ const useStyles2 = makeStyles(theme => ({
   
 }));
 
-const OrderHistory = ({orders,setSearchByOrderId,clickOrderId,searchTextBegin,searchTextEnd,setbeginDate,setendDate,history,fetchAuthedUser, user, refreshToken}) => {
+const OrderHistory = ({orders,searchTextOrderId,setSearchByOrderId,clickOrderId,searchTextBegin,searchTextEnd,setbeginDate,setendDate,history,fetchAuthedUser, user, refreshToken}) => {
 
   const classes = useStyles2();
   const [page, setPage] = React.useState(0);
@@ -200,8 +200,7 @@ const OrderHistory = ({orders,setSearchByOrderId,clickOrderId,searchTextBegin,se
              margin="normal"
              variant="outlined"
              fullWidth
-             
-             
+             value={searchTextOrderId}
             />
          
         </Grid>

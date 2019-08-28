@@ -94,6 +94,7 @@ const CartTable = ({ cart, showQty }) => {
   cart.forEach((row, i) => {
     //rows for PC
     tableRows.push(
+      
       <Grid container key={row.id} className={classes.gridRow}>
         <Grid item xs={3} className={classes.gridCell}>
           <CardMedia
@@ -104,27 +105,27 @@ const CartTable = ({ cart, showQty }) => {
         
         </Grid>
          <Grid item xs={3} className={classes.gridCell}>
-          <Box ml="0" mr="auto" fontWeight={600} className='priceTxt'>
-            {row.name}
+          <Box ml="0" mr="auto" fontWeight={600} >
+            <div className='text2'>{row.name}</div>
           </Box>
         </Grid>
         <Grid item xs={2} className={classes.gridCell}>
-          <Box ml="0" mr="auto" className='priceTxt'>
-            {row.price}
+          <Box ml="0" mr="auto">
+           <div className='text2'>{row.price}</div>
           </Box>
         </Grid>
    
         <Grid item xs={2} className={classes.gridCell}>
         <Box ml="0" mr="auto">
           <Box mx="auto" my="auto">
-          {showQty?<div>{row.quantity}</div>:<QuantitySelect id={row.id} quantity={row.quantity} />}
+          {showQty?<div className='text2'>{row.quantity}</div>:<QuantitySelect id={row.id} quantity={row.quantity} />}
           </Box>
         </Box>
         </Grid>
         
         <Grid item xs={2} className={classes.gridCell}>
-          <Box ml="0" mr="auto" fontWeight={600} color='#663300'>
-            {row.subTotal}
+          <Box ml="0" mr="auto" fontWeight={600} color='#663300'  className='text2'>
+            <div className='text2'>{row.subTotal}</div>
           </Box>
         </Grid>
       </Grid>
@@ -153,10 +154,10 @@ const CartTable = ({ cart, showQty }) => {
               Qty:<div>{row.quantity}</div>
             </Box>
             <Box fontWeight={400} ml={0} mt={0} my={0}>
-             Price: @{row.price} Ks
+             Price:@{row.price}Ks
             </Box>
             <Box fontWeight={400} ml={0} mt={0} my={0}>
-             Total: {row.subTotal} Ks
+             Total:{row.subTotal}Ks
             </Box>
           </Box>
         </Grid>

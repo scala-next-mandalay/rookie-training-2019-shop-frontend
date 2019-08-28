@@ -1,0 +1,854 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout component matches the snapshot 1`] = `
+Array [
+  <div>
+    <header
+      className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-13 MuiAppBar-colorPrimary mui-fixed"
+    >
+      <div
+        className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+      >
+        <button
+          aria-label="Open drawer"
+          className="MuiButtonBase-root MuiIconButton-root makeStyles-menuButton-14 MuiIconButton-edgeStart"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label"
+          />
+        </button>
+        <div
+          className="PrivateHiddenCss-smDown-79"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-90 title"
+          >
+            <span>
+              Rookie Training 2019
+            </span>
+          </div>
+        </div>
+        <div
+          className="MuiBox-root MuiBox-root-91"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-container"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-195 makeStyles-navMenuList-18"
+            />
+            <button
+              className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary Mui-disabled Mui-disabled"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            >
+              <span
+                className="MuiIconButton-label"
+              >
+                <span
+                  className="MuiBadge-root"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    />
+                  </svg>
+                  <span
+                    className="MuiBadge-badge MuiBadge-colorSecondary MuiBadge-invisible"
+                  >
+                    0
+                  </span>
+                </span>
+              </span>
+            </button>
+            <button
+              aria-controls="long-menu"
+              aria-haspopup="true"
+              aria-label="More"
+              className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>,
+  <div
+    className="makeStyles-toolbar-11"
+  />,
+  <div
+    className="title_Ship"
+  >
+    <div
+      className="ho"
+    >
+      1.
+      <span>
+        Shipping Information
+      </span>
+    </div>
+    <div
+      className="txt3"
+    >
+      <span>
+        Information
+      </span>
+    </div>
+    <div
+      className="text2"
+    >
+      <span>
+        Please fill your information fully
+      </span>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-8 MuiGrid-grid-lg-8"
+      >
+        <div
+          className="MuiBox-root MuiBox-root-227"
+        >
+          <div
+            className="MuiBox-root MuiBox-root-228"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="MuiButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root makeStyles-homeSpace-12"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                  />
+                </svg>
+                <span>
+                  Shopping
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div>
+          <form
+            noValidate={true}
+            onSubmit={[Function]}
+          >
+            <div
+              className="firstName"
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+              >
+                <label
+                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
+                  data-shrink={false}
+                  htmlFor="first_name"
+                >
+                  First name
+                  <span
+                    className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                  >
+                     
+                    *
+                  </span>
+                </label>
+                <div
+                  className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    autoComplete="fname"
+                    className="MuiInputBase-input MuiOutlinedInput-input"
+                    disabled={false}
+                    id="first_name"
+                    name="first_name"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={true}
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden={true}
+                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    style={
+                      Object {
+                        "paddingLeft": 8,
+                      }
+                    }
+                  >
+                    <legend
+                      className="PrivateNotchedOutline-legend-304"
+                      style={
+                        Object {
+                          "width": 0.01,
+                        }
+                      }
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "&#8203;",
+                          }
+                        }
+                      />
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div
+              className="lastName"
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+              >
+                <label
+                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                  data-shrink={false}
+                  htmlFor="last_name"
+                >
+                  Last name
+                </label>
+                <div
+                  className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    autoComplete="lname"
+                    className="MuiInputBase-input MuiOutlinedInput-input"
+                    disabled={false}
+                    id="last_name"
+                    name="last_name"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={false}
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden={true}
+                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    style={
+                      Object {
+                        "paddingLeft": 8,
+                      }
+                    }
+                  >
+                    <legend
+                      className="PrivateNotchedOutline-legend-304"
+                      style={
+                        Object {
+                          "width": 0.01,
+                        }
+                      }
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "&#8203;",
+                          }
+                        }
+                      />
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div
+              className="address1"
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+              >
+                <label
+                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
+                  data-shrink={false}
+                  htmlFor="address1"
+                >
+                  address1
+                  <span
+                    className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                  >
+                     
+                    *
+                  </span>
+                </label>
+                <div
+                  className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    className="MuiInputBase-input MuiOutlinedInput-input"
+                    disabled={false}
+                    id="address1"
+                    name="address1"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={true}
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden={true}
+                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    style={
+                      Object {
+                        "paddingLeft": 8,
+                      }
+                    }
+                  >
+                    <legend
+                      className="PrivateNotchedOutline-legend-304"
+                      style={
+                        Object {
+                          "width": 0.01,
+                        }
+                      }
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "&#8203;",
+                          }
+                        }
+                      />
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div
+              className="address2"
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+              >
+                <label
+                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                  data-shrink={false}
+                  htmlFor="address2"
+                >
+                  address2
+                </label>
+                <div
+                  className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    className="MuiInputBase-input MuiOutlinedInput-input"
+                    disabled={false}
+                    id="address2"
+                    name="address2"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={false}
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden={true}
+                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    style={
+                      Object {
+                        "paddingLeft": 8,
+                      }
+                    }
+                  >
+                    <legend
+                      className="PrivateNotchedOutline-legend-304"
+                      style={
+                        Object {
+                          "width": 0.01,
+                        }
+                      }
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "&#8203;",
+                          }
+                        }
+                      />
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div
+              className="country"
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+              >
+                <label
+                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
+                  data-shrink={false}
+                  htmlFor="country"
+                >
+                  country
+                  <span
+                    className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                  >
+                     
+                    *
+                  </span>
+                </label>
+                <div
+                  className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    className="MuiInputBase-input MuiOutlinedInput-input"
+                    disabled={false}
+                    id="country"
+                    name="country"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={true}
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden={true}
+                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    style={
+                      Object {
+                        "paddingLeft": 8,
+                      }
+                    }
+                  >
+                    <legend
+                      className="PrivateNotchedOutline-legend-304"
+                      style={
+                        Object {
+                          "width": 0.01,
+                        }
+                      }
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "&#8203;",
+                          }
+                        }
+                      />
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div
+              className="statetxt"
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+              >
+                <label
+                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                  data-shrink={false}
+                  htmlFor="state"
+                >
+                  state
+                </label>
+                <div
+                  className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    className="MuiInputBase-input MuiOutlinedInput-input"
+                    disabled={false}
+                    id="state"
+                    name="state"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={false}
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden={true}
+                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    style={
+                      Object {
+                        "paddingLeft": 8,
+                      }
+                    }
+                  >
+                    <legend
+                      className="PrivateNotchedOutline-legend-304"
+                      style={
+                        Object {
+                          "width": 0.01,
+                        }
+                      }
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "&#8203;",
+                          }
+                        }
+                      />
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div
+              className="city"
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+              >
+                <label
+                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
+                  data-shrink={false}
+                  htmlFor="city"
+                >
+                  city
+                  <span
+                    className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                  >
+                     
+                    *
+                  </span>
+                </label>
+                <div
+                  className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    className="MuiInputBase-input MuiOutlinedInput-input"
+                    disabled={false}
+                    id="city"
+                    name="city"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={true}
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden={true}
+                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    style={
+                      Object {
+                        "paddingLeft": 8,
+                      }
+                    }
+                  >
+                    <legend
+                      className="PrivateNotchedOutline-legend-304"
+                      style={
+                        Object {
+                          "width": 0.01,
+                        }
+                      }
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "&#8203;",
+                          }
+                        }
+                      />
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div
+              className="createAccount"
+            >
+              <button
+                className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary Mui-disabled MuiButton-fullWidth Mui-disabled"
+                disabled={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={-1}
+                type="submit"
+              >
+                <span
+                  className="MuiButton-label"
+                >
+                  <span>
+                    Confirm
+                  </span>
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <hr
+          className="MuiDivider-root"
+        />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="title_Ship"
+  >
+    <div
+      className="ho"
+    >
+      2.
+      <span>
+        Order Review
+      </span>
+    </div>
+    <div
+      className="MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-8 MuiGrid-grid-lg-8"
+      >
+        <div
+          className="PrivateHiddenCss-smUp-78"
+        />
+        <div
+          className="PrivateHiddenCss-xsDown-76"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <div
+              className="makeStyles-girdDv-315"
+            >
+              <div
+                className="MuiGrid-root makeStyles-gridRow-310 MuiGrid-container"
+                variant="contained"
+              >
+                <div
+                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-3"
+                >
+                  <div
+                    className="MuiBox-root MuiBox-root-316"
+                  >
+                    <span>
+                      Image
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-3"
+                >
+                  <div
+                    className="MuiBox-root MuiBox-root-317"
+                  >
+                    <span>
+                      Description
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-2"
+                >
+                  <div
+                    className="MuiBox-root MuiBox-root-318"
+                  >
+                    <span>
+                      Price
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-2"
+                >
+                  <div
+                    className="MuiBox-root MuiBox-root-319"
+                  >
+                    <span>
+                      Quantity
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-2"
+                >
+                  <div
+                    className="MuiBox-root MuiBox-root-320"
+                  >
+                    <span>
+                      Total Price
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+            >
+              <hr
+                className="MuiDivider-root"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiBox-root MuiBox-root-321"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 makeStyles-gridPaper-6 MuiPaper-rounded"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-322 text1"
+            >
+              <div
+                className="MuiGrid-root text1 MuiGrid-item MuiGrid-grid-xs-9 MuiGrid-grid-sm-8"
+              >
+                <span>
+                  Total Quantity
+                </span>
+                :
+              </div>
+               
+              <div
+                className="MuiGrid-root makeStyles-gridTotalPrice-7 MuiGrid-item MuiGrid-grid-xs-3 MuiGrid-grid-sm-4"
+              >
+                 
+                0
+                (Items)
+              </div>
+            </div>
+            <div
+              className="MuiBox-root MuiBox-root-323 text1"
+            >
+              <div
+                className="MuiGrid-root text1 MuiGrid-item MuiGrid-grid-xs-9 MuiGrid-grid-sm-8"
+              >
+                <span>
+                  Total Price
+                </span>
+                :
+              </div>
+               
+              <div
+                className="MuiGrid-root makeStyles-gridTotalPrice-7 MuiGrid-item MuiGrid-grid-xs-3 MuiGrid-grid-sm-4"
+              >
+                 
+                0
+                (MMK)
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr
+          className="MuiDivider-root"
+        />
+      </div>
+    </div>
+  </div>,
+]
+`;

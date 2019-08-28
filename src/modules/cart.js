@@ -77,6 +77,7 @@ export const addCartItem = (item) => {
     //All cart data
     const cartItems = [...getState().cart.rows];
    
+   
     //count up if found the item.
     let found = false;
     for (const row of cartItems) {

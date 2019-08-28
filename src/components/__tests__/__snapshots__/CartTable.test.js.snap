@@ -44,15 +44,15 @@ Array [
           <div
             className="MuiBox-root MuiBox-root-158"
           >
-            Price: @
+            Price:@
             1000
-             Ks
+            Ks
           </div>
           <div
             className="MuiBox-root MuiBox-root-159"
           >
-            Total: 
-             Ks
+            Total:
+            Ks
           </div>
         </div>
       </div>
@@ -96,15 +96,15 @@ Array [
           <div
             className="MuiBox-root MuiBox-root-163"
           >
-            Price: @
+            Price:@
             1000
-             Ks
+            Ks
           </div>
           <div
             className="MuiBox-root MuiBox-root-164"
           >
-            Total: 
-             Ks
+            Total:
+            Ks
           </div>
         </div>
       </div>
@@ -207,18 +207,26 @@ Array [
           className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-3"
         >
           <div
-            className="MuiBox-root MuiBox-root-175 priceTxt"
+            className="MuiBox-root MuiBox-root-175"
           >
-            a
+            <div
+              className="text2"
+            >
+              a
+            </div>
           </div>
         </div>
         <div
           className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
         >
           <div
-            className="MuiBox-root MuiBox-root-176 priceTxt"
+            className="MuiBox-root MuiBox-root-176"
           >
-            1000
+            <div
+              className="text2"
+            >
+              1000
+            </div>
           </div>
         </div>
         <div
@@ -361,8 +369,12 @@ Array [
           className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
         >
           <div
-            className="MuiBox-root MuiBox-root-225"
-          />
+            className="MuiBox-root MuiBox-root-225 text2"
+          >
+            <div
+              className="text2"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -392,18 +404,26 @@ Array [
           className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-3"
         >
           <div
-            className="MuiBox-root MuiBox-root-226 priceTxt"
+            className="MuiBox-root MuiBox-root-226"
           >
-            b
+            <div
+              className="text2"
+            >
+              b
+            </div>
           </div>
         </div>
         <div
           className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
         >
           <div
-            className="MuiBox-root MuiBox-root-227 priceTxt"
+            className="MuiBox-root MuiBox-root-227"
           >
-            1000
+            <div
+              className="text2"
+            >
+              1000
+            </div>
           </div>
         </div>
         <div
@@ -546,8 +566,12 @@ Array [
           className="MuiGrid-root makeStyles-gridCell-2 MuiGrid-item MuiGrid-grid-xs-2"
         >
           <div
-            className="MuiBox-root MuiBox-root-230"
-          />
+            className="MuiBox-root MuiBox-root-230 text2"
+          >
+            <div
+              className="text2"
+            />
+          </div>
         </div>
       </div>
     </div>

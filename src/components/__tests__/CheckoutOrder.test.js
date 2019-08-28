@@ -35,7 +35,7 @@ const valueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prot
 
 describe("CheckoutOrder component", () => {
   let cart = [{ id: 1, name: "a", quantity: 1, price: 1000, image:"a.jpg",subTotal : 1000 },
-             { id: 2, name: "b", quantity: 1, price: 1000 , image:"a.jpg",subTotal : 1000 }];
+             { id: 2, name: "b", quantity: 1, price: 1000 , image:"b.jpg",subTotal : 1000 }];
  const deleteCartItem = jest.fn((id) => {
 
       if (id === 1) cart = [{ id: 2, name: "b", quantity: 1, price: 1000, subTotal: 1000 }];
@@ -61,26 +61,17 @@ describe("CheckoutOrder component", () => {
 
 describe("testing cart table", () => {
 
-  it('should exists one create button and one name textfield', () => {
-
+  it('testing delete link in checkoutOrder', () => {
     let cart = [
-
       { id: 1, name: "a", quantity: 1, price: 1000, subTotal: 1000 },
-
       { id: 2, name: "b", quantity: 1, price: 1000, subTotal: 1000 }
-
     ];
     const deleteCartItem = jest.fn((id) => {
-
       if (id === 1) cart = [{ id: 2, name: "b", quantity: 1, price: 1000, subTotal: 1000 }];
-
       else cart = [{ id: 1, name: "a", quantity: 1, price: 1000, subTotal: 1000 }];
-
     });
      act(() => {
-
       ReactDOM.render((
-    
         <Parent><CheckoutOrder 
                     cart={cart} 
                     totalPrice={2000}
@@ -88,9 +79,7 @@ describe("testing cart table", () => {
                     deleteCartItem={deleteCartItem} /></Parent>
 
       ), container);
-
     });
-
   const linkArr = document.querySelectorAll('a');
   //console.log("linkArr",linkArr.length)
   // console.log(document.body.outerHTML)
@@ -108,10 +97,36 @@ describe("testing cart table", () => {
   const expectedCart1 =[{ id: 1, name: "a", quantity: 1, price: 1000, subTotal: 1000 }];
   expect(deleteCartItem).toHaveBeenCalled();
   expect(cart).toStrictEqual(expectedCart1);
-  
-
   });
+  
+  it('testing and checking recieved data in checkoutOrder', () => {
 
+    let cart = [
+      { id: 1, name: "a", quantity: 5, price: 500, subTotal: 2500 },
+      { id: 2, name: "b", quantity: 3, price: 1000, subTotal: 3000 }
+    ];
+     act(() => {
 
+      ReactDOM.render((
+        <Parent><CheckoutOrder 
+                    cart={cart} 
+                    totalPrice={2000}
+                    totalQuantity={2} 
+                    /></Parent>
+      ), container);
+      const divArr3 = document.querySelectorAll('div span');
+    //   console.log("divArr",divArr3.length)
+    //   console.log("#1",divArr3[0].textContent)
+    // console.log("#2",divArr3[1].textContent)
+    // console.log("#3",divArr3[2].textContent)
+    // console.log("#4",divArr3[3].textContent)
+    // console.log("#5",divArr3[4].textContent)
+    // console.log("#6",divArr3[5].textContent)
+    // console.log("#7",divArr3[6].textContent)
+    // console.log("#8",divArr3[7].textContent)
+    // console.log("#9",divArr3[8].textContent)
+    // console.log("#10",divArr3[9].textContent)
 
+    });
+  });
 })

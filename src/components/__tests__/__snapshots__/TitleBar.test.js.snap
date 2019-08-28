@@ -13,6 +13,7 @@ exports[`Titlebar component matches the snapshot 1`] = `
         className="MuiButtonBase-root MuiIconButton-root makeStyles-menuButton-2 MuiIconButton-edgeStart"
         disabled={false}
         onBlur={[Function]}
+        onClick={[MockFunction]}
         onDragLeave={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}

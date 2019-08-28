@@ -21,7 +21,8 @@ afterEach(() => {
 const noMoreFetch=true;
 
 const items = [{ id: 1, name: "ver" ,price:4000 ,image: 'pic1' },
-            { id: 2, name: "mer" ,price:3000 ,image: 'pic2' }];
+            { id: 2, name: "mer" ,price:3000 ,image: 'pic2' },
+            { id: 3, name: "neko" ,price:1000 ,image: 'pic3' }];
 
 const fetchItems=jest.fn(()=>{
     
