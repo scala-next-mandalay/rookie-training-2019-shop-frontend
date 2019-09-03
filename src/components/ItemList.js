@@ -20,8 +20,6 @@ const ItemList = ({ items, fetchItems, noMoreFetch }) => {
       <Box maxWidth={1300}  justify="center" mx="auto">
         <Grid container>{
           items.map(item => (
-         
-         
             <Grid key={item.id} item xs={12} sm={4} lg={4} md={4}>
               <Item key={item.id} row={item} />
             </Grid>

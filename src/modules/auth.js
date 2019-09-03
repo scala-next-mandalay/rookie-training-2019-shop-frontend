@@ -200,7 +200,7 @@ export const confirmSignUp = (email, code) => {
 };
 
 
-export const resendSingUp = (email) => {
+export const resendSignUp = (email) => {
   return async (dispatch, getState) => {
     dispatch({
       type: 'AUTH_BEGIN_LOADING'

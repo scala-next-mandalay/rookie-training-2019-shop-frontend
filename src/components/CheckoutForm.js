@@ -104,7 +104,8 @@ const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}
        history.push("/checkout/confirm");
     }
   };
-    
+ 
+  const onlyText = (e) => { e.target.value = e.target.value.replace(/[^a-zA-Z]/g, '') }; 
   const addressForm = (
     <div>
       <form noValidate onSubmit={handleSubmit}>
@@ -121,6 +122,7 @@ const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}
             fullWidth
             autoComplete="fname"
             variant="outlined"
+            onInput={(e) => onlyText(e) }
           />
         </div>
          
@@ -137,6 +139,7 @@ const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}
             fullWidth
             autoComplete="lname"
             variant="outlined"
+            onInput={(e) => onlyText(e) }
           />
         </div>
         
@@ -167,6 +170,8 @@ const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}
             label="address2"
             fullWidth
             variant="outlined"
+            // onInput={(e) => onlyText(e) }
+            
           />
         </div>
         
@@ -182,6 +187,7 @@ const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}
             label="country"
             fullWidth
             variant="outlined"
+            onInput={(e) => onlyText(e) }
           />
         </div>
         
@@ -197,6 +203,7 @@ const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}
             label="state"
             fullWidth
             variant="outlined"
+            onInput={(e) => onlyText(e) }
           />
         </div>
         
@@ -212,6 +219,7 @@ const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}
             label="city"
             fullWidth
             variant="outlined"
+            onInput={(e) => onlyText(e)}
           />
         </div>
         
@@ -237,10 +245,10 @@ const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}
     event.preventDefault();
     history.push("/");
   };
-
+ 
   return (
     <React.Fragment>
-       <TitleBar showMenu={false} showNav={false} showIcon={true} />
+       <TitleBar showMenu={false} showNav={false} showIcon={false} />
         <div className={classes.toolbar} />
         
         <div className="title_Ship">
@@ -266,10 +274,7 @@ const CheckoutForm = ({ cart,setRequestParams, history,totalPrice,totalQuantity}
         </div>
         
         <div className="title_Ship">
-          <div className="ho">2.<FormattedMessage id="Label.OrderReview" defualtMessage="Order Review" /></div>
-           
-           
-           
+          <div className="ho">2.<FormattedMessage id="Label.OrderReview" defualtMessage="Order Review" /></div>  
           <Grid>
             <Grid item xs={12} sm={12} md={8} lg={8}>
               <CartTable showQty={true}/>

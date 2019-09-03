@@ -70,7 +70,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-root text2 MuiGrid-container"
+      className="MuiGrid-root text3 MuiGrid-container"
     >
       <div
         className="MuiBox-root MuiBox-root-163"
@@ -252,9 +252,8 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
           <div
             className="MuiBox-root MuiBox-root-217"
           >
-             
             1000
-            MMK 
+            MMK
           </div>
           <div
             className="MuiBox-root MuiBox-root-218"
@@ -306,7 +305,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-root text2 MuiGrid-container"
+      className="MuiGrid-root text3 MuiGrid-container"
     >
       <div
         className="MuiBox-root MuiBox-root-264"
@@ -488,9 +487,8 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
           <div
             className="MuiBox-root MuiBox-root-270"
           >
-             
             1000
-            MMK 
+            MMK
           </div>
           <div
             className="MuiBox-root MuiBox-root-271"
@@ -572,7 +570,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
           className="MuiGrid-root text2 MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
-            className="MuiBox-root MuiBox-root-275"
+            className="MuiBox-root MuiBox-root-275 nameTxt"
           >
             a
           </div>
@@ -708,7 +706,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
             className="MuiBox-root MuiBox-root-277"
           >
             1
-            x 
+            x
             1000
             MMK
           </div>
@@ -716,7 +714,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
             className="MuiBox-root MuiBox-root-278"
           >
             1000
-             MMK
+            MMK
           </div>
           <div
             className="MuiBox-root MuiBox-root-279"
@@ -794,7 +792,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
           className="MuiGrid-root text2 MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
-            className="MuiBox-root MuiBox-root-283"
+            className="MuiBox-root MuiBox-root-283 nameTxt"
           >
             b
           </div>
@@ -930,7 +928,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
             className="MuiBox-root MuiBox-root-285"
           >
             1
-            x 
+            x
             1000
             MMK
           </div>
@@ -938,7 +936,7 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
             className="MuiBox-root MuiBox-root-286"
           >
             1000
-             MMK
+            MMK
           </div>
           <div
             className="MuiBox-root MuiBox-root-287"
@@ -1042,26 +1040,24 @@ exports[`CheckoutOrder component matches the snapshot 1`] = `
         className="MuiBox-root MuiBox-root-295"
       >
         2
-         (Items)
+        (Items)
       </div>
       <div
         className="MuiBox-root MuiBox-root-296"
       >
-         
         2000
-         MMK 
+        MMK
       </div>
       <div
         className="MuiBox-root MuiBox-root-297"
       >
-         0.0 MMK 
+        0.0MMK
       </div>
       <div
         className="MuiBox-root MuiBox-root-298"
       >
-         
         2000
-         MMK
+        MMK
       </div>
     </div>
   </div>

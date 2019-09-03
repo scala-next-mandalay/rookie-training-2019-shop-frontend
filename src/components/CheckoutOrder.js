@@ -51,16 +51,16 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity,deleteCartItem}) => {
         <Box><FormattedMessage id="Label.TotalPrice" defualtMessage="Total Price" /></Box>
       </Grid>
       <Grid item xs={6} sm={4} className="text1">
-        <Box textAlign="right" pr={3}>{totalQuantity} (Items)</Box>
-        <Box textAlign="right" pr={3}> {totalPrice} MMK </Box>
-        <Box textAlign="right" pr={3}> 0.0 MMK </Box>
-        <Box textAlign="right" pr={3}> {totalPrice} MMK</Box>
+        <Box textAlign="right" pr={3}>{totalQuantity}(Items)</Box>
+        <Box textAlign="right" pr={3}>{totalPrice}MMK</Box>
+        <Box textAlign="right" pr={3}>0.0MMK</Box>
+        <Box textAlign="right" pr={3}>{totalPrice}MMK</Box>
       </Grid>
     </Box>
   );
   cart.forEach((cartList, k) => {
     pcView.push(
-      <Grid container key={cartList.id} className="text2">
+      <Grid container key={cartList.id} className="text3">
         <Box flexGrow={1} display="flex">
           <Grid item xs={3}>
             <Box textAlign="left" my={2} pl={3}>
@@ -78,14 +78,14 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity,deleteCartItem}) => {
           </Grid>
           <Grid item xs={2}>
             <Box textAlign="left" my={2} >
-              <QuantitySelect id={cartList.id} quantity={cartList.quantity} />
+             <QuantitySelect id={cartList.id} quantity={cartList.quantity} />
                         </Box>
           </Grid>
         </Box>
         <Grid item xs={2}>
           <Box textAlign="right" my={2} mr={3}>
-            <Box pb={2} mr={0}>({cartList.quantity}x{cartList.price})MMK</Box>
-            <Box mr={0}> {cartList.subTotal}MMK </Box>
+           <Box pb={2} mr={0}>({cartList.quantity}x{cartList.price})MMK</Box>
+            <Box mr={0}>{cartList.subTotal}MMK</Box>
           <Box>  
            <Link className={classes.btnRemoveItem} onClick={()=> removeCartItem(cartList.id)} color="secondary" fontSize="10px">
            <Box mr={0}>
@@ -115,17 +115,17 @@ const CheckoutOrder = ({ cart, totalPrice,totalQuantity,deleteCartItem}) => {
             </Box>
           </Grid>
           <Grid item xs={6} className="text2">
-            <Box textAlign="right" my={2} pr={3} fontWeight="fontWeightBold">
-              {cartList.name}
+            <Box textAlign="right" my={2} pr={3} fontWeight="fontWeightBold" className="nameTxt">
+             {cartList.name}
             </Box>
              <Box textAlign="right" my={2} pr={3}>
              <QuantitySelect id={cartList.id} quantity={cartList.quantity} />
              </Box>
             <Box textAlign="right" my={2} pr={3} >
-              {cartList.quantity}x {cartList.price}MMK
+              {cartList.quantity}x{cartList.price}MMK
             </Box>
             <Box textAlign="right" my={2} pr={3}>
-              {cartList.subTotal} MMK
+              {cartList.subTotal}MMK
             </Box>
             <Box textAlign="right" my={2} pr={3}>
               <Link className={classes.btnRemoveItem} onClick={()=> removeCartItem(cartList.id)} color="secondary" fontSize="10px">

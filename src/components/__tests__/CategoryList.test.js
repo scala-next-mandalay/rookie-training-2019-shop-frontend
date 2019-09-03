@@ -50,15 +50,14 @@ describe("testing category list", () => {
             <Parent>
               <CategoryList handleDrawerClose={handleDrawerClose} categories={categories} setCategoryId={setCategoryId}/>
             </Parent>
-          ), container);
-         
-          
+          ), container);    
        const spanDivArr = document.querySelectorAll('span div');
          act(() =>{
             spanDivArr[0].dispatchEvent(new MouseEvent('click', {bubbles: true}));
           });
           expect(setCategoryId).toHaveBeenCalled();
           expect(id).toBe(1);
+          expect(spanDivArr[0].textContent).toBe("category1");
           
           act(() =>{
             spanDivArr[1].dispatchEvent(new MouseEvent('click', {bubbles: true}));
@@ -66,6 +65,7 @@ describe("testing category list", () => {
           expect(setCategoryId).toHaveBeenCalled();
           expect(id).toBe(3);
           expect(spanDivArr[1].textContent).toBe("category3");
+          
         });
       });
 });

@@ -55,6 +55,7 @@ describe("testing category", () => {
           //console.log("selectArr[0][1]",selectArr[0][1].textContent)
           expect(setCategoryId).toHaveBeenCalled();
           expect(id).toBe(2);
+          expect(selectArr[0][1].textContent).toBe("category2");
           
            act(() =>{
             selectArr[0][0].value=1

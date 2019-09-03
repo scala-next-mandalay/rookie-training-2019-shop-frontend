@@ -5,9 +5,8 @@ import renderer from 'react-test-renderer';
 import Checkout from '../Checkout';
 import Parent from '../Parent';
 import CheckoutForm from '../CheckoutForm';
-// import CheckoutConfirm from '../CheckoutConfirm';
-// import CheckoutSuccess from '../CheckoutSuccess';
 /*global expect*/
+/*global jest*/
 let container
 beforeEach(() => {
   container = document.createElement('div')

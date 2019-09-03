@@ -192,6 +192,7 @@ Array [
           >
             <div
               className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+              onInput={[Function]}
             >
               <div
                 className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
@@ -203,11 +204,12 @@ Array [
                   className="MuiInputBase-input MuiOutlinedInput-input"
                   disabled={false}
                   id="search"
+                  min="1"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
                   required={false}
-                  type="text"
+                  type="number"
                 />
                 <fieldset
                   aria-hidden={true}

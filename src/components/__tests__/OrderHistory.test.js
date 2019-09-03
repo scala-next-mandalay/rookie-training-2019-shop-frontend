@@ -51,26 +51,12 @@ let orders =[{
 
   const setbeginDate=jest.fn((beginDate)=>{
   let date1=beginDate;
-  // console.log("dateorders##",orders);
-  // for (const n of orders) {
-  //     console.log("n.created_at",n.created_at)
-  //     console.log("n",[n])
-  // if (n.created_at===(moment(date).format('YYYYMMDD'))) 
-
-  // console.log("orders",orders)
-  //     {
-  //       orders = [n];
-  //     }
-  // }
-  //   console.log("dateorders#",orders);
-  // return orders;
 })
 
 const setendDate=jest.fn((endDate)=>{
    let date2=endDate;
 })
 const clickOrderId=jest.fn((clickid)=>{
-  console.log("clickid",clickid)
     let viewdetail=clickid;
 })
 const setPage=jest.fn(()=>{

@@ -99,7 +99,7 @@ describe("testing cart table", () => {
   expect(cart).toStrictEqual(expectedCart1);
   });
   
-  it('testing and checking recieved data in checkoutOrder', () => {
+it('testing and checking recieved data in checkoutOrder', () => {
 
     let cart = [
       { id: 1, name: "a", quantity: 5, price: 500, subTotal: 2500 },
@@ -110,23 +110,59 @@ describe("testing cart table", () => {
       ReactDOM.render((
         <Parent><CheckoutOrder 
                     cart={cart} 
-                    totalPrice={2000}
-                    totalQuantity={2} 
+                    totalPrice={5500}
+                    totalQuantity={8} 
                     /></Parent>
       ), container);
-      const divArr3 = document.querySelectorAll('div span');
-    //   console.log("divArr",divArr3.length)
-    //   console.log("#1",divArr3[0].textContent)
-    // console.log("#2",divArr3[1].textContent)
-    // console.log("#3",divArr3[2].textContent)
-    // console.log("#4",divArr3[3].textContent)
-    // console.log("#5",divArr3[4].textContent)
-    // console.log("#6",divArr3[5].textContent)
-    // console.log("#7",divArr3[6].textContent)
-    // console.log("#8",divArr3[7].textContent)
-    // console.log("#9",divArr3[8].textContent)
-    // console.log("#10",divArr3[9].textContent)
-
+    const divArr = document.querySelectorAll('div span');
+    expect(divArr[0].textContent.toUpperCase()).toBe('PRODUCT');
+    expect(divArr[1].textContent.toUpperCase()).toBe('DESCRIPTION');
+    expect(divArr[2].textContent.toUpperCase()).toBe('QUANTITY');
+    expect(divArr[3].textContent.toUpperCase()).toBe('PRICE');
+    expect(divArr[4].textContent.toUpperCase()).toBe('TOTAL QUANTITY');
+    expect(divArr[5].textContent.toUpperCase()).toBe('SUBTOTAL');
+    expect(divArr[6].textContent.toUpperCase()).toBe('SALES TAX');
+    expect(divArr[7].textContent.toUpperCase()).toBe('TOTAL PRICE');
+    const divArr3 = document.querySelectorAll('.text1 div');
+    /*for total*/
+    expect(divArr3[0].textContent).toBe('8(Items)');
+    expect(divArr3[1].textContent).toBe('5500MMK');
+    expect(divArr3[2].textContent).toBe('0.0MMK');
+    expect(divArr3[3].textContent).toBe('5500MMK');
+    /*name of cart*/
+    const divArr4 = document.querySelectorAll('.nameTxt');
+    expect(divArr4[0].textContent).toBe('a');
+    expect(divArr4[1].textContent).toBe('b');
+    /*for quantity x subtotal and total of cart*/
+    const divArr5 = document.querySelectorAll('.text2 div');
+    expect(divArr5[3].textContent).toBe('5x500MMK');
+    expect(divArr5[4].textContent).toBe('2500MMK');
+    expect(divArr5[10].textContent).toBe('3x1000MMK');
+    expect(divArr5[11].textContent).toBe('3000MMK');
+    /*for select box of no of quantity*/
+    const optionArr = document.querySelectorAll('select');
+    expect(optionArr[0][0].textContent).toBe('1');
+    expect(optionArr[0][1].textContent).toBe('2');
+    expect(optionArr[0][2].textContent).toBe('3');
+    expect(optionArr[0][3].textContent).toBe('4');
+    expect(optionArr[0][4].textContent).toBe('5');
+    expect(optionArr[0][5].textContent).toBe('6');
+    expect(optionArr[0][6].textContent).toBe('7');
+    expect(optionArr[0][7].textContent).toBe('8');
+    expect(optionArr[0][8].textContent).toBe('9');
+    expect(optionArr[0][9].textContent).toBe('10');
+    expect(optionArr[0][10].textContent).toBe('11');
+    expect(optionArr[0][11].textContent).toBe('12');
+    expect(optionArr[0][12].textContent).toBe('13');
+    expect(optionArr[0][13].textContent).toBe('14');
+    expect(optionArr[0][14].textContent).toBe('15');
+    expect(optionArr[0][15].textContent).toBe('16');
+    expect(optionArr[0][16].textContent).toBe('17');
+    expect(optionArr[0][17].textContent).toBe('18');
+    expect(optionArr[0][18].textContent).toBe('19');
+    expect(optionArr[0][19].textContent).toBe('20');
+    
+    
     });
   });
 })

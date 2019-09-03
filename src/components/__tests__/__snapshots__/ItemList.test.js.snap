@@ -20,7 +20,7 @@ Array [
               className="MuiCardMedia-root makeStyles-media-107"
               style={
                 Object {
-                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/pic1\\")",
+                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/pic1.png\\")",
                 }
               }
               title="ver"
@@ -31,18 +31,15 @@ Array [
               <div
                 className="MuiBox-root MuiBox-root-141 nameTxt"
               >
-                Name 
+                Name:
                 ver
               </div>
               <div
                 className="MuiBox-root MuiBox-root-142 priceTxt"
               >
-                <span>
-                  Price
-                </span>
-                :Price
+                Price:
                 4000
-                 Ks
+                Ks
               </div>
             </div>
             <div
@@ -106,7 +103,7 @@ Array [
               className="MuiCardMedia-root makeStyles-media-107"
               style={
                 Object {
-                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/pic2\\")",
+                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/pic2.png\\")",
                 }
               }
               title="mer"
@@ -117,18 +114,15 @@ Array [
               <div
                 className="MuiBox-root MuiBox-root-175 nameTxt"
               >
-                Name 
+                Name:
                 mer
               </div>
               <div
                 className="MuiBox-root MuiBox-root-176 priceTxt"
               >
-                <span>
-                  Price
-                </span>
-                :Price
+                Price:
                 3000
-                 Ks
+                Ks
               </div>
             </div>
             <div
@@ -192,7 +186,7 @@ Array [
               className="MuiCardMedia-root makeStyles-media-107"
               style={
                 Object {
-                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/pic3\\")",
+                  "backgroundImage": "url(\\"http://dg9c95ld8mycd.cloudfront.net/items/pic3.png\\")",
                 }
               }
               title="neko"
@@ -203,18 +197,15 @@ Array [
               <div
                 className="MuiBox-root MuiBox-root-178 nameTxt"
               >
-                Name 
+                Name:
                 neko
               </div>
               <div
                 className="MuiBox-root MuiBox-root-179 priceTxt"
               >
-                <span>
-                  Price
-                </span>
-                :Price
+                Price:
                 1000
-                 Ks
+                Ks
               </div>
             </div>
             <div

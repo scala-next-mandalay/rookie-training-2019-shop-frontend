@@ -35,156 +35,78 @@ exports[`ConfirmSingup component snapshot matches the snapshot 1`] = `
       Please enter confirmation code
     </div>
     <div
-      className="MuiBox-root MuiBox-root-49"
+      className="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-container"
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12"
       >
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12"
+          className="MuiBox-root MuiBox-root-153"
         >
           <div
-            className="MuiBox-root MuiBox-root-154"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
           >
-            <div
-              className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
+              data-shrink={false}
+              htmlFor="confirmationCode"
+              style={
+                Object {
+                  "color": "#ffffff",
+                }
+              }
             >
-              <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
-                data-shrink={false}
-                htmlFor="confirmationCode"
+              Confirmation Code
+              <span
+                className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+              >
+                 
+                *
+              </span>
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="confirmationCode"
+                name="confirmationCode"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={true}
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-211 MuiOutlinedInput-notchedOutline"
                 style={
                   Object {
-                    "color": "#ffffff",
+                    "paddingLeft": 8,
                   }
                 }
               >
-                Confirmation Code
-                <span
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-                >
-                   
-                  *
-                </span>
-              </label>
-              <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-                onClick={[Function]}
-              >
-                <input
-                  aria-invalid={false}
-                  className="MuiInputBase-input MuiOutlinedInput-input"
-                  disabled={false}
-                  id="confirmationCode"
-                  name="confirmationCode"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  required={true}
-                  type="text"
-                  value=""
-                />
-                <fieldset
-                  aria-hidden={true}
-                  className="PrivateNotchedOutline-root-212 MuiOutlinedInput-notchedOutline"
+                <legend
+                  className="PrivateNotchedOutline-legend-212"
                   style={
                     Object {
-                      "paddingLeft": 8,
+                      "width": 0.01,
                     }
                   }
                 >
-                  <legend
-                    className="PrivateNotchedOutline-legend-213"
-                    style={
+                  <span
+                    dangerouslySetInnerHTML={
                       Object {
-                        "width": 0.01,
+                        "__html": "&#8203;",
                       }
                     }
-                  >
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "&#8203;",
-                        }
-                      }
-                    />
-                  </legend>
-                </fieldset>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-214"
-          >
-            <div
-              className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
-            >
-              <label
-                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
-                data-shrink={false}
-                htmlFor="password"
-                style={
-                  Object {
-                    "color": "#ffffff",
-                  }
-                }
-              >
-                New Password
-                <span
-                  className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-                >
-                   
-                  *
-                </span>
-              </label>
-              <div
-                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-                onClick={[Function]}
-              >
-                <input
-                  aria-invalid={false}
-                  autoComplete="new-password"
-                  className="MuiInputBase-input MuiOutlinedInput-input"
-                  disabled={false}
-                  id="password"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  required={true}
-                  type="password"
-                  value=""
-                />
-                <fieldset
-                  aria-hidden={true}
-                  className="PrivateNotchedOutline-root-212 MuiOutlinedInput-notchedOutline"
-                  style={
-                    Object {
-                      "paddingLeft": 8,
-                    }
-                  }
-                >
-                  <legend
-                    className="PrivateNotchedOutline-legend-213"
-                    style={
-                      Object {
-                        "width": 0.01,
-                      }
-                    }
-                  >
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "&#8203;",
-                        }
-                      }
-                    />
-                  </legend>
-                </fieldset>
-              </div>
+                  />
+                </legend>
+              </fieldset>
             </div>
           </div>
         </div>
@@ -226,10 +148,10 @@ exports[`ConfirmSingup component snapshot matches the snapshot 1`] = `
         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
       >
         <div
-          className="MuiBox-root MuiBox-root-338"
+          className="MuiBox-root MuiBox-root-336"
         >
           <div
-            className="MuiBox-root MuiBox-root-339"
+            className="MuiBox-root MuiBox-root-337"
           >
             <span>
               Send Code to 

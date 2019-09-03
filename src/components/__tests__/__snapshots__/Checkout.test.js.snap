@@ -52,49 +52,6 @@ Array [
               className="MuiBox-root MuiBox-root-195 makeStyles-navMenuList-18"
             />
             <button
-              className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary Mui-disabled Mui-disabled"
-              disabled={true}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={-1}
-              type="button"
-            >
-              <span
-                className="MuiIconButton-label"
-              >
-                <span
-                  className="MuiBadge-root"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="MuiSvgIcon-root"
-                    focusable="false"
-                    role="presentation"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
-                    />
-                  </svg>
-                  <span
-                    className="MuiBadge-badge MuiBadge-colorSecondary MuiBadge-invisible"
-                  >
-                    0
-                  </span>
-                </span>
-              </span>
-            </button>
-            <button
               aria-controls="long-menu"
               aria-haspopup="true"
               aria-label="More"
@@ -171,10 +128,10 @@ Array [
         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-8 MuiGrid-grid-lg-8"
       >
         <div
-          className="MuiBox-root MuiBox-root-227"
+          className="MuiBox-root MuiBox-root-220"
         >
           <div
-            className="MuiBox-root MuiBox-root-228"
+            className="MuiBox-root MuiBox-root-221"
           >
             <button
               className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
@@ -225,6 +182,7 @@ Array [
             >
               <div
                 className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+                onInput={[Function]}
               >
                 <label
                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
@@ -259,7 +217,7 @@ Array [
                   />
                   <fieldset
                     aria-hidden={true}
-                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    className="PrivateNotchedOutline-root-296 MuiOutlinedInput-notchedOutline"
                     style={
                       Object {
                         "paddingLeft": 8,
@@ -267,7 +225,7 @@ Array [
                     }
                   >
                     <legend
-                      className="PrivateNotchedOutline-legend-304"
+                      className="PrivateNotchedOutline-legend-297"
                       style={
                         Object {
                           "width": 0.01,
@@ -291,6 +249,7 @@ Array [
             >
               <div
                 className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+                onInput={[Function]}
               >
                 <label
                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -319,7 +278,7 @@ Array [
                   />
                   <fieldset
                     aria-hidden={true}
-                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    className="PrivateNotchedOutline-root-296 MuiOutlinedInput-notchedOutline"
                     style={
                       Object {
                         "paddingLeft": 8,
@@ -327,7 +286,7 @@ Array [
                     }
                   >
                     <legend
-                      className="PrivateNotchedOutline-legend-304"
+                      className="PrivateNotchedOutline-legend-297"
                       style={
                         Object {
                           "width": 0.01,
@@ -384,7 +343,7 @@ Array [
                   />
                   <fieldset
                     aria-hidden={true}
-                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    className="PrivateNotchedOutline-root-296 MuiOutlinedInput-notchedOutline"
                     style={
                       Object {
                         "paddingLeft": 8,
@@ -392,7 +351,7 @@ Array [
                     }
                   >
                     <legend
-                      className="PrivateNotchedOutline-legend-304"
+                      className="PrivateNotchedOutline-legend-297"
                       style={
                         Object {
                           "width": 0.01,
@@ -443,7 +402,7 @@ Array [
                   />
                   <fieldset
                     aria-hidden={true}
-                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    className="PrivateNotchedOutline-root-296 MuiOutlinedInput-notchedOutline"
                     style={
                       Object {
                         "paddingLeft": 8,
@@ -451,7 +410,7 @@ Array [
                     }
                   >
                     <legend
-                      className="PrivateNotchedOutline-legend-304"
+                      className="PrivateNotchedOutline-legend-297"
                       style={
                         Object {
                           "width": 0.01,
@@ -475,6 +434,7 @@ Array [
             >
               <div
                 className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+                onInput={[Function]}
               >
                 <label
                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
@@ -508,7 +468,7 @@ Array [
                   />
                   <fieldset
                     aria-hidden={true}
-                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    className="PrivateNotchedOutline-root-296 MuiOutlinedInput-notchedOutline"
                     style={
                       Object {
                         "paddingLeft": 8,
@@ -516,7 +476,7 @@ Array [
                     }
                   >
                     <legend
-                      className="PrivateNotchedOutline-legend-304"
+                      className="PrivateNotchedOutline-legend-297"
                       style={
                         Object {
                           "width": 0.01,
@@ -540,6 +500,7 @@ Array [
             >
               <div
                 className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+                onInput={[Function]}
               >
                 <label
                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -567,7 +528,7 @@ Array [
                   />
                   <fieldset
                     aria-hidden={true}
-                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    className="PrivateNotchedOutline-root-296 MuiOutlinedInput-notchedOutline"
                     style={
                       Object {
                         "paddingLeft": 8,
@@ -575,7 +536,7 @@ Array [
                     }
                   >
                     <legend
-                      className="PrivateNotchedOutline-legend-304"
+                      className="PrivateNotchedOutline-legend-297"
                       style={
                         Object {
                           "width": 0.01,
@@ -599,6 +560,7 @@ Array [
             >
               <div
                 className="MuiFormControl-root MuiTextField-root makeStyles-textField-8 makeStyles-dense-9 MuiFormControl-fullWidth"
+                onInput={[Function]}
               >
                 <label
                   className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
@@ -632,7 +594,7 @@ Array [
                   />
                   <fieldset
                     aria-hidden={true}
-                    className="PrivateNotchedOutline-root-303 MuiOutlinedInput-notchedOutline"
+                    className="PrivateNotchedOutline-root-296 MuiOutlinedInput-notchedOutline"
                     style={
                       Object {
                         "paddingLeft": 8,
@@ -640,7 +602,7 @@ Array [
                     }
                   >
                     <legend
-                      className="PrivateNotchedOutline-legend-304"
+                      className="PrivateNotchedOutline-legend-297"
                       style={
                         Object {
                           "width": 0.01,
@@ -724,17 +686,17 @@ Array [
             className="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
-              className="makeStyles-girdDv-315"
+              className="makeStyles-girdDv-308"
             >
               <div
-                className="MuiGrid-root makeStyles-gridRow-310 MuiGrid-container"
+                className="MuiGrid-root makeStyles-gridRow-303 MuiGrid-container"
                 variant="contained"
               >
                 <div
-                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-3"
+                  className="MuiGrid-root makeStyles-gridCell-304 MuiGrid-item MuiGrid-grid-xs-3"
                 >
                   <div
-                    className="MuiBox-root MuiBox-root-316"
+                    className="MuiBox-root MuiBox-root-309"
                   >
                     <span>
                       Image
@@ -742,10 +704,10 @@ Array [
                   </div>
                 </div>
                 <div
-                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-3"
+                  className="MuiGrid-root makeStyles-gridCell-304 MuiGrid-item MuiGrid-grid-xs-3"
                 >
                   <div
-                    className="MuiBox-root MuiBox-root-317"
+                    className="MuiBox-root MuiBox-root-310"
                   >
                     <span>
                       Description
@@ -753,10 +715,10 @@ Array [
                   </div>
                 </div>
                 <div
-                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-2"
+                  className="MuiGrid-root makeStyles-gridCell-304 MuiGrid-item MuiGrid-grid-xs-2"
                 >
                   <div
-                    className="MuiBox-root MuiBox-root-318"
+                    className="MuiBox-root MuiBox-root-311"
                   >
                     <span>
                       Price
@@ -764,10 +726,10 @@ Array [
                   </div>
                 </div>
                 <div
-                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-2"
+                  className="MuiGrid-root makeStyles-gridCell-304 MuiGrid-item MuiGrid-grid-xs-2"
                 >
                   <div
-                    className="MuiBox-root MuiBox-root-319"
+                    className="MuiBox-root MuiBox-root-312"
                   >
                     <span>
                       Quantity
@@ -775,10 +737,10 @@ Array [
                   </div>
                 </div>
                 <div
-                  className="MuiGrid-root makeStyles-gridCell-311 MuiGrid-item MuiGrid-grid-xs-2"
+                  className="MuiGrid-root makeStyles-gridCell-304 MuiGrid-item MuiGrid-grid-xs-2"
                 >
                   <div
-                    className="MuiBox-root MuiBox-root-320"
+                    className="MuiBox-root MuiBox-root-313"
                   >
                     <span>
                       Total Price
@@ -797,13 +759,13 @@ Array [
           </div>
         </div>
         <div
-          className="MuiBox-root MuiBox-root-321"
+          className="MuiBox-root MuiBox-root-314"
         >
           <div
             className="MuiPaper-root MuiPaper-elevation1 makeStyles-gridPaper-6 MuiPaper-rounded"
           >
             <div
-              className="MuiBox-root MuiBox-root-322 text1"
+              className="MuiBox-root MuiBox-root-315 text1"
             >
               <div
                 className="MuiGrid-root text1 MuiGrid-item MuiGrid-grid-xs-9 MuiGrid-grid-sm-8"
@@ -823,7 +785,7 @@ Array [
               </div>
             </div>
             <div
-              className="MuiBox-root MuiBox-root-323 text1"
+              className="MuiBox-root MuiBox-root-316 text1"
             >
               <div
                 className="MuiGrid-root text1 MuiGrid-item MuiGrid-grid-xs-9 MuiGrid-grid-sm-8"

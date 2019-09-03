@@ -18,16 +18,13 @@ exports[`Item component matches the snapshot 1`] = `
     <div
       className="MuiBox-root MuiBox-root-37 nameTxt"
     >
-      Name 
+      Name:
     </div>
     <div
       className="MuiBox-root MuiBox-root-38 priceTxt"
     >
-      <span>
-        Price
-      </span>
-      :Price
-       Ks
+      Price:
+      Ks
     </div>
   </div>
   <div

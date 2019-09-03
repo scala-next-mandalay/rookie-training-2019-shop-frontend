@@ -168,6 +168,8 @@ const OrderHistory = ({orders,searchTextOrderId,setSearchByOrderId,clickOrderId,
       fetchAuthedUser();
     }
   });
+  const onlyNumbers = (e) => { e.target.value = e.target.value.replace(/[^0-9]/g, '') };
+
     
   const show=( <Container maxWidth="lg">
         <TitleBar showMenu={false} showIcon={false} showNav={false}/>
@@ -200,9 +202,15 @@ const OrderHistory = ({orders,searchTextOrderId,setSearchByOrderId,clickOrderId,
              margin="normal"
              variant="outlined"
              fullWidth
+             type="number"
              value={searchTextOrderId}
+             inputProps={{
+              min: "1",
+            }}
+            onInput={(e) => onlyNumbers(e) }
+
             />
-         
+
         </Grid>
        
       </Grid>

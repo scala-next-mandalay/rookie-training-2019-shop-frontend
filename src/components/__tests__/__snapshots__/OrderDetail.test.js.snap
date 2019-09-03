@@ -104,7 +104,7 @@ Array [
         </header>
       </div>
       <div
-        className="makeStyles-toolbar-6"
+        className="toolbar"
       />
       <div
         className="MuiBox-root MuiBox-root-222"
@@ -122,177 +122,175 @@ Array [
         </span>
       </div>
       <div>
-        <div>
+        <div
+          className="title_Ship"
+        >
           <div
-            className="title_Ship"
+            className="MuiGrid-root nameTxt"
+            mb={1}
+            mt={1}
           >
             <div
-              className="MuiGrid-root nameTxt"
+              className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12"
+              ml={1}
+            >
+              Order Id- 
+               
+            </div>
+            <div
+              className="MuiGrid-root text2 MuiGrid-container"
               mb={1}
               mt={1}
             >
               <div
-                className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12"
-                ml={1}
+                className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
               >
-                Order Id- 
-                 
+                Order Date- 
+                2019-07-30 07:48:47
               </div>
               <div
-                className="MuiGrid-root text2 MuiGrid-container"
-                mb={1}
-                mt={1}
+                className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+              >
+                Order Total- 
+                4100
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-container"
+          mb={1}
+          mt={1}
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+          >
+            <div
+              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+            >
+              <div
+                className="MuiCardContent-root"
               >
                 <div
-                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                  className="MuiBox-root MuiBox-root-227 text2"
                 >
-                  Order Date- 
-                  2019-07-30 07:48:47
-                </div>
-                <div
-                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
-                >
-                  Order Total- 
-                  4100
+                  <div
+                    className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                    fontSize={20}
+                  >
+                    Billing Address
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    khin
+                     
+                    lawoon
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    23street
+                     
+                    CMTZ
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    mandalay
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    mandalay
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    myanmar
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  />
+                  <hr
+                    className="MuiDivider-root"
+                  />
+                  <div
+                    className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    Payment Method
+                  </div>
+                  <div
+                    className="MuiGrid-root text2 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    Checkmoney/MoneyOrder
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="MuiGrid-root MuiGrid-container"
-            mb={1}
-            mt={1}
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
           >
             <div
-              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
             >
               <div
-                className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+                className="MuiCardContent-root"
               >
                 <div
-                  className="MuiCardContent-root"
+                  className="MuiBox-root MuiBox-root-233 text2"
                 >
                   <div
-                    className="MuiBox-root MuiBox-root-227 text2"
+                    className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                    fontSize={20}
                   >
-                    <div
-                      className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                      fontSize={20}
-                    >
-                      Billing Address
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      khin
-                       
-                      lawoon
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      23street
-                       
-                      CMTZ
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      mandalay
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      mandalay
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      myanmar
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    />
-                    <hr
-                      className="MuiDivider-root"
-                    />
-                    <div
-                      className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      Payment Method
-                    </div>
-                    <div
-                      className="MuiGrid-root text2 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      Checkmoney/MoneyOrder
-                    </div>
+                    Delivery Address
                   </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
-            >
-              <div
-                className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
-              >
-                <div
-                  className="MuiCardContent-root"
-                >
                   <div
-                    className="MuiBox-root MuiBox-root-233 text2"
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
                   >
-                    <div
-                      className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                      fontSize={20}
-                    >
-                      Delivery Address
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      khin
-                       
-                      lawoon
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      23street
-                       
-                      CMTZ
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      mandalay
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      mandalay
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      myanmar
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    />
-                    <hr
-                      className="MuiDivider-root"
-                    />
-                    <div
-                      className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      Shipping Method
-                    </div>
-                    <div
-                      className="MuiGrid-root text2 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
-                    >
-                      Shipping
-                    </div>
+                    khin
+                     
+                    lawoon
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    23street
+                     
+                    CMTZ
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    mandalay
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    mandalay
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    myanmar
+                  </div>
+                  <div
+                    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  />
+                  <hr
+                    className="MuiDivider-root"
+                  />
+                  <div
+                    className="MuiGrid-root txt4 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    Shipping Method
+                  </div>
+                  <div
+                    className="MuiGrid-root text2 MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6"
+                  >
+                    Shipping
                   </div>
                 </div>
               </div>
@@ -512,65 +510,63 @@ Array [
             </tr>
           </tbody>
         </table>
-        <div>
+        <div
+          className="MuiBox-root MuiBox-root-253"
+        >
           <div
-            className="MuiBox-root MuiBox-root-253"
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4"
           >
             <div
-              className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-4"
+              className="MuiBox-root MuiBox-root-254"
             >
-              <div
-                className="MuiBox-root MuiBox-root-254"
-              >
-                 
-              </div>
+               
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root nameTxt MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-255"
+            >
+               
+              <span>
+                SubTotal
+              </span>
             </div>
             <div
-              className="MuiGrid-root nameTxt MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4"
+              className="MuiBox-root MuiBox-root-256"
             >
-              <div
-                className="MuiBox-root MuiBox-root-255"
-              >
-                 
-                <span>
-                  SubTotal
-                </span>
-              </div>
-              <div
-                className="MuiBox-root MuiBox-root-256"
-              >
-                <span>
-                  Sales Tax
-                </span>
-              </div>
-              <div
-                className="MuiBox-root MuiBox-root-257"
-              >
-                <span>
-                  Total Price
-                </span>
-              </div>
+              <span>
+                Sales Tax
+              </span>
             </div>
             <div
-              className="MuiGrid-root nameTxt MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4"
+              className="MuiBox-root MuiBox-root-257"
             >
-              <div
-                className="MuiBox-root MuiBox-root-258"
-              >
-                4100
-                 MMK 
-              </div>
-              <div
-                className="MuiBox-root MuiBox-root-259"
-              >
-                0.0 MMK 
-              </div>
-              <div
-                className="MuiBox-root MuiBox-root-260"
-              >
-                4100
-                 MMK
-              </div>
+              <span>
+                Total Price
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root nameTxt MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-258"
+            >
+              4100
+               MMK 
+            </div>
+            <div
+              className="MuiBox-root MuiBox-root-259"
+            >
+              0.0 MMK 
+            </div>
+            <div
+              className="MuiBox-root MuiBox-root-260"
+            >
+              4100
+               MMK
             </div>
           </div>
         </div>

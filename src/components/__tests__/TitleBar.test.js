@@ -67,13 +67,15 @@ describe("Titlebar component", () => {
       ReactDOM.render((
         <Parent>
          <TitleBar cart={cart} 
-          totalQuantity={2} showMenu={showMenu} showNav={showNav}
+         totalQuantity={2} showMenu={showMenu} showNav={showNav}
          showIcon={showIcon} fetchAuthedUser={fetchAuthedUser}
          handleDrawerToggle={handleDrawerToggle}
-         setAnchorEl={setAnchorEl}/>
+         setAnchorEl={setAnchorEl}
+         />
         </Parent>
         ),container);
     });
+    
    
     const buttonArr = container.querySelectorAll('button');
     const span = container.querySelectorAll('span');
@@ -82,17 +84,27 @@ describe("Titlebar component", () => {
       buttonArr[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));
     });
     expect(handleDrawerToggle).toHaveBeenCalledTimes(1);
-    
+
+    /*pressing ESC key*/// 27 == Escape Key
     const evt = new KeyboardEvent('keydown', { keyCode: 27 });
-    // 27 == Escape Key    
     document.dispatchEvent(evt);
     expect(handleDrawerToggle).toHaveBeenCalledTimes(1);
+
+    /*clicking document*/
+    const evt1 = new MouseEvent('click', { bubbles: true })
+    document.dispatchEvent(evt1);
+    expect(handleDrawerToggle).toHaveBeenCalledTimes(1);
+
     act(()=>{
       buttonArr[1].dispatchEvent(new MouseEvent('click',{bubbles:true}));
     });
+    
     act(()=>{
       buttonArr[2].dispatchEvent(new MouseEvent('click',{bubbles:true}));
     });
+    const selectArr = container.querySelectorAll('select');
+    expect(selectArr).toHaveLength(1);
+   
     
  });
     

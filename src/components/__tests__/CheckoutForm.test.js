@@ -19,7 +19,7 @@ afterEach(() => {
   container = null;
 });
 
- const history = { push: jest.fn('') };
+const history = { push: jest.fn('') };
  //console.log("history",history.length)
 const cart = [{ id: 1, name: "a", quantity: 1, price: 1000 },
   { id: 2, name: "b", quantity: 1, price: 1000 }];
@@ -28,7 +28,7 @@ const setRequestParams = jest.fn((form) => {
     setRequest ={...form};
 });
 
-    const requestParams = {
+const requestParams = {
         first_name: "",
         last_name: "",
         address1: "",
@@ -55,20 +55,7 @@ describe("CheckoutForm component", () => {
 });
 
 
-
-// describe("testing CheckoutForm ", () => {
-//   it('testing textfield handelchange and click comfirm button', () => {
-
-//     act(() => {
-//       ReactDOM.render((<Parent>
-//           <CheckoutForm cart={cart} totalPrice={2000} totalQuantity={2} requestParams={requestParams} setRequestParams={setRequestParams} />
-//       </Parent>), container);
-//     });
-//   });
-// });
-
-
-describe("testing Checkout ", () => {
+describe("testing CheckoutForm ", () => {
 
   it('testing textfield handelchange and click comfirm button', () => {
      act(() => {
@@ -116,29 +103,37 @@ describe("testing Checkout ", () => {
     expect(inputArr[6].value).toBe("mandalay");
 
     const buttonArray = document.querySelectorAll('button');
-    // console.log("buttonArray",buttonArray.length);
-    // console.log("buttonArray",buttonArray[0].textContent);
-    // console.log("buttonArray",buttonArray[1].textContent);
-    // console.log("buttonArray",buttonArray[2].textContent);
-    // console.log("buttonArray",buttonArray[3].textContent);
-    // console.log("buttonArray",buttonArray[4].textContent);
-   
-    
+  
     act(() => {
-    buttonArray[3].dispatchEvent(new Event('click', { bubbles: true }))
+    buttonArray[2].dispatchEvent(new Event('click', { bubbles: true }))
     });
-    expect(buttonArray[3].textContent.toUpperCase()).toBe("SHOPPING")
+    expect(buttonArray[2].textContent.toUpperCase()).toBe("SHOPPING")
    
  
    
     act(() => {
-      buttonArray[4].dispatchEvent(new Event('click', { bubbles: true }))
+      buttonArray[3].dispatchEvent(new Event('click', { bubbles: true }))
     });
-    expect(buttonArray[4].textContent.toUpperCase()).toBe("CONFIRM")
+    expect(buttonArray[3].textContent.toUpperCase()).toBe("CONFIRM")
     expect(setRequestParams).toHaveBeenCalled();
  
 
  });
+ it('testing history push link of shopping', () => {
+  const history = { push: jest.fn("") };
+  act(() => {
+   ReactDOM.render((<Parent>
+       <CheckoutForm cart={cart} totalPrice={2000} totalQuantity={2}  history={history} requestParams={requestParams} setRequestParams={setRequestParams} />
+   </Parent>), container);
+ });
+
+ const button=document.querySelectorAll('button');  
+  //console.log(container.outerHTML)
+ //expect(button[2].textContent).toBe("Shopping")
+ // expect( history.push ).toBe( '/' );
+ // expect(history.push.mock.calls[0]).toEqual(['/']);
+ //expect(button[2].getAttribute("href")).toBe("/")
+})
 })
     
     

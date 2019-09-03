@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-const OrderDetail = ({orderitems, selectedOrder,history}) => {
+const OrderDetail = ({orderitems, selectedOrder,history,user}) => {
   const classes = useStyles();
    const handleHome = event => {
     event.preventDefault();
@@ -62,8 +62,6 @@ const OrderDetail = ({orderitems, selectedOrder,history}) => {
   };
   const OrderView=()=>{
     return( 
-    <div>
-     
     <div>
        <div className="title_Ship">
            <Grid  mt={1} mb={1}  className="nameTxt">
@@ -118,13 +116,11 @@ const OrderDetail = ({orderitems, selectedOrder,history}) => {
          </Grid>
      
       </div> 
-      </div>
+    
       );
   };
   const TotalView=()=>{
     return(
-    <div>
-     
     <Box display="flex" mt={2} pl={3} pb={3}>
       <Grid item xs={false} sm={4}>
         <Box> </Box>
@@ -140,17 +136,17 @@ const OrderDetail = ({orderitems, selectedOrder,history}) => {
         <Box textAlign="right" pr={3}>{selectedOrder!==null?selectedOrder.total_price:null} MMK</Box>
       </Grid>
     </Box>
-    </div>
       );
     };
     
   return(
+    // user?
     <div>
   {selectedOrder===null?<OrderHistory/>:
       <Container maxWidth="lg">
          <TitleBar showMenu={false} showIcon={false} showNav={false} />
-          <div className={classes.toolbar}/>
-          <Box display="flex" >
+         <div className="toolbar"/>
+         <Box display="flex" >
           <Box ml="auto" my="auto" mr={0} mt={3}>
             <Hidden only={['xs','sm']}>
             <Button onClick={handleHome} variant="contained" color="primary">
@@ -160,13 +156,12 @@ const OrderDetail = ({orderitems, selectedOrder,history}) => {
            </Hidden>
            <Hidden mdUp>
            <Button onClick={handleHome} variant="contained" color="primary">
-              <HomeIcon className={classes.homeSpace} />
+              {/* <HomeIcon className={classes.homeSpace} /> */}
              <FormattedMessage id="Button.Shopping" />
           </Button>
           </Hidden>
         </Box>
-        </Box>
-            
+        </Box>  
         <Box className="txt3" mt={3}> <FormattedMessage id="Label.OrderHistory" /></Box>
         <OrderView/>
         <Paper className={classes.root}>
@@ -213,7 +208,7 @@ const OrderDetail = ({orderitems, selectedOrder,history}) => {
             <Box ml="auto" my="auto" mr={3} mt={3}>
             <Button onClick={handleBack} variant="contained" color="primary"
                 >
-              <FormattedMessage id="Button.Back" />
+              <FormattedMessage id="Button.Back" defualtMessage="Back"/>
             </Button>
         </Box>
        </Box>
@@ -222,6 +217,7 @@ const OrderDetail = ({orderitems, selectedOrder,history}) => {
        
       </Container>}
       </div>
+      // :<Login/>
   );
  
 };

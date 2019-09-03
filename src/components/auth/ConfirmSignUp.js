@@ -77,11 +77,10 @@ const ConfirmSignUp = React.memo(({
       <Box display="flex" mx="auto" my="auto" mt={2} fontWeight={600} color="error.main">
             {error}
       </Box>
-      <Box mt={3}>
       <ThemeProvider theme={theme}>
         <Grid container>
         <Grid item xs={12} sm={12}  >
-        <Box mx="auto" my="auto" p={1} mt={2}>
+        <Box mx="auto" my="auto" p={1} mt={5}>
             <TextField
               id="confirmationCode"
               name="confirmationCode"
@@ -97,34 +96,10 @@ const ConfirmSignUp = React.memo(({
               }
              }}
             />
-             
-           
-          
-             </Box>
-        </Grid>
-        <Grid item xs={12} sm={12}  >
-         <Box mx="auto" my="auto"  p={1} mt={2}>
-            <TextField
-              id="password"
-              label="New Password"
-              type="password"
-              autoComplete="new-password"
-              onChange={handleChangeValue("password")}
-              value={form.password}
-              variant="outlined"
-              required
-              fullWidth
-               InputLabelProps={{
-              style: {
-              color: "#ffffff",
-              }
-             }}
-            />
             </Box>
         </Grid>
         </Grid>
         </ThemeProvider>
-        </Box>
            <Grid container className={classes.btnWrapper}>
               <Button
               type="submit"
@@ -135,7 +110,7 @@ const ConfirmSignUp = React.memo(({
               className="btnSign"
             >
         
-              <FormattedMessage id="Button.Confirm" defualtMessage="Confirm" />
+            <FormattedMessage id="Button.Confirm" defualtMessage="Confirm" />
             </Button>
               {loading && <CircularProgress size={24} className={classes.btnProgress} />}
              </Grid>  
@@ -149,8 +124,7 @@ const ConfirmSignUp = React.memo(({
               </Grid>
             </Grid>
      </form>
-    </Container>
-   
+    </Container> 
   );
   return (authState === 'confirmSignUp') ? content : null;
 });
